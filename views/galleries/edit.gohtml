@@ -7,13 +7,16 @@
             <h5 class="blue-grey-text text-lighten-1">EDIT</h5><br>
         </div>
         <div class="row">
-            {{template "galleryEditInformation" .}}
+            {{template "galleryShowButton" .}}
+        </div>
+        <div class="row">
+            {{template "galleryImageForm" .}}
         </div>
         <div class="row">
             {{template "galleryEditForm" .}}
         </div>
         <div class="row">
-            {{template "galleryImageForm" .}}
+            {{template "galleryEditInformation" .}}
         </div>
         <div class="row">
             {{template "galleryDeleteForm" .}}
@@ -21,17 +24,21 @@
     </div>
 {{end}}
 
+{{define "galleryShowButton"}}
+    <a href="/galleries/{{.ID}}" class="waves-effect waves-light btn btn-flat blue-grey-text left" type="submit" name="action"><i class="material-icons">keyboard_arrow_left</i> Go to Gallery</a>
+{{end}}
+
 {{define "galleryEditInformation"}}
     <div class="col s12 m8 offset-m2 card z-depth-1">
         <div class="card-content">
             <div class="card-title">
                 <h4>Information</h4>
-            </div>
-            <h6><b>Modification:</b> #{{.ID}}</h6><br>
-            <h6><b>Created: </b><br>
-            {{.CreatedAt}}</h6><br>
-            <h6><b>Updated: </b><br>
-            {{.UpdatedAt}}</h6>
+            </div><br>
+            <p><b>Modification:</b> #{{.ID}}</p><br>
+            <p><b>Created: </b><br>
+            {{.CreatedAt}}</p><br>
+            <p><b>Updated: </b><br>
+            {{.UpdatedAt}}</p>
         </div>
         <div class="card-action right-align">
             <a href="/galleries/{{.ID}}" class="btn waves-effect waves-light red lighten-3">
@@ -53,7 +60,7 @@
                     <input id="modification-title" type="text" class="validate" name="title" data-length="48" value="{{.Title}}" pattern=".{1,48}" title="Title missing">
                     <label for="modification-title" data-error="Too long" data-success="Accepted"></label>
                 </div>
-                <div class="row right-align">
+                <div class="card-content right">
                     <button type="submit" class="btn waves-effect waves-light red lighten-3">
                         <i class="material-icons">save</i>
                     </button>
@@ -64,7 +71,7 @@
 {{end}}
 
 {{define "galleryImageForm"}}
-    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
+    <div class="col s12 m10 offset-m1 card hoverable z-depth-1">
         <div class="card-content">
             <div class="card-title">
                 <h4>Images</h4>

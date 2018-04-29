@@ -73,6 +73,7 @@ func main() {
 	r.Handle("/contact", staticC.ContactView).Methods("GET")
 	r.Handle("/faq", staticC.FaqView).Methods("GET")
 	r.Handle("/faq-question", staticC.FaqQuestionView).Methods("GET")
+	r.Handle("/dashboard", staticC.DashboardView).Methods("GET")
 
 	// Account Routes
 	r.HandleFunc("/register", accountsC.New).Methods("GET")

@@ -12,28 +12,37 @@
 {{define "galleryShowTitle"}}
     <div class="card">
         <div class="card-content">
-            <a href="/galleries/{{.ID}}/edit" class="btn waves-effect blue-grey-text grey lighten-4 text-lighten-2 waves-light right"><i class="material-icons">settings</i></a>
             <blockquote>
               <h5>GALLERY - # {{.ID}}</h5>
             </blockquote>
             <div class="card-title center">
-                <h3>{{.Title}}</h3>  
+                <h4>{{.Title}}</h4>  
             </div>
         </div>
     </div>
 {{end}}
 
 {{define "galleryShowImages"}}
-        <ul class="collection">
-        {{range .ImagesSplitN 6}}
-            <li id="gallery-show-images" class="col s12 m4 collection-item">
-                {{range .}}
-                    <a href="{{.Path}}">
-                        <img src="{{.Path}}" class="responsive-img">
-                    </a>
+    <a href="/galleries/{{.ID}}/edit" class="btn waves-effect blue-grey-text grey lighten-4 text-lighten-2 waves-light right"><i class="material-icons">settings</i></a>
+    <div class="card col s12 m12">
+        <div class="card-content">
+            {{if .Images}}
+                {{range .ImagesSplitN 6}}
+                    <div id="gallery-show-images" class="col s12 m4">
+                        {{range .}}
+                            <a href="{{.Path}}">
+                                <img src="{{.Path}}" class="responsive-img">
+                            </a>
+                        {{end}}
+                    </div>
                 {{end}}
-            </li>
-        {{end}}
-        </ul>
+            {{else}}
+                <div class="center"><br>
+                    <h4 class="blue-grey-text text-lighten-4">No images<h4><br>
+                    <h5>Try to upload a few</h5><br>
+                    <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn red lighten-3"><i class="material-icons">file_upload</i></a>
+                </div>
+            {{end}}
+        </div>
     </div>
 {{end}}

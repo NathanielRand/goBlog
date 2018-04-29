@@ -16,6 +16,8 @@ func NewStatic() *Static {
 			"materialize", "static/pulse"),
 		CollectionView: views.NewView(
 			"materialize", "static/collection"),
+		DashboardView: views.NewView(
+			"materialize", "static/dashboard"),
 	}
 }
 
@@ -26,4 +28,5 @@ type Static struct {
 	FaqQuestionView *views.View
 	PulseView       *views.View
 	CollectionView  *views.View
+	DashboardView   *views.View
 }

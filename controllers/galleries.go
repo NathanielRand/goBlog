@@ -210,7 +210,7 @@ func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// Generate a URL using the router and the names ShowGallery route.
-	url, err := g.r.Get(ShowGallery).URL("id", strconv.Itoa(int(gallery.ID)))
+	url, err := g.r.Get(EditGallery).URL("id", strconv.Itoa(int(gallery.ID)))
 	// Check for errors creating the URL.
 	if err != nil {
 		log.Println(err)
