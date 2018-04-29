@@ -1,0 +1,81 @@
+{{define "yield"}}
+    <div class="container">
+        <div class="row">
+            {{template "faqContent"}}
+        </div>
+        <div class="row">
+            {{template "faqAction"}}
+        </div>
+    </div>
+{{end}}
+
+{{define "faqContent"}}
+    <div class="card col s12 m10 offset-m1 center">
+        <div class="card-title">
+            <h2 class="thin">FAQ</h2>
+            <p>Explore our most asked questions.</p>
+        </div><br>
+        <div class="card-action">
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">Is MUTO free to join?</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">How much is Elite Membership?</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Can I Advertise on MUTO?</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Is there a MUTO Affiliate program?</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Where is MUTO's Privacy Policy?</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">What data does MUTO collect?</div>
+                    <div class="collapsible-body"><span>You can see all the data we collect. This information is available in the account settings section. You can download, export, message, or email the data.</span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+{{end}}
+
+{{define "faqAction"}}
+    <div class="card col s12 m8 offset-m2">
+        <div class="card-content">
+            <div class="card-title center">
+                <h4 class="thin">Still Have Questions?</h4>
+            </div><br>
+            <div class="card-action center">
+                <!-- FAQ Questions Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons left">help_outline</i>ASK US NOW</a>
+                
+                <!-- FAQ Questions Modal Structure -->
+                <div id="modal1" class="modal bottom-sheet">
+                    <div class="modal-content">
+                        <form>
+                            <div class="input-field col s10 m8 offset-s1 offset-m2">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        
+                            <div class="input-field col s10 m8 offset-s1 offset-m2">
+                                <textarea id="contact-message" class="materialize-textarea"></textarea>
+                                <label for="contact-message">Question</label>
+                            </div>
+                            <a href="/faq-question" class="modal-action modal-close waves-effect waves-light btn-flat red-text text-lighten-2">
+                                <i class="material-icons left">send</i>submit
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{end}}

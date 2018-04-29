@@ -1,0 +1,39 @@
+{{define "yield"}}
+    <div class='container'>
+        <div class="row">
+            <form class="card col s12 m8 l6 offset-m2 offset-l3">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="card-title">
+                            <h3>CONTACT</h3>
+                            <p>Please fill out the form below</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s10 m8 offset-s1 offset-m2">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s10 m8 offset-s1 offset-m2">
+                            <input id="subject" type="text" class="validate">
+                            <label for="subject">Subject</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s10 m8 offset-s1 offset-m2">
+                            <textarea id="contact-message" class="materialize-textarea"></textarea>
+                            <label for="contact-message">Message</label>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <a class="waves-effect waves-light btn">
+                            <i class="material-icons left">send</i>submit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{end}}

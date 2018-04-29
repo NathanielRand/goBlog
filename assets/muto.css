@@ -1,0 +1,147 @@
+/*MUTO HTML Elements*/
+body {
+    background-color: #eceff1;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+    font-family: 'Comfortaa', cursive;
+    color: grey;
+    letter-spacing: 0.06em;
+}
+
+a, p {
+    font-size: 16px;
+}
+
+
+/*Materialize Inspected Elements*/
+input[type=range]+.thumb {
+    background-color: #ee6e73;
+}
+
+input[type=range]+.thumb .value {
+    color: #607d8b;
+}
+
+.tabs.tabs-transparent .indicator {
+    background-color: rgb(96, 125, 139);
+}
+
+/*MUTO Custom ID Elements*/
+
+#search {
+    text-align: center;
+}
+
+#collection-menu-icons {
+    margin-top: 5%;
+}
+
+#gallery-show-images {
+    padding: 1%;
+}
+
+#landing-btn-default {
+    font-size: 18px;
+    letter-spacing: 0.13em;
+}
+
+#landing-btn-explore {
+    font-size: 23px;
+    font-family: Quicksand;
+    letter-spacing: 0.16em;
+}
+
+#landing-secondary-content{
+    letter-spacing: 0.16em;
+}
+
+#muto-alert{
+    margin-top: 5%;
+    
+}
+
+#navbar-account-menu-trigger {
+    padding-top: 38.25%;
+}
+
+#navbar-brand-logo {
+    margin-left: 1.6%;
+}
+
+#navbar-site-menu {
+    font-family: 'Raleway', sans-serif;
+	font-size: 28px;
+	letter-spacing: 0.02em;
+	margin-top: 5%;
+}
+
+#navbar-site-menu-wrapper {
+    margin-top: 10%;
+}
+
+#navbar-site-menu-icons {
+    margin-right: 6%;
+    margin-top: 9%;
+}
+
+#pulse-main-actions {
+    margin: 0% 27.5% 0% 27.5%;
+}
+
+/* Device Media */
+
+@media screen and (min-width: 641px) {
+        #navbar-account-menu-trigger {
+            padding-top: 50%;
+    }   
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 601px) and (max-width: 641px){
+        #navbar-account-menu-trigger {
+            padding-top: 50%;
+    }   
+}
+
+/* SMARTPHONES SMALL */
+@media only screen and (max-width: 375px){
+        #landing-social-icons {
+            margin: 0% 1.20% 0% 1.20%;
+    }   
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 375px) and (max-width: 479px){
+        #landing-social-icons {
+            margin: 0% 2% 0% 2%;
+    }   
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px){
+        #landing-social-icons {
+            margin: 0% 2% 0% 2%;
+    }   
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 601px) and (max-width: 688px){
+        #landing-social-icons {
+            margin: 0% .8% 0% .8%;
+    }   
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+        #landing-social-icons {
+            margin: 0% 2% 0% 2%;
+    }   
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1999px){
+        #landing-social-icons {
+            margin: 0% 2% 0% 2%;
+    }   
+}

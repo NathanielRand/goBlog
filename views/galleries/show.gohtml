@@ -1,0 +1,39 @@
+{{define "yield"}}
+    <div class="container">
+        <div class="row">
+            {{template "galleryShowTitle" .}}
+        </div>
+        <div class="row">
+            {{template "galleryShowImages" .}}
+        </div>
+    </div>
+{{end}}
+
+{{define "galleryShowTitle"}}
+    <div class="card">
+        <div class="card-content">
+            <a href="/galleries/{{.ID}}/edit" class="btn waves-effect blue-grey-text grey lighten-4 text-lighten-2 waves-light right"><i class="material-icons">settings</i></a>
+            <blockquote>
+              <h5>GALLERY - # {{.ID}}</h5>
+            </blockquote>
+            <div class="card-title center">
+                <h3>{{.Title}}</h3>  
+            </div>
+        </div>
+    </div>
+{{end}}
+
+{{define "galleryShowImages"}}
+        <ul class="collection">
+        {{range .ImagesSplitN 6}}
+            <li id="gallery-show-images" class="col s12 m4 collection-item">
+                {{range .}}
+                    <a href="{{.Path}}">
+                        <img src="{{.Path}}" class="responsive-img">
+                    </a>
+                {{end}}
+            </li>
+        {{end}}
+        </ul>
+    </div>
+{{end}}

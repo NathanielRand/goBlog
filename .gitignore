@@ -1,0 +1,37 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+#other
+node_modules/
+bower_components/
+.tmp
+.sass-cache
+builds/**/images/*
+*.ogg
+*.mp3
+*.mp4
+#*.png
+#*.jpeg
+
+# security / ssl
+*.pem
+*.xxjson
+
+
+# Anything under a tmp folder
+**/tmp/*
+
+# Local Images
+images/**

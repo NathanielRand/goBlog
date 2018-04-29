@@ -1,0 +1,99 @@
+Nathaniel Rand ©2017-2018
+This web application provides an example of Nathaniel Rand's skillset in software development.
+
+----------------------------------
+TECHNOLOGY
+
+- HTML5
+- CSS3
+--- Materialize CSS
+- JavaScript
+- GO 1.9.3 linux/amd64
+--- Gorilla Toolkit
+- GNU bash 4.3.11 (x86_64-pc-linux-gnu)
+- PostgreSQL 9.3.13
+- Google App Engine
+
+----------------------------------
+PROJECT DETAILS
+
+- Account CRUD
+- Login / Logout
+-- Front-end validation
+-- Back-end validation
+-- Cookies
+-- Salt & Pepper Hashing
+- Password Reset (coming soon)
+- Micropost CRUD
+- Image CRUD
+- Video CRUD
+- Broadcast CRUD (coming soon)
+
+----------------------------------
+PROJECT TODO
+
+- Fix galleries index page rendering error
+- Create seperate static page for login/register redirection. Include account resources buttons.
+- New Resource: Microposts
+- New Resource: Videos
+- New Resource: Broadcasts
+
+----------------------------------
+RUN APPLICATION / CONFIGURATION
+
+--- Run Application
+1. Start PostgreSQL DB
+2. Edit Environment Variables
+3. Start "Fresh" dynamic-reloader
+
+
+--- (Start PostgreSQL DB / Enter DB)
+$   sudo service postgresql start
+$   sudo -u postgres psql
+
+
+--- (Edit Environment Variables / Run Fresh Reloader)
+$   cd src/muto
+$   export PATH="$PATH:$GOPATH/bin"
+$   fresh
+$   (ALTERNATIVE) go run main.go
+
+
+--- (Go Packages)
+-- Golang
+-   golang.org/x/crypto/bcrypt
+-   golang.org/x/tools/refactor/rename
+
+
+--- (Third-Party Packages)
+-- Github
+-   github.com/pilu/fresh
+-   github.com/gorilla/mux
+-   github.com/gorilla/schema
+-   github.com/gorilla/csrf
+-   github.com/lib/pq
+-   github.com/jinzhu/gorm
+-   github.com/jinzhu/gorm/dialects/postgres
+
+
+-- Icons
+-   Social: Freepik - http://www.freepik.com
+
+
+--- (Update Go)
+$   sudo rm -rf /opt/go
+$   wget https://dl.google.com/go/go1.9.3.linux-amd64.tar.gz
+$   sudo tar -C /opt -xzf go1.9.3.linux-amd64.tar.gz
+$   go version
+
+
+--- Dynamic Reloading: "Fresh" Third-Party Package
+$   go get github.com/pilu/fresh
+-   Export environment variables (export PATH="$PATH:$GOPATH/bin")
+-   Create runner.conf file
+-   Start application via "fresh" command
+
+--- Update Gcloud SDK
+$   gcloud components update
+-- Revert back to previous version
+$   gcloud components update --version [91.0.1]
