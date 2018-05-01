@@ -25,11 +25,13 @@
                     <ul class="collection with-header">
                         {{range .}}
                             <li class="collection-item avatar">
-                                <span class="title"># {{.ID}}</span>
-                                <p>{{.Title}} <br>
+                                <a href="/galleries/{{.ID}}"><br>
+                                <span class="title red-text text-lighten-3">GoBlog # {{.ID}}</span>
+                                <h5 class='center blue-grey-text'>{{.Title}} <br><br>
                                      <small>{{.CreatedAt}}</small>
-                                </p>
+                                </h5><br>
                                 <a href="/galleries/{{.ID}}" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a>
+                            </a>
                             </li>
                         {{end}}
                     </ul>
