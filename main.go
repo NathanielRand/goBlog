@@ -114,6 +114,14 @@ func main() {
 		requireAccountMw.ApplyFn(galleriesC.ImageDelete)).
 		Methods("POST")
 
+	// Micropost Routes
+	r.Handle("/microposts/new",
+		requireAccountMw.Apply(micropostsC.New)).
+		Methods("GET")
+	r.Handle("/microposts",
+		requireAccountMw.Apply(micropostsC.Create)).
+		Methods("POST")
+
 	b, err := rand.Bytes(32)
 	if err != nil {
 		panic(err)
