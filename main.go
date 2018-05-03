@@ -130,7 +130,7 @@ func main() {
 	r.HandleFunc("/microposts/{id:[0-9]+}/edit",
 		requireAccountMw.ApplyFn(micropostsC.Edit)).
 		Methods("GET").
-		Name(controllers.EditGallery)
+		Name(controllers.EditMicropost)
 	r.HandleFunc("/microposts/{id:[0-9]+}/update",
 		requireAccountMw.ApplyFn(micropostsC.Update)).
 		Methods("POST")

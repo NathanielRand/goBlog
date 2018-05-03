@@ -34,7 +34,7 @@
             <div class="card-title">
                 <h4>Information</h4>
             </div><br>
-            <p><b>Modification:</b> #{{.ID}}</p><br>
+            <p><b>Gallery:</b> #{{.ID}}</p><br>
             <p><b>Created: </b><br>
             {{.CreatedAt}}</p><br>
             <p><b>Updated: </b><br>
@@ -57,8 +57,8 @@
             <form action="/galleries/{{.ID}}/update" method="POST">
                 {{csrfField}}
                 <div class="input-field col s11 m11">
-                    <input id="modification-title" type="text" class="validate" name="title" data-length="48" value="{{.Title}}" pattern=".{1,48}" title="Title missing">
-                    <label for="modification-title" data-error="Too long" data-success="Accepted"></label>
+                    <input id="gallery-title" type="text" class="validate" name="title" data-length="48" value="{{.Title}}" pattern=".{1,48}" title="Title missing">
+                    <label for="gallery-title" data-error="Too long" data-success="Accepted"></label>
                 </div>
                 <div class="card-content right">
                     <button type="submit" class="btn waves-effect waves-light red lighten-3">

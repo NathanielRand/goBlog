@@ -1,0 +1,21 @@
+{{define "yield"}}
+    <div class="container">
+        <div class="row">
+            {{template "micropostShowContent" .}}
+        </div>
+    </div>
+{{end}}
+
+{{define "micropostShowContent"}}
+    <div class="card">
+        <div class="card-content">
+            <blockquote>
+                <h6>ACCOUNT - {{.AccountID}}</h6>
+                <h5>GALLERY - {{.ID}}</h5>
+            </blockquote>
+            <div class="card-title center">
+                <h4>{{.Content}}</h4>
+            </div>
+        </div>
+    </div>
+{{end}}
