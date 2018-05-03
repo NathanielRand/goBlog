@@ -103,7 +103,7 @@
 {{define "galleryImages"}}
     <div class="row">
         {{range .ImagesSplitN 6}}
-            <div class="col s6 m6">
+            <div class="col s6 m4">
                 {{range .}}
                     <a href="{{.Path}}">
                         <img src="{{.Path}}" class="responsive-img">
@@ -140,10 +140,10 @@
 {{end}}
 
 {{define "galleryDeleteImageForm"}}
-    <form action="/galleries/{{.GalleryID}}/images/{{pathEscape .Filename}}/delete" method="POST">
+    <form action="/galleries/{{.GalleryID}}/images/{{pathEscape .Filename}}/delete" method="POST" class="center">
         {{csrfField}}
-        <button type="submit" class="btn btn-flat center-align ">
+        <button type="submit" class="btn btn-flat">
             <i class="material-icons red-text text-lighten-3">close</i>
         </button>
-    </form>
+    </form><hr>
 {{end}}
