@@ -1,0 +1,90 @@
+{{define "yield"}}
+    <div class="container">
+        <div class="row center">
+            <br>
+            <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMTMgNTEyLjAxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAxMyA1MTIuMDEzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNS4wNTIsMC42NzVjLTQuMTgxLTEuNTc5LTguODk2LTAuMzItMTEuODE5LDMuMDcyYy03OS4zMTcsOTIuNTQ0LTE5NC43MDksMTQ1LjYtMzE2LjU4NywxNDUuNmgtMTYuNjQgICAgYy0xNy42NDMsMC0zMiwxNC4zNTctMzIsMzJWMzMwLjY4YzAsMTcuNjQzLDE0LjM1NywzMiwzMiwzMmgxNi42NGMxMjEuODc3LDAsMjM3LjI2OSw1My4wNTYsMzE2LjU4NywxNDUuNiAgICBjMi4wNjksMi40MTEsNS4wMzUsMy43MzMsOC4xMDcsMy43MzNjMS4yNTksMCwyLjQ5Ni0wLjIxMywzLjcxMi0wLjY2MWM0LjE4MS0xLjU1Nyw2Ljk1NS01LjU0Nyw2Ljk1NS0xMC4wMDVWMTAuNjggICAgQzUxMi4wMDcsNi4yMjEsNTA5LjIzMywyLjIzMiw1MDUuMDUyLDAuNjc1eiBNNDkwLjY3Myw0NzMuODY5Yy04Mi4yODMtODQuNTQ0LTE5NS4yMjEtMTMyLjUyMy0zMTQuMDI3LTEzMi41MjNoLTE2LjY0ICAgIGMtNS44NjcsMC0xMC42NjctNC44LTEwLjY2Ny0xMC42NjdWMTgxLjM0N2MwLTUuODY3LDQuOC0xMC42NjcsMTAuNjY3LTEwLjY2N2gxNi42NGMxMTguODI3LDAsMjMxLjc2NS00Ny45NzksMzE0LjAyNy0xMzIuNTIzICAgIFY0NzMuODY5eiIgZmlsbD0iI2VmOWE5YSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTEzOC42NzMsMTcwLjY4SDUzLjM0Yy0yOS40MTksMC01My4zMzMsMjMuOTE1LTUzLjMzMyw1My4zMzN2NjRjMCwyOS40MTksMjMuOTE1LDUzLjMzMyw1My4zMzMsNTMuMzMzaDg1LjMzMyAgICBjNS44ODgsMCwxMC42NjctNC43NzksMTAuNjY3LTEwLjY2N1YxODEuMzQ3QzE0OS4zNCwxNzUuNDU5LDE0NC41NjEsMTcwLjY4LDEzOC42NzMsMTcwLjY4eiBNMTI4LjAwNywzMjAuMDEzSDUzLjM0ICAgIGMtMTcuNjQzLDAtMzItMTQuMzU3LTMyLTMydi02NGMwLTE3LjY0MywxNC4zNTctMzIsMzItMzJoNzQuNjY3VjMyMC4wMTN6IiBmaWxsPSIjZWY5YTlhIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjI4LjkxMyw0NjEuOTIzYy0wLjAyMS0wLjAyMS01LjY3NS02LjMxNS03LjQyNC04LjUxMmMtNC42MjktNS44MDMtOS4wMDMtMTIuMzUyLTEyLjk5Mi0xOS40NzcgICAgYy0xMS41ODQtMjAuNjkzLTE0LjY1Ni00NS4yMjctOC43MDQtNjkuMTJsMi41Ni0xMC4yMTljMS40MjktNS42OTYtMi4wMjctMTEuNDk5LTcuNzY1LTEyLjkyOCAgICBjLTUuNjMyLTEuNDA4LTExLjQ5OSwyLjAyNy0xMi45MjgsNy43NjVsLTIuNTYsMTAuMjE5Yy03LjI3NSwyOS4xNjMtMy40MzUsNTkuMjQzLDEwLjc5NSw4NC42OTMgICAgYzQuNTY1LDguMTI4LDkuNTc5LDE1LjY4LDE0Ljk3NiwyMi40YzEuNzI4LDIuMTc2LDYuODI3LDcuOTE1LDcuMTA0LDguMDIxYzIuNjg4LDQuNzE1LDAuODk2LDguODk2LDAsMTAuNDk2ICAgIGMtMC45MTcsMS42MjEtMy42NjksNS40MTktOS4zMDEsNS40MTloLTI5Ljc4MWMtMTUuMTA0LDAtMjcuOTQ3LTEwLjMwNC0zMS4zMTctMjUuMzg3bC0zNS4yNDMtMTM3LjI1OSAgICBjLTEuNDUxLTUuNzE3LTcuMjk2LTkuMTczLTEyLjk3MS03LjY4Yy01LjY5NiwxLjQ1MS05LjEzMSw3LjI1My03LjY4LDEyLjk3MWwzNS4xNTcsMTM2LjkxNyAgICBjNS40NCwyNC41NzYsMjYuODU5LDQxLjc3MSw1Mi4wNTMsNDEuNzcxaDI5Ljc4MWMxMS42OTEsMCwyMi4wOC02LjA1OSwyNy44NC0xNi4yMzUgICAgQzIzNi4yNzMsNDg1LjYwMywyMzYuMTI0LDQ3My41NDksMjI4LjkxMyw0NjEuOTIzeiIgZmlsbD0iI2VmOWE5YSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUzLjM0LDIzNC42OGMtNS44ODgsMC0xMC42NjcsNC43NzktMTAuNjY3LDEwLjY2N3YyMS4zMzNjMCw1Ljg4OCw0Ljc3OSwxMC42NjcsMTAuNjY3LDEwLjY2NyAgICBzMTAuNjY3LTQuNzc5LDEwLjY2Ny0xMC42Njd2LTIxLjMzM0M2NC4wMDcsMjM5LjQ1OSw1OS4yMjgsMjM0LjY4LDUzLjM0LDIzNC42OHoiIGZpbGw9IiNlZjlhOWEiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik05Ni4wMDcsMjM0LjY4Yy01Ljg4OCwwLTEwLjY2Nyw0Ljc3OS0xMC42NjcsMTAuNjY3djIxLjMzM2MwLDUuODg4LDQuNzc5LDEwLjY2NywxMC42NjcsMTAuNjY3ICAgIHMxMC42NjctNC43NzksMTAuNjY3LTEwLjY2N3YtMjEuMzMzQzEwNi42NzMsMjM5LjQ1OSwxMDEuODk1LDIzNC42OCw5Ni4wMDcsMjM0LjY4eiIgZmlsbD0iI2VmOWE5YSIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+            <h4 class="blue-grey-text text-lighten-1">MICROPOST</h4><br>
+            <h5 class="blue-grey-text text-lighten-1">EDIT</h5><br>
+        </div>
+        <div class="row">
+            {{template "micropostShowButton" .}}
+        </div>
+        <div class="row">
+            {{template "micropostEditForm" .}}
+        </div>
+        <div class="row">
+            {{template "micropostEditInformation" .}}
+        </div>
+        <div class="row">
+            {{template "micropostDeleteForm" .}}
+        </div>
+    </div>
+{{end}}
+
+{{define "micropostShowButton"}}
+    <a href="/microposts/{{.ID}}" class="waves-effect waves-light btn btn-flat blue-grey-text left" type="submit" name="action"><i class="material-icons">keyboard_arrow_left</i> Go to Micropost</a>
+{{end}}
+
+{{define "micropostEditForm"}}
+    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
+        <div class="card-content">
+            <div class="card-title">
+                <h4>Content</h4>
+            </div>
+            <form action="/micropost/{{.ID}}/update" method="POST">
+                {{csrfField}}
+                <div class="input-field col s11 m11">
+                    <input id="micropost-title" type="text" class="validate" name="title" data-length="66" value="{{.Content}}" pattern=".{1,66}" title="Title missing">
+                    <label for="micropost-title" data-error="Too long" data-success="Accepted"></label>
+                </div>
+                <div class="card-content right">
+                    <button type="submit" class="btn waves-effect waves-light red lighten-3">
+                        <i class="material-icons">save</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{end}}
+
+{{define "micropostEditInformation"}}
+    <div class="col s12 m8 offset-m2 card z-depth-1">
+        <div class="card-content">
+            <div class="card-title">
+                <h4>Information</h4>
+            </div><br>
+            <p><b>Micropost:</b> #{{.ID}}</p><br>
+            <p><b>Created: </b><br>
+            {{.CreatedAt}}</p><br>
+            <p><b>Updated: </b><br>
+            {{.UpdatedAt}}</p>
+        </div>
+        <div class="card-action right-align">
+            <a href="/microposts/{{.ID}}" class="btn waves-effect waves-light red lighten-3">
+                <i class="material-icons">visibility</i>
+            </a>
+        </div>
+    </div>
+{{end}}
+
+{{define "micropostDeleteForm"}}
+    <div class="card col s12 m8 offset-m2">
+        <div class="card-content">
+            <div class="card-title">
+                <h4>Delete</h4>
+            </div><br>
+            <form action="/microposts/{{.ID}}/delete" method="POST">
+                {{csrfField}}
+                <button type="submit" class="btn btn-small waves-effect waves-light red lighten-3">
+                    <i class="material-icons left">delete_forever</i> DELETE
+                </button>
+            </form>
+        </div>
+        <div class="card-action">
+            <a class="waves-effect waves-light grey-text text-darken-2 right">
+               <i class="material-icons">help_outline</i>
+            </a>
+        </div>
+    </div>
+{{end}}
+

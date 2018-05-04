@@ -36,6 +36,7 @@ func main() {
 		models.WithAccount(cfg.Pepper, cfg.HMACKey),
 		models.WithGallery(),
 		models.WithImage(),
+		models.WithMicropost(),
 	)
 
 	if err != nil {
@@ -50,6 +51,7 @@ func main() {
 	staticC := controllers.NewStatic()
 	accountsC := controllers.NewAccounts(services.Account)
 	galleriesC := controllers.NewGalleries(services.Gallery, services.Image, r)
+	micropostsC := controllers.NewMicroposts(services.Micropost, r)
 
 	// Middleware - Check Account Logged In
 	AccountMw := middleware.Account{
@@ -113,6 +115,31 @@ func main() {
 	r.HandleFunc("/galleries/{id:[0-9]+}/images/{filename}/delete",
 		requireAccountMw.ApplyFn(galleriesC.ImageDelete)).
 		Methods("POST")
+
+	// Micropost Routes
+	r.Handle("/microposts/new",
+		requireAccountMw.Apply(micropostsC.New)).
+		Methods("GET")
+	r.Handle("/microposts",
+		requireAccountMw.ApplyFn(micropostsC.Create)).
+		Methods("POST")
+	r.HandleFunc("/microposts/{id:[0-9]+}",
+		micropostsC.Show).
+		Methods("GET").
+		Name(controllers.ShowMicropost)
+	r.HandleFunc("/microposts/{id:[0-9]+}/edit",
+		requireAccountMw.ApplyFn(micropostsC.Edit)).
+		Methods("GET").
+		Name(controllers.EditMicropost)
+	r.HandleFunc("/microposts/{id:[0-9]+}/update",
+		requireAccountMw.ApplyFn(micropostsC.Update)).
+		Methods("POST")
+	r.HandleFunc("/microposts/{id:[0-9]+}/delete",
+		requireAccountMw.ApplyFn(micropostsC.Delete)).
+		Methods("POST")
+	r.HandleFunc("/microposts",
+		requireAccountMw.ApplyFn(micropostsC.Index)).
+		Methods("GET")
 
 	b, err := rand.Bytes(32)
 	if err != nil {

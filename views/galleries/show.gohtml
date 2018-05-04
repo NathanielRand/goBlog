@@ -1,6 +1,12 @@
 {{define "yield"}}
     <div class="container">
         <div class="row">
+            <blockquote>
+                <h6>ACCOUNT - {{.AccountID}}</h6>
+                <h5>GALLERY - {{.ID}}</h5>
+            </blockquote>
+        </div>
+        <div class="row">
             {{template "galleryShowTitle" .}}
         </div>
         <div class="row">
@@ -12,11 +18,8 @@
 {{define "galleryShowTitle"}}
     <div class="card">
         <div class="card-content">
-            <blockquote>
-              <h5>GALLERY - # {{.ID}}</h5>
-            </blockquote>
             <div class="card-title center">
-                <h4>{{.Title}}</h4>  
+                <h4>{{.Title}}</h4>
             </div>
         </div>
     </div>

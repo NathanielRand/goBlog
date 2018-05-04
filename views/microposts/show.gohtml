@@ -1,0 +1,24 @@
+{{define "yield"}}
+    <div class="container">
+        <div class="row">
+            <blockquote>
+                <h6>ACCOUNT - {{.AccountID}}</h6>
+                <h5>MICROPOST - {{.ID}}</h5>
+            </blockquote>
+        </div>
+        <div class="row">
+            {{template "micropostShowContent" .}}
+        </div>
+    </div>
+{{end}}
+
+{{define "micropostShowContent"}}
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title center">
+                <h4>{{.Content}}</h4>
+            </div>
+        </div>
+    </div>
+    <a href="/microposts/{{.ID}}/edit" class="btn waves-effect blue-grey-text grey lighten-4 text-lighten-2 waves-light right"><i class="material-icons">settings</i></a>
+{{end}}

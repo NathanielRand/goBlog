@@ -6,10 +6,11 @@ import (
 )
 
 type Services struct {
-	Gallery GalleryService
-	Account AccountService
-	Image   ImageService
-	db      *gorm.DB
+	Account   AccountService
+	Gallery   GalleryService
+	Image     ImageService
+	Micropost MicropostService
+	db        *gorm.DB
 }
 
 type ServicesConfig func(*Services) error
@@ -71,16 +72,23 @@ func WithImage() ServicesConfig {
 	}
 }
 
+func WithMicropost() ServicesConfig {
+	return func(s *Services) error {
+		s.Micropost = NewMicropostService(s.db)
+		return nil
+	}
+}
+
 func (s *Services) Close() error {
 	return s.db.Close()
 }
 
 func (s *Services) AutoMigrate() error {
-	return s.db.AutoMigrate(&Account{}, &Gallery{}).Error
+	return s.db.AutoMigrate(&Account{}, &Gallery{}, &Micropost{}).Error
 }
 
 func (s *Services) DestructiveReset() error {
-	err := s.db.DropTableIfExists(&Account{}, &Gallery{}).Error
+	err := s.db.DropTableIfExists(&Account{}, &Gallery{}, &Micropost{}).Error
 	if err != nil {
 		return err
 	}
