@@ -233,7 +233,7 @@ func (m *Microposts) micropostByID(w http.ResponseWriter,
 	if err != nil {
 		switch err {
 		case models.ErrNotFound:
-			http.Error(w, "micropost not found", http.StatusNotFound)
+			http.Error(w, "Micropost not found", http.StatusNotFound)
 		default:
 			log.Println(err)
 			http.Error(w, "Hmmm..Something went wrong.",
