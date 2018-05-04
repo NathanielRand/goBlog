@@ -111,7 +111,7 @@ func (m *Microposts) Create(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// Generate a URL using the router and the names ShowMicropost route.
-	url, err := m.r.Get(EditMicropost).URL("id", strconv.Itoa(int(micropost.ID)))
+	url, err := m.r.Get(ShowMicropost).URL("id", strconv.Itoa(int(micropost.ID)))
 	// Check for errors creating the URL.
 	if err != nil {
 		log.Println(err)

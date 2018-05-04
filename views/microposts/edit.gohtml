@@ -25,6 +25,28 @@
     <a href="/microposts/{{.ID}}" class="waves-effect waves-light btn btn-flat blue-grey-text left" type="submit" name="action"><i class="material-icons">keyboard_arrow_left</i> Go to Micropost</a>
 {{end}}
 
+{{define "micropostEditForm"}}
+    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
+        <div class="card-content">
+            <div class="card-title">
+                <h4>Content</h4>
+            </div>
+            <form action="/micropost/{{.ID}}/update" method="POST">
+                {{csrfField}}
+                <div class="input-field col s11 m11">
+                    <input id="micropost-title" type="text" class="validate" name="title" data-length="66" value="{{.Content}}" pattern=".{1,66}" title="Title missing">
+                    <label for="micropost-title" data-error="Too long" data-success="Accepted"></label>
+                </div>
+                <div class="card-content right">
+                    <button type="submit" class="btn waves-effect waves-light red lighten-3">
+                        <i class="material-icons">save</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{end}}
+
 {{define "micropostEditInformation"}}
     <div class="col s12 m8 offset-m2 card z-depth-1">
         <div class="card-content">
@@ -44,30 +66,6 @@
         </div>
     </div>
 {{end}}
-
-{{define "micropostEditForm"}}
-    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
-        <div class="card-content">
-            <div class="card-title">
-                <h4>Content</h4>
-            </div>
-            <form action="/microposts/{{.ID}}/update" method="POST">
-                {{csrfField}}
-                <div class="input-field col s11 m11">
-                    <input id="micropost-title" type="text" class="validate" name="title" data-length="66" value="{{.Title}}" pattern=".{1,66}" title="Title missing">
-                    <label for="micropost-title" data-error="Too long" data-success="Accepted"></label>
-                </div>
-                <div class="card-content right">
-                    <button type="submit" class="btn waves-effect waves-light red lighten-3">
-                        <i class="material-icons">save</i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-{{end}}
-
-
 
 {{define "micropostDeleteForm"}}
     <div class="card col s12 m8 offset-m2">

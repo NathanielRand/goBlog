@@ -123,7 +123,7 @@ func main() {
 	r.Handle("/microposts",
 		requireAccountMw.ApplyFn(micropostsC.Create)).
 		Methods("POST")
-	r.HandleFunc("/microposts/{id:[0-9]+",
+	r.HandleFunc("/microposts/{id:[0-9]+}",
 		micropostsC.Show).
 		Methods("GET").
 		Name(controllers.ShowMicropost)
