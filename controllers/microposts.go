@@ -193,12 +193,14 @@ func (m *Microposts) Delete(w http.ResponseWriter, r *http.Request) {
 		m.EditView.Render(w, r, vd)
 		return
 	}
-	url, err := m.r.Get(IndexMicroposts).URL()
-	if err != nil {
-		http.Redirect(w, r, "/", http.StatusFound)
-		return
-	}
-	http.Redirect(w, r, url.Path, http.StatusFound)
+	// ERROR: Request could not be proxied
+	//
+	// url, err := m.r.Get(IndexMicroposts).URL()
+	// if err != nil {
+	// 	http.Redirect(w, r, "/", http.StatusFound)
+	// 	return
+	// }
+	http.Redirect(w, r, "/microposts", http.StatusFound)
 }
 
 // micropostByID will parse the "id" variable from the
