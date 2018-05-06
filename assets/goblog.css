@@ -1,4 +1,4 @@
-/*MUTO HTML Elements*/
+/*GoBlog HTML Elements*/
 body {
     background-color: #eceff1;
 }
@@ -31,7 +31,7 @@ input[type=range]+.thumb .value {
     background-color: rgb(96, 125, 139);
 }
 
-/*MUTO Custom ID Elements*/
+/*GoBlog Custom ID Elements*/
 
 #search {
     text-align: center;
@@ -60,7 +60,7 @@ input[type=range]+.thumb .value {
     letter-spacing: 0.16em;
 }
 
-#muto-alert{
+#goblog-alert{
     margin-top: 5%;
     
 }

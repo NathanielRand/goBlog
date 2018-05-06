@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"muto/models"
-	"muto/rand"
-	"muto/views"
+	"GoBlog/models"
+	"GoBlog/rand"
+	"GoBlog/views"
 )
 
 func NewAccounts(as models.AccountService) *Accounts {

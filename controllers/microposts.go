@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"muto/context"
-	"muto/models"
-	"muto/views"
+	"GoBlog/context"
+	"GoBlog/models"
+	"GoBlog/views"
 
 	"github.com/gorilla/mux"
 )

@@ -4,8 +4,8 @@ import (
 	"regexp"
 	"strings"
 
-	"muto/hash"
-	"muto/rand"
+	"GoBlog/hash"
+	"GoBlog/rand"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"

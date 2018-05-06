@@ -1,6 +1,6 @@
 package controllers
 
-import "muto/views"
+import "GoBlog/views"
 
 func NewStatic() *Static {
 	return &Static{
@@ -12,8 +12,6 @@ func NewStatic() *Static {
 			"materialize", "static/faq"),
 		FaqQuestionView: views.NewView(
 			"materialize", "static/faq-question"),
-		PulseView: views.NewView(
-			"materialize", "static/pulse"),
 		CollectionView: views.NewView(
 			"materialize", "static/collection"),
 		DashboardView: views.NewView(
@@ -26,7 +24,6 @@ type Static struct {
 	ContactView     *views.View
 	FaqView         *views.View
 	FaqQuestionView *views.View
-	PulseView       *views.View
 	CollectionView  *views.View
 	DashboardView   *views.View
 }

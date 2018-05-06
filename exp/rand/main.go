@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"muto/rand"
+
+	"GoBlog/rand"
 )
 
 func main() {

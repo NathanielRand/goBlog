@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"muto/context"
-	"muto/models"
+	"GoBlog/context"
+	"GoBlog/models"
 )
 
 // User middleware will lookup the current user via their

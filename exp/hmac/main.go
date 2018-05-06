@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"muto/hash"
+
+	"GoBlog/hash"
 )
 
 func main() {

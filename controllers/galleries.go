@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"muto/context"
-	"muto/models"
-	"muto/views"
+	"GoBlog/context"
+	"GoBlog/models"
+	"GoBlog/views"
 
 	"github.com/gorilla/mux"
 )
@@ -220,7 +220,7 @@ func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 	// If no errors, use the URL and redirect
 	// to the path portion of that URL.
 	// We do not need the entire URL in case
-	// application is hosted on custom domain (i.e. "www.muto.world").
+	// application is hosted on custom domain (i.e. "www.domain.com").
 	http.Redirect(w, r, url.Path, http.StatusFound)
 
 }

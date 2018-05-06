@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"muto/controllers"
-	"muto/middleware"
-	"muto/models"
-	"muto/rand"
+	"GoBlog/controllers"
+	"GoBlog/middleware"
+	"GoBlog/models"
+	"GoBlog/rand"
 
 	"github.com/gorilla/csrf"
 	"github.com/gorilla/mux"

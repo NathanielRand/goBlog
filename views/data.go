@@ -3,7 +3,7 @@ package views
 import (
 	"log"
 
-	"muto/models"
+	"GoBlog/models"
 )
 
 const (
