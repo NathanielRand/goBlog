@@ -47,11 +47,11 @@
 			
 			<!--MUTO JavaScript-->
 			<script>
+			    M.AutoInit();
 			    
 			    var elem = document.querySelector('.fixed-action-btn');
                 var instance = M.FloatingActionButton.init(elem, options);
                 
-                // Or with jQuery
                 
                 $(document).ready(function(){
                 $('.fixed-action-btn').floatingActionButton();
@@ -65,10 +65,7 @@
 			    // Initialize collapse button
 			    $(".button-collapse").sideNav();
 			    
-                $(document).ready(function(){
-                    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-                    $('.modal').modal();
-                });
+              
                 
                 $('.chips-placeholder').material_chip({
                     placeholder: 'Styles, Types, etc..',

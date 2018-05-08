@@ -73,12 +73,27 @@
             <div class="card-title">
                 <h4>Delete</h4>
             </div><br>
-            <form action="/microposts/{{.ID}}/delete" method="POST">
-                {{csrfField}}
-                <button type="submit" class="btn btn-small waves-effect waves-light red lighten-3">
-                    <i class="material-icons left">delete_forever</i> DELETE
-                </button>
-            </form>
+            
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">DELETE</a>
+            
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="/microposts/{{.ID}}/delete" method="POST">
+                        {{csrfField}}
+                        <button type="submit" class="modal-close btn btn-small waves-effect waves-light red lighten-3">
+                            <i class="material-icons left">delete_forever</i> DELETE
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            
         </div>
         <div class="card-action">
             <a class="waves-effect waves-light grey-text text-darken-2 right">
