@@ -72,14 +72,17 @@ $   (ALTERNATIVE) go run main.go
 
 --- (Third-Party Packages)
 -- Github
--   github.com/pilu/fresh
 -   github.com/gorilla/mux
 -   github.com/gorilla/schema
 -   github.com/gorilla/csrf
+-   github.com/pilu/fresh
+-   github.com/pilu/config
 -   github.com/lib/pq
 -   github.com/jinzhu/gorm
 -   github.com/jinzhu/gorm/dialects/postgres
-
+-   github.com/howeyc/fsnotify
+-   github.com/mattn/go-isatty
+-   github.com/mattn/go-colorable
 
 -- Icons
 -   Social: Freepik - http://www.freepik.com
@@ -102,3 +105,48 @@ $   go get github.com/pilu/fresh
 $   gcloud components update
 -- Revert back to previous version
 $   gcloud components update --version [91.0.1]
+
+--- Production Server GCP
+1. Initialize a server
+2. Install PostgreSQL
+    - SSH into instance
+    - $ sudo apt-get update
+    - $ sudo apt-get install postgresql postgresql-contrib
+    - $ sudo -u postgres psql
+    - $ ALTER USER postgres WITH ENCRYPTED PASSWORD 'xxxxxxx';
+    - $ sudo nano /etc/postgresql/9.5/main/pg_hba.conf
+        - local all postgres md5 <-- local all postgres peer
+    - $ sudo service postgresql restart
+    - $ psql -U postgres
+    - $ CREATE DATABASE goblog_prod;
+3. Install Go
+    - SSH into instance
+    - $ sudo curl -O https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
+    - $ sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
+    - $ export PATH=$PATH:/usr/local/go/bin
+    - $ cd ~
+    - $ mkdir -p go/src
+    - $ go version
+4. Build/Setup Caddy
+    - SSH into instance
+    - $ cd ~/go/src
+    - $ go get -u github.com/mholt/caddy
+    - $ go get -u github.com/caddyserver/builds
+    - $ cd ~/go/src/github.com/mholt/caddy/caddy
+    - $ go run build.go -goos=linux -goarch=amd64
+    - $ ./caddy
+    - $ sudo cp ./caddy /usr/local/bin/
+    - $ sudo nano /etc/systemd/system/caddy.service
+    - $ sudo systemctl daemon-reload
+    - $ sudo systemctl enable caddy.service
+    - $ mkdir /root/app
+    - $ sudo service caddy restart
+    - $ journalctl -r
+    - $ q (to exit)
+    - $ sudo service caddy stop
+    - $ ctrl+d (log out of instance server)
+    - $ touch CaddyFile
+    - Define domain and handling of incomng web requests to that domian
+    
+
+5. Create service & deploy script that builds and deploys our app and runs it
