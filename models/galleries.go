@@ -6,17 +6,33 @@ import (
 
 // GALLERY - ERRORS
 const (
-	ErrAccountIDRequired modelError = "models: account ID is required"
-	ErrTitleRequired     modelError = "models: title is required"
+	ErrAccountIDRequired   modelError = "models: account ID is required"
+	ErrReasonRequired      modelError = "models: reason is required"
+	ErrDoctorRequired      modelError = "models: doctor is required"
+	ErrCostRequired        modelError = "models: cost is required"
+	ErrOfficeRequired      modelError = "models: office is required"
+	ErrAddressRequired     modelError = "models: address is required"
+	ErrCityRequired        modelError = "models: city is required"
+	ErrStateRequired       modelError = "models: state is required"
+	ErrZipCodeRequired     modelError = "models: zipcode is required"
+	ErrPhoneNumberRequired modelError = "models: phone number is required"
 )
 
 var _ GalleryDB = &galleryGorm{}
 
 type Gallery struct {
 	gorm.Model
-	AccountID uint    `gorm:"not_null;index"`
-	Title     string  `gorm:"not_null"`
-	Images    []Image `gorm:"-"`
+	AccountID   uint    `gorm:"not_null;index"`
+	Reason      string  `gorm:"not_null"`
+	Cost        int     `gorm:"not_null"`
+	Doctor      string  `gorm:"not_null"`
+	Office      string  `gorm:"not_null"`
+	Address     string  `gorm:"not_null"`
+	City        string  `gorm:"not_null"`
+	State       string  `gorm:"not_null"`
+	ZipCode     int     `gorm:"not_null"`
+	PhoneNumber string  `gorm:"not_null"`
+	Images      []Image `gorm:"-"`
 }
 
 type GalleryService interface {
@@ -67,9 +83,60 @@ func (gv *galleryValidator) accountIDRequired(g *Gallery) error {
 }
 
 // GALLERY - VALIDATION
-func (gv *galleryValidator) titleRequired(g *Gallery) error {
-	if g.Title == "" {
-		return ErrTitleRequired
+func (gv *galleryValidator) reasonRequired(g *Gallery) error {
+	if g.Reason == "" {
+		return ErrReasonRequired
+	}
+	return nil
+}
+
+// VISIT - VALIDATION
+func (gv *galleryValidator) doctorRequired(g *Gallery) error {
+	if g.Doctor == "" {
+		return ErrDoctorRequired
+	}
+	return nil
+}
+
+// VISIT - VALIDATION
+func (gv *galleryValidator) costRequired(g *Gallery) error {
+	if g.Cost == 0 {
+		return ErrCostRequired
+	}
+	return nil
+}
+
+func (gv *galleryValidator) addressRequired(g *Gallery) error {
+	if g.Address == "" {
+		return ErrAddressRequired
+	}
+	return nil
+}
+
+func (gv *galleryValidator) cityRequired(g *Gallery) error {
+	if g.City == "" {
+		return ErrCityRequired
+	}
+	return nil
+}
+
+func (gv *galleryValidator) stateRequired(g *Gallery) error {
+	if g.State == "" {
+		return ErrStateRequired
+	}
+	return nil
+}
+
+func (gv *galleryValidator) zipcodeRequired(g *Gallery) error {
+	if g.ZipCode == 0 {
+		return ErrZipCodeRequired
+	}
+	return nil
+}
+
+func (gv *galleryValidator) phonenumberRequired(g *Gallery) error {
+	if g.PhoneNumber == "" {
+		return ErrPhoneNumberRequired
 	}
 	return nil
 }
@@ -78,7 +145,14 @@ func (gv *galleryValidator) titleRequired(g *Gallery) error {
 func (gv *galleryValidator) Create(gallery *Gallery) error {
 	err := runGalleryValFns(gallery,
 		gv.accountIDRequired,
-		gv.titleRequired)
+		gv.reasonRequired,
+		gv.doctorRequired,
+		gv.costRequired,
+		gv.addressRequired,
+		gv.cityRequired,
+		gv.stateRequired,
+		gv.zipcodeRequired,
+		gv.phonenumberRequired)
 	if err != nil {
 		return err
 	}
@@ -89,7 +163,14 @@ func (gv *galleryValidator) Create(gallery *Gallery) error {
 func (gv *galleryValidator) Update(gallery *Gallery) error {
 	err := runGalleryValFns(gallery,
 		gv.accountIDRequired,
-		gv.titleRequired)
+		gv.reasonRequired,
+		gv.doctorRequired,
+		gv.costRequired,
+		gv.addressRequired,
+		gv.cityRequired,
+		gv.stateRequired,
+		gv.zipcodeRequired,
+		gv.phonenumberRequired)
 	if err != nil {
 		return err
 	}

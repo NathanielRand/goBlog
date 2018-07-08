@@ -4,8 +4,8 @@ import (
 	"regexp"
 	"strings"
 
-	"GoBlog/hash"
-	"GoBlog/rand"
+	"coverd/hash"
+	"coverd/rand"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
@@ -406,6 +406,16 @@ func (ag *accountGorm) ByID(id uint) (*Account, error) {
 	}
 	return &account, nil
 }
+
+// func (ag *accountGorm) ByIndex(id uint) (*Account, error) {
+// 	// var accounts []Account
+// 	// db.Find(&accounts)
+// 	// if db.Error != nil {
+// 	// 	panic(db.Error)
+// 	// }
+// 	// fmt.Println("Retrieved", len(accounts), "accounts.")
+// 	// fmt.Println(accounts)
+// }
 
 // GORM - ByEmail will lookup an account with the provided email.
 func (ag *accountGorm) ByEmail(email string) (*Account, error) {

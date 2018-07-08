@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"path/filepath"
 
-	"GoBlog/context"
+	"coverd/context"
 
 	"github.com/gorilla/csrf"
 )

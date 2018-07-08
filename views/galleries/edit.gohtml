@@ -1,11 +1,6 @@
 {{define "yield"}}
     <div class="container">
-        <div class="row center">
-            <br>
-            <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMzIDMzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMyAzMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiPgo8Zz4KCTxwYXRoIGQ9Ik0yMC42MjYsMzNoLTguMjUzYy0wLjI3NiwwLTAuNS0wLjIyNC0wLjUtMC41di05LjcwMUgxMS43NmMtMS40NywwLTIuNjY1LTEuMTk1LTIuNjY1LTIuNjY1di02LjQ0MiAgIGMwLTEuNDcsMS4xOTUtMi42NjUsMi42NjUtMi42NjVoOS40NzljMS40NywwLDIuNjY1LDEuMTk1LDIuNjY1LDIuNjY1djYuNDQyYzAsMS40NjktMS4xOTUsMi42NjUtMi42NjUsMi42NjVoLTAuMTEzVjMyLjUgICBDMjEuMTI2LDMyLjc3NiwyMC45MDMsMzMsMjAuNjI2LDMzeiBNMTIuODc0LDMyaDcuMjUzdi05LjcwMWMwLTAuMjc2LDAuMjI0LTAuNSwwLjUtMC41aDAuNjEzYzAuOTE4LDAsMS42NjUtMC43NDcsMS42NjUtMS42NjUgICB2LTYuNDQyYzAtMC45MTgtMC43NDctMS42NjUtMS42NjUtMS42NjVIMTEuNzZjLTAuOTE4LDAtMS42NjUsMC43NDctMS42NjUsMS42NjV2Ni40NDJjMCwwLjkxOCwwLjc0NywxLjY2NSwxLjY2NSwxLjY2NWgwLjYxMyAgIGMwLjI3NiwwLDAuNSwwLjIyNCwwLjUsMC41VjMyeiIgZmlsbD0iI2VmOWE5YSIvPgoJPHBhdGggZD0iTTE2LjUsOS44NjJjLTIuNzE5LDAtNC45MzEtMi4yMTItNC45MzEtNC45MzFTMTMuNzgxLDAsMTYuNSwwYzIuNzIsMCw0LjkzMiwyLjIxMiw0LjkzMiw0LjkzMVMxOS4yMTksOS44NjIsMTYuNSw5Ljg2MnogICAgTTE2LjUsMWMtMi4xNjcsMC0zLjkzMSwxLjc2NC0zLjkzMSwzLjkzMXMxLjc2NCwzLjkzMSwzLjkzMSwzLjkzMWMyLjE2OCwwLDMuOTMyLTEuNzY0LDMuOTMyLTMuOTMxUzE4LjY2NywxLDE2LjUsMXoiIGZpbGw9IiNlZjlhOWEiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
-            <h4 class="blue-grey-text text-lighten-1">GALLERY</h4><br>
-            <h5 class="blue-grey-text text-lighten-1">EDIT</h5><br>
-        </div>
+        {{template "visitEditInfo" .}}
         <div class="row">
             {{template "galleryShowButton" .}}
         </div>
@@ -24,8 +19,23 @@
     </div>
 {{end}}
 
+{{define "visitEditInfo"}}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <blockquote>
+                <h6>Customer - #{{.AccountID}}</h6>
+                <h5>Visit - #{{.ID}}</h5>
+            </blockquote>
+        </div>
+    </div>
+    <div class="row center">
+        <h3>EDIT</h3>
+    </div>
+{{end}}
+
 {{define "galleryShowButton"}}
-    <a href="/galleries/{{.ID}}" class="waves-effect waves-light btn btn-flat blue-grey-text left" type="submit" name="action"><i class="material-icons">keyboard_arrow_left</i> Go to Gallery</a>
+    <a href="/galleries/{{.ID}}" class="btn btn-flat indigo-text text-lighten-2 left" type="submit" name="action">
+        <i class="material-icons left">keyboard_arrow_left</i> Back to Visit</a>
 {{end}}
 
 {{define "galleryEditInformation"}}
@@ -34,52 +44,124 @@
             <div class="card-title">
                 <h4>Information</h4>
             </div><br>
-            <p><b>Gallery:</b> #{{.ID}}</p><br>
-            <p><b>Created: </b><br>
-            {{.CreatedAt}}</p><br>
-            <p><b>Updated: </b><br>
-            {{.UpdatedAt}}</p>
+            <h6><b>Gallery:</b> #{{.ID}}</h6><br>
+            <h6><b>Created: </b><br>
+            {{.CreatedAt}}</h6><br>
+            <h6><b>Updated: </b><br>
+            {{.UpdatedAt}}</h6>
         </div>
-        <div class="card-action right-align">
-            <a href="/galleries/{{.ID}}" class="btn waves-effect waves-light red lighten-3">
-                <i class="material-icons">visibility</i>
+        <div class="card-action center">
+            <a href="/galleries/{{.ID}}" class="btn waves-effect waves-light indigo lighten-3">
+                VIEW VISIT
             </a>
         </div>
     </div>
 {{end}}
 
 {{define "galleryEditForm"}}
+    <form action="/galleries/{{.ID}}/update" method="POST">
+    {{csrfField}}
     <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
         <div class="card-content">
             <div class="card-title">
-                <h4>Title</h4>
+                <h4>Reason</h4>
             </div>
-            <form action="/galleries/{{.ID}}/update" method="POST">
-                {{csrfField}}
-                <div class="input-field col s11 m11">
-                    <input id="gallery-title" type="text" class="validate" name="title" data-length="48" value="{{.Title}}" pattern=".{1,48}" title="Title missing">
-                    <label for="gallery-title" data-error="Too long" data-success="Accepted"></label>
-                </div>
-                <div class="card-content right">
-                    <button type="submit" class="btn waves-effect waves-light red lighten-3">
-                        <i class="material-icons">save</i>
-                    </button>
-                </div>
-            </form>
+            <div class="input-field col s11">
+                <i class="material-icons prefix indigo-text text-lighten-1">accessibility</i>
+                <input id="gallery-reason" type="text" class="validate" name="reason" data-length="48" value="{{.Reason}}" pattern=".{1,48}" title="Reason missing">
+                <label for="gallery-reason" data-error="Too long" data-success="Accepted"></label>
+            </div>
+            <div class="card-content right">
+                <button type="submit" class="btn waves-effect waves-light indigo lighten-3">
+                    <i class="material-icons">save</i>
+                </button>
+            </div>
         </div>
     </div>
+    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
+        <div class="card-content">
+            <div class="card-title">
+                <h4>Doctor</h4>
+            </div>
+            <div class="row">
+                <div class="input-field col s11">
+                    <i class="material-icons prefix indigo-text text-lighten-1">assignment_ind</i>
+                    <input id="gallery-doctor" type="text" class="validate" name="doctor" data-length="48" value="{{.Doctor}}" pattern=".{1,48}" title="Doctor missing">
+                    <label for="gallery-doctor" data-error="Too long" data-success="Accepted">Doctor</label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s11">
+                    <i class="material-icons prefix indigo-text text-lighten-1">location_city</i>
+                    <input id="gallery-title" type="text" class="validate"  name="address" data-length="99" value="{{.Address}}">
+                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">Address</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <input id="gallery-title" type="text" class="validate" name="city" pattern="[A-Za-z]{,66}" data-length="66" value="{{.City}}">
+                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">City</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <input id="gallery-title" type="text" class="validate" name="state" pattern="[A-Za-z]{,52}" data-length="52" value="{{.State}}">
+                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">State</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <input id="gallery-title" type="text" class="validate" name="zipcode" pattern="[0-9]{5}" data-length="5" value="{{.ZipCode}}">
+                    <label for="gallery-title" data-error="Invalid. 5 Digit Zip Codes Please" data-success="Accepted">Zip Code (5 Digit)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s11">
+                    <i class="material-icons prefix indigo-text text-lighten-1">phone</i>
+                    <input id="gallery-title" type="tel" class="validate" name="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-length="12" value="{{.PhoneNumber}}">
+                    <label for="gallery-title" data-error="Invalid. (i.e 888-888-8888)" data-success="Accepted">Phone Number</label>
+                </div>
+            </div>
+            <div class="card-content right">
+                <button type="submit" class="btn waves-effect waves-light indigo lighten-3">
+                    <i class="material-icons">save</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
+        <div class="card-content">
+            <div class="card-title">
+                <h4>Cost</h4>
+            </div>
+            <div class="row">
+                <div class="input-field col s11">
+                    <i class="material-icons prefix indigo-text text-lighten-1">attach_money</i>
+                    <input id="gallery-cost" type="text" class="validate" name="cost" data-length="48" value="{{.Cost}}" pattern=".{1,48}" title="Doctor missing">
+                    <label for="gallery-cost" data-error="Too long" data-success="Accepted"></label>
+                </div>
+            </div>
+            <div class="card-content right">
+                <button type="submit" class="btn waves-effect waves-light indigo lighten-3">
+                    <i class="material-icons">save</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    </form>
 {{end}}
 
 {{define "galleryImageForm"}}
     <div class="col s12 m10 offset-m1 card hoverable z-depth-1">
         <div class="card-content">
-            <div class="card-title">
-                <h4>Images</h4>
+            <div class="card-title center">
+                <h5>UPLOAD BILLS</h5><br>
             </div>
+            <div class="divider"></div><br>
             <form action="/galleries/{{.ID}}/images" method="POST" enctype="multipart/form-data">
                 {{csrfField}}
                 <div class="file-field input-field">
-                    <div class="btn">
+                    <div class="btn indigo lighten-2">
                         <span>File</span>
                         <input type="file" id="images" name="images" multiple="multiple">
                     </div>
@@ -88,13 +170,17 @@
                     </div>
                 </div>
                 <div class="row right-align">
-                    <button type="submit" class="btn waves-effect waves-light red lighten-3">
+                    <button type="submit" class="btn waves-effect waves-light orange lighten-2">
                         <i class="material-icons">file_upload</i>
                     </button>
                 </div>
             </form>
             <div class="card-action">
-                {{template "galleryImages" .}}
+                {{if .Images}}
+                    {{template "galleryImages" .}}
+                {{else}}
+                    <h6 class="center indigo-text text-lighten-3">NO BILLS UPLOADED</h6>
+                {{end}}
             </div>
         </div>
     </div>
@@ -103,7 +189,7 @@
 {{define "galleryImages"}}
     <div class="row">
         {{range .ImagesSplitN 6}}
-            <div class="col s6 m4">
+            <div class="col s6 m6">
                 {{range .}}
                     <a href="{{.Path}}">
                         <img src="{{.Path}}" class="responsive-img">
@@ -113,28 +199,28 @@
             </div>
         {{end}}
     </div>
-    <div class="row">
-        <small>*We recommend 3-5 images per modification.</small>
-    </div>
 {{end}}
 
 {{define "galleryDeleteForm"}}
-    <div class="card col s12 m8 offset-m2">
-        <div class="card-content">
-            <div class="card-title">
-                <h4>Delete</h4>
+    <div class="card red lighten-3 col s12 m8 offset-m2">
+        <div class="card-content center">
+            <div class="card-title white-text">
+                <h4 class="white-text">DANGER ZONE</h4>
+                <div class="divider"></div><br>
+                <h5 class="white-text">DELETE</h5>
+                <p>THIS ACTION CANNOT BE UNDONE</p>
             </div><br>
             <form action="/galleries/{{.ID}}/delete" method="POST">
                 {{csrfField}}
-                <button type="submit" class="btn btn-small waves-effect waves-light red lighten-3">
+                <button type="submit" class="btn btn-large waves-effect waves-light white red-text text-lighten-3">
                     <i class="material-icons left">delete_forever</i> DELETE
                 </button>
             </form>
         </div>
         <div class="card-action">
             <a class="waves-effect waves-light grey-text text-darken-2 right">
-               <i class="material-icons">help_outline</i>
-            </a>
+               <i class="material-icons white-text">help_outline</i>
+            </a><br>
         </div>
     </div>
 {{end}}
@@ -142,8 +228,8 @@
 {{define "galleryDeleteImageForm"}}
     <form action="/galleries/{{.GalleryID}}/images/{{pathEscape .Filename}}/delete" method="POST" class="center">
         {{csrfField}}
-        <button type="submit" class="btn btn-flat">
-            <i class="material-icons red-text text-lighten-3">close</i>
+        <button type="submit" class="btn red lighten-3">
+            <i class="material-icons white-text text-lighten-2">close</i>
         </button>
-    </form><hr>
+    </form>
 {{end}}

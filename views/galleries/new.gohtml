@@ -3,34 +3,135 @@
         <div class="row center">
             <br>
             <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMDcgNTEyLjAwNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwNyA1MTIuMDA3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwMS4zMzMsMC4wMDRIMTAuNjY3QzQuNzc5LDAuMDA0LDAsNC43ODIsMCwxMC42N3Y0OTAuNjY3YzAsNS44ODgsNC43NzksMTAuNjY3LDEwLjY2NywxMC42NjdoNDkwLjY2NyAgICBjNS44ODgsMCwxMC42NjctNC43NzksMTAuNjY3LTEwLjY2N1YxMC42N0M1MTIsNC43ODIsNTA3LjIyMSwwLjAwNCw1MDEuMzMzLDAuMDA0eiBNNDkwLjY2Nyw0OTAuNjdIMjEuMzMzVjIxLjMzN2g0NjkuMzMzVjQ5MC42NyAgICB6IiBmaWxsPSIjZWY5YTlhIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTA5LjU4OSwzNzguNDU3TDM2MC4yNTYsMTk1LjkyOWMtMi4wMDUtMi40NzUtNS4wMzUtMy45MjUtOC4yMTMtMy45MjVjMCwwLTAuMDIxLDAtMC4wNDMsMCAgICBjLTMuMTU3LDAtNi4xNjUsMS40MDgtOC4xNzEsMy44MTlsLTUwLjkwMSw2MS4wNTZjLTMuNzc2LDQuNTQ0LTMuMTc5LDExLjI2NCwxLjM0NCwxNS4wNGM0LjU0NCwzLjc1NSwxMS4yNjQsMy4xNzksMTUuMDE5LTEuMzY1ICAgIGw0Mi42MjQtNTEuMTM2TDQ5My4wNzcsMzkxLjk0YzIuMTEyLDIuNTgxLDUuMTYzLDMuOTI1LDguMjU2LDMuOTI1YzIuMzY4LDAsNC43NzktMC43ODksNi43NjMtMi4zODkgICAgQzUxMi42NjEsMzg5LjcyMSw1MTMuMzIzLDM4My4wMDEsNTA5LjU4OSwzNzguNDU3eiIgZmlsbD0iI2VmOWE5YSIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM4MS41ODksMzQ1LjI2MmwtMTkyLTIzNC42NjdjLTQuMDMyLTQuOTQ5LTEyLjQ1OS00Ljk0OS0xNi40OTEsMEwyLjQzMiwzMTkuMTkzYy0zLjczMyw0LjU2NS0zLjA3MiwxMS4yODUsMS40OTMsMTUuMDE5ICAgIGM0LjU0NCwzLjcxMiwxMS4yNjQsMy4wNTEsMTQuOTk3LTEuNTE1TDE4MS4zMzMsMTM0LjE5bDE4My43NDQsMjI0LjU1NWMyLjExMiwyLjU4MSw1LjE2MywzLjkyNSw4LjI1NiwzLjkyNSAgICBjMi4zNjgsMCw0Ljc3OS0wLjc4OSw2Ljc2My0yLjM4OUMzODQuNjYxLDM1Ni41MjYsMzg1LjMyMywzNDkuODA2LDM4MS41ODksMzQ1LjI2MnoiIGZpbGw9IiNlZjlhOWEiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
-            <h4 class="blue-grey-text text-lighten-1">GALLERY</h4>  
+            <h3 class="indigo-text text-lighten-2">VISIT</h3>  
         </div>
-        <div class="row">
-            {{template "galleryForm"}}
+        {{template "visitInformation"}}
+        {{template "visitForm"}}
+    </div>
+{{end}}
+
+{{define "visitInformation"}}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <blockquote>
+                <h4>INFO</h4>
+                <p>Please fill out the form below to begin processing your recent visit. <br><br>
+                You will be asked to include an image of your bill in the next step. Please have this ready.</p>
+            </blockquote>
         </div>
     </div>
 {{end}}
 
-{{define "galleryForm"}}
-    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
-        <div class="card-content">
-            <div class="card-title">
-                <h6>What is the gallery title?</h6>
-            </div><br>
-            <form action="/galleries" method="POST">
-                {{csrfField}}
-                <div class="row">
-                    <div class="input-field">
-                        <input id="gallery-title" type="text" class="validate" name="title" data-length="48">
-                        <label for="gallery-title" data-error="Too long" data-success="Accepted">Title</label>
+{{define "visitForm"}}
+    <div class="row">
+        <form action="/galleries" method="POST">
+            {{csrfField}}
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h6>What is the reason for your visit?</h6>
+                            </div>
+                            <div class="divider"></div><br>
+                            <div class="row">
+                                <div class="input-field col s11 m10">
+                                    <i class="material-icons prefix indigo-text text-lighten-1">accessibility</i>
+                                    <input id="gallery-title" type="text" class="validate" name="reason" data-length="48">
+                                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">Reason</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="center"><br>
-                    <button type="submit" class="btn waves-effect waves-light red lighten-3">
-                        <i class="material-icons">keyboard_arrow_right</i>
-                    </button>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h6>What is your visit's total bill cost?</h6>
+                            </div>
+                            <div class="divider"></div><br>
+                            <div class="row">
+                                <div class="input-field col s11 m10">
+                                    <i class="material-icons prefix indigo-text text-lighten-1">attach_money</i>
+                                    <input id="gallery-cost" type="text" class="validate" name="cost" data-length="48">
+                                    <label for="gallery-cost" data-error="Invalid" data-success="Accepted">Cost</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </form>
-        </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h6>Who is the doctor providing medical services?</h6>
+                            </div>
+                            <div class="divider"></div><br>
+                            <div class="row">
+                                <div class="input-field col s11 m8">
+                                    <i class="material-icons prefix indigo-text text-lighten-1">assignment_ind</i>
+                                    <input id="gallery-title" type="text" class="validate" name="doctor" data-length="48">
+                                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">Doctor</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h6>Medical office information</h6>
+                            </div>
+                            <div class="divider"></div><br>
+                            <div class="row">
+                                <div class="input-field col s11 m10">
+                                    <i class="material-icons prefix indigo-text text-lighten-1">location_city</i>
+                                    <input id="gallery-title" type="text" class="validate" name="address" data-length="99">
+                                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">Address</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s11 m10">
+                                    <input id="gallery-title" type="text" class="validate" name="city" pattern="[A-Za-z]{,66}" data-length="66">
+                                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">City</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s11 m10">
+                                    <input id="gallery-title" type="text" class="validate" name="state" pattern="[A-Za-z]{,52}" data-length="52">
+                                    <label for="gallery-title" data-error="Invalid" data-success="Accepted">State</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s11 m10">
+                                    <input id="gallery-title" type="text" class="validate" name="zipcode" pattern="[0-9]{5}" data-length="5">
+                                    <label for="gallery-title" data-error="Invalid. 5 Digit Zip Codes Please" data-success="Accepted">Zip Code (5 Digit)</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s11 m10">
+                                    <i class="material-icons prefix indigo-text text-lighten-1">phone</i>
+                                    <input id="gallery-title" type="tel" class="validate" name="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-length="12">
+                                    <label for="gallery-title" data-error="Invalid. (i.e 888-888-8888)" data-success="Accepted">Phone Number</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 center">
+                <button type="submit" class="waves-effect btn btn-large indigo lighten-2 z-depth-2">
+                   <i class="material-icons">keyboard_arrow_right</i> 
+                </button>
+            </div>
+        </form>
     </div>
 {{end}}

@@ -1,6 +1,6 @@
 package controllers
 
-import "GoBlog/views"
+import "coverd/views"
 
 func NewStatic() *Static {
 	return &Static{
@@ -16,6 +16,12 @@ func NewStatic() *Static {
 			"materialize", "static/collection"),
 		DashboardView: views.NewView(
 			"materialize", "static/dashboard"),
+		NetworkView: views.NewView(
+			"materialize", "static/network"),
+		BillingView: views.NewView(
+			"materialize", "static/billing"),
+		SettingsView: views.NewView(
+			"materialize", "static/settings"),
 	}
 }
 
@@ -26,4 +32,7 @@ type Static struct {
 	FaqQuestionView *views.View
 	CollectionView  *views.View
 	DashboardView   *views.View
+	NetworkView     *views.View
+	BillingView     *views.View
+	SettingsView    *views.View
 }

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"GoBlog/models"
-	"GoBlog/rand"
-	"GoBlog/views"
+	"coverd/models"
+	"coverd/rand"
+	"coverd/views"
 )
 
 func NewAccounts(as models.AccountService) *Accounts {
@@ -100,6 +100,9 @@ func (a *Accounts) Create(w http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(w, r, "/dashboard", http.StatusFound)
 }
+
+// func (a *Accounts) Index(w http.ResponseWriter, r *http.Request) {
+// }
 
 // CookieTest displays cookie info on the screen to the current account.
 func (a *Accounts) CookieTest(w http.ResponseWriter, r *http.Request) {

@@ -1,0 +1,214 @@
+{{define "yield"}}
+	<div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-title center"><br>
+                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MC42NjcgNDkwLjY2NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkwLjY2NyA0OTAuNjY3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4OC42ODMsMjE0LjYxN2MtMS42LTEyLjQzNy04LjY0LTIzLjI3NS0xOS4zMDctMjkuNjk2Yy0xMC40OTYtNi4zMTUtMjMuMTI1LTcuNTA5LTM0LjgzNy0zLjExNSAgICBjLTkuMjgsMy40NTYtMTkuNzEyLTEuMzIzLTIzLjkzNi0xMC43NTJjLTQuOTcxLTExLjE1Ny0xMS4wOTMtMjEuODI0LTE4LjIxOS0zMS43MDFjLTYuMTY1LTguNTk3LTUuMDEzLTE5Ljg0LDIuNjQ1LTI2LjE1NSAgICBjOS40OTMtNy44MDgsMTQuNzg0LTE5LjMyOCwxNC41NzEtMzEuNjM3Yy0wLjI1Ni0xMi40NTktNi4xMjMtMjMuOTc5LTE2LjE0OS0zMS41NzNjLTE2LjI5OS0xMi4zNTItMzQuMDkxLTIyLjYzNS01Mi44ODUtMzAuNTQ5ICAgIGMtMTEuNjI3LTQuODg1LTI0LjU5Ny00LjI0NS0zNS41NDEsMS43OTJjLTEwLjc1Miw1LjkzMS0xOC4wNjksMTYuMjc3LTIwLjA5NiwyOC4zNzNjLTEuNjQzLDkuODU2LTEwLjgzNywxNi4zNjMtMjEuNDQsMTUuMzYgICAgYy0xMS45MDQtMS4yNTktMjQuMzQxLTEuMjU5LTM2LjMwOSwwYy0xMC42NDUsMC45ODEtMTkuNzc2LTUuNTA0LTIxLjQxOS0xNS4zNmMtMi4wMDUtMTIuMTE3LTkuMzQ0LTIyLjQ2NC0yMC4wOTYtMjguMzczICAgIGMtMTAuOTQ0LTYuMDE2LTIzLjkxNS02LjY3Ny0zNS41NDEtMS43OTJjLTE4Ljc5NSw3LjkxNS0zNi41ODcsMTguMTk3LTUyLjg4NSwzMC41NDljLTEwLjAyNyw3LjU5NS0xNS44OTMsMTkuMDkzLTE2LjE0OSwzMS41NzMgICAgYy0wLjIzNSwxMi4zMDksNS4wNzcsMjMuODI5LDE0LjU5MiwzMS42OGM3LjY1OSw2LjI5Myw4Ljc4OSwxNy41MzYsMi42MjQsMjYuMTEyYy03LjEyNSw5Ljg5OS0xMy4yNjksMjAuNTY1LTE4LjIxOSwzMS42OCAgICBjLTQuMjY3LDkuNDcyLTE0LjgwNSwxNC4yMDgtMjQuMTcxLDEwLjY4OGMtMTEuNDc3LTQuMzA5LTI0LjEwNy0zLjE1Ny0zNC42MjQsMy4xNzljLTEwLjY2Nyw2LjQ0My0xNy43MDcsMTcuMjU5LTE5LjMwNywyOS42NzUgICAgQzAuNjYxLDIyNC43MDgsMCwyMzUuMDU1LDAsMjQ1LjMzN2MwLDEwLjI4MywwLjY2MSwyMC42MjksMS45ODQsMzAuNzJjMS42LDEyLjQzNyw4LjY0LDIzLjI3NSwxOS4zMDcsMjkuNjk2ICAgIGMxMC40OTYsNi4zMzYsMjMuMTQ3LDcuNTMxLDM0LjgzNywzLjExNWM5LjMwMS0zLjQ3NywxOS43MzMsMS4zMjMsMjMuOTM2LDEwLjc1MmM0Ljk3MSwxMS4xNTcsMTEuMDkzLDIxLjgyNCwxOC4yMTksMzEuNzAxICAgIGM2LjE2NSw4LjU5Nyw1LjAxMywxOS44NC0yLjY0NSwyNi4xNTVjLTkuNDkzLDcuODA4LTE0Ljc4NCwxOS4zMjgtMTQuNTcxLDMxLjYzN2MwLjI1NiwxMi40NTksNi4xMjMsMjMuOTc5LDE2LjE0OSwzMS41NzMgICAgYzE2LjI5OSwxMi4zNTIsMzQuMDkxLDIyLjYzNSw1Mi44ODUsMzAuNTQ5YzUuMTYzLDIuMTU1LDEwLjU4MSwzLjI0MywxNS45NzksMy4yNDNjNi43NjMsMCwxMy40ODMtMS42ODUsMTkuNTYzLTUuMDU2ICAgIGMxMC43NTItNS45MzEsMTguMDY5LTE2LjI3NywyMC4wOTYtMjguMzczYzEuNjQzLTkuODU2LDEwLjc5NS0xNi40NDgsMjEuNDQtMTUuMzZjMTEuOTA0LDEuMjU5LDI0LjM0MSwxLjI1OSwzNi4zMDksMCAgICBjMTAuNTgxLTEuMTA5LDE5Ljc3Niw1LjUwNCwyMS40MTksMTUuMzZjMi4wMDUsMTIuMTE3LDkuMzQ0LDIyLjQ2NCwyMC4wOTYsMjguMzczYzEwLjk0NCw2LjAxNiwyMy45MTUsNi42NzcsMzUuNTQxLDEuNzkyICAgIGMxOC43OTUtNy45MTUsMzYuNTg3LTE4LjE5Nyw1Mi44ODUtMzAuNTQ5YzEwLjAyNy03LjU5NSwxNS44OTMtMTkuMDkzLDE2LjE0OS0zMS41NzNjMC4yMTMtMTIuMzA5LTUuMDk5LTIzLjgyOS0xNC41OTItMzEuNjU5ICAgIGMtNy42NTktNi4yOTMtOC43ODktMTcuNTM2LTIuNjI0LTI2LjExMmM3LjEyNS05Ljg5OSwxMy4yNjktMjAuNTY1LDE4LjIxOS0zMS42OGM0LjI0NS05LjQ1MSwxNC42NTYtMTQuMjUxLDIzLjk1Ny0xMC43NzMgICAgbDMuNzMzLTkuOTg0bC0zLjUyLDEwLjA2OWMxMS41Miw0LjM1MiwyNC4xMDcsMy4xNzksMzQuNjI0LTMuMTc5YzEwLjY2Ny02LjQ0MywxNy43MDctMTcuMjU5LDE5LjMwNy0yOS42NzUgICAgYzEuMzIzLTEwLjEzMywxLjk4NC0yMC40OCwxLjk4NC0zMC43NjNDNDkwLjY2NywyMzUuMDU1LDQ5MC4wMDUsMjI0LjcwOCw0ODguNjgzLDIxNC42MTd6IE00NjcuNTQxLDI3My4zNjkgICAgYy0wLjc0Nyw1LjkzMS00LjExNywxMS4wNzItOS4xNzMsMTQuMTIzYy00Ljg2NCwyLjk0NC0xMC43MzEsMy40NzctMTYuMjEzLDEuNDUxbC0wLjE5Mi0wLjA2NCAgICBjLTE5LjU4NC03LjMxNy00MS45ODQsMi4zNDctNTAuODU5LDIyLjA1OWMtNC4zNzMsOS44MTMtOS43NzEsMTkuMi0xNi4wNjQsMjcuOTQ3Yy0xMi43NzksMTcuODM1LTEwLjAyNyw0MS40OTMsNi40NDMsNTUuMDYxICAgIGM0LjQxNiwzLjYyNyw2Ljg2OSw5LjAwMyw2Ljc2MywxNC43MmMtMC4xMjgsNS45MzEtMi45MDEsMTEuNDEzLTcuNjgsMTUuMDE5Yy0xNC45MTIsMTEuMjg1LTMxLjEyNSwyMC42NzItNDguMjk5LDI3Ljg4MyAgICBjLTUuNTQ3LDIuMzI1LTExLjc1NSwyLjA0OC0xNi45Ni0wLjgzMmMtNS4wNzctMi43OTUtOC4zODQtNy40ODgtOS4zNDQtMTMuMjA1Yy0zLjUyLTIxLjEyLTIyLjYxMy0zNS4yNDMtNDQuNjkzLTMzLjA0NSAgICBjLTEwLjQ5NiwxLjA4OC0yMS4zOTcsMS4wODgtMzEuODUxLDBjLTIyLjA4LTIuNDMyLTQxLjE5NSwxMS44ODMtNDQuNzE1LDMzLjA0NWMtMC45MzksNS43MTctNC4yNjcsMTAuNDExLTkuMzQ0LDEzLjIwNSAgICBjLTUuMjA1LDIuOTAxLTExLjQxMywzLjE3OS0xNi45NiwwLjgzMmMtMTcuMTczLTcuMjExLTMzLjQwOC0xNi41OTctNDguMjk5LTI3Ljg4M2MtNC43NTctMy42MDUtNy41NTItOS4wODgtNy42OC0xNC45OTcgICAgYy0wLjEwNy01LjcxNywyLjM2OC0xMS4wOTMsNi43ODQtMTQuNzQxYzE2LjQ2OS0xMy41NjgsMTkuMjIxLTM3LjIyNyw2LjQyMS01NS4wNjFjLTYuMjkzLTguNzQ3LTExLjY5MS0xOC4xMzMtMTYuMDg1LTI3Ljk2OCAgICBjLTYuODA1LTE1LjIxMS0yMS42OTYtMjQuNDQ4LTM3LjI2OS0yNC40NDhjLTQuNjI5LDAtOS4zMDEsMC44MTEtMTMuODQ1LDIuNDk2Yy01LjM1NSwyLjAyNy0xMS4yMjEsMS40NzItMTYuMTA3LTEuNDcyICAgIGMtNS4wNzctMy4wNTEtOC40MjctOC4xOTItOS4xNzMtMTQuMTQ0Yy0xLjIxNi05LjIxNi0xLjgxMy0xOC42NDUtMS44MTMtMjguMDExYzAtOS4zNjUsMC41OTctMTguNzk1LDEuODEzLTI4LjA1MyAgICBjMC43NDctNS45MzEsNC4xMTctMTEuMDcyLDkuMTczLTE0LjEyM2M0Ljg0My0yLjkyMywxMC43MDktMy40OTksMTYuMzQxLTEuMzg3YzE5LjcxMiw3LjM2LDQyLjA0OC0yLjMwNCw1MC45MDEtMjIuMDM3ICAgIGM0LjM3My05LjgxMyw5Ljc3MS0xOS4yLDE2LjA2NC0yNy45NDdjMTIuOC0xNy44MzUsMTAuMDQ4LTQxLjUxNS02LjQ0My01NS4wNjFjLTQuNDE2LTMuNjI3LTYuODY5LTkuMDAzLTYuNzYzLTE0LjcyICAgIGMwLjEyOC01LjkzMSwyLjkyMy0xMS4zOTIsNy42OC0xNS4wMTljMTQuODkxLTExLjI4NSwzMS4xMjUtMjAuNjcyLDQ4LjI5OS0yNy44ODNjNS41NDctMi4zNDcsMTEuNzU1LTIuMDY5LDE2Ljk2LDAuODExICAgIGM1LjA3NywyLjc5NSw4LjM4NCw3LjQ4OCw5LjM0NCwxMy4yMDVjMy41NDEsMjEuMTQxLDIyLjc0MSwzNS4zNzEsNDQuNjkzLDMzLjA4OGMxMC40OTYtMS4wODgsMjEuMzk3LTEuMDg4LDMxLjg1MSwwICAgIGMyMi4wNTksMi4yNjEsNDEuMTk1LTExLjkwNCw0NC43MTUtMzMuMDQ1YzAuOTM5LTUuNzE3LDQuMjY3LTEwLjQxMSw5LjM0NC0xMy4yMDVjNS4yMDUtMi45MDEsMTEuNDEzLTMuMTc5LDE2Ljk2LTAuODMyICAgIGMxNy4xNzMsNy4yMTEsMzMuNDA4LDE2LjU5Nyw0OC4yOTksMjcuODgzYzQuNzU3LDMuNjA1LDcuNTUyLDkuMDg4LDcuNjgsMTQuOTk3YzAuMTA3LDUuNzE3LTIuMzY4LDExLjA5My02Ljc4NCwxNC43NDEgICAgYy0xNi40NjksMTMuNTY4LTE5LjIyMSwzNy4yMjctNi40MjEsNTUuMDYxYzYuMjkzLDguNzQ3LDExLjY5MSwxOC4xMzMsMTYuMDg1LDI3Ljk2OGM4LjgzMiwxOS43MzMsMzEuMTY4LDI5LjM1NSw1MS4xMTUsMjEuOTMxICAgIGM1LjMzMy0yLjA0OCwxMS4yMjEtMS40NzIsMTYuMTA3LDEuNDcyYzUuMDc3LDMuMDUxLDguNDI3LDguMTkyLDkuMTczLDE0LjE0NGMxLjIxNiw5LjIxNiwxLjgxMywxOC42NDUsMS44MTMsMjguMDExICAgIEM0NjkuMzMzLDI1NC43MDMsNDY4LjczNiwyNjQuMTMyLDQ2Ny41NDEsMjczLjM2OXoiIGZpbGw9IiM1YzZiYzAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNDUuMzMzLDE0OS4zMzdjLTUyLjkyOCwwLTk2LDQzLjA3Mi05Niw5NmMwLDUyLjkyOCw0My4wNzIsOTYsOTYsOTZjNTIuOTI4LDAsOTYtNDMuMDcyLDk2LTk2ICAgIEMzNDEuMzMzLDE5Mi40MDksMjk4LjI2MSwxNDkuMzM3LDI0NS4zMzMsMTQ5LjMzN3ogTTI0NS4zMzMsMzIwLjAwNGMtNDEuMTczLDAtNzQuNjY3LTMzLjQ5My03NC42NjctNzQuNjY3ICAgIHMzMy40OTMtNzQuNjY3LDc0LjY2Ny03NC42NjdTMzIwLDIwNC4xNjQsMzIwLDI0NS4zMzdTMjg2LjUwNywzMjAuMDA0LDI0NS4zMzMsMzIwLjAwNHoiIGZpbGw9IiM1YzZiYzAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                <h3 class="indigo-text text-lighten-2">SETTINGS</h3>
+            </div>
+        </div>
+    </div>
+	 <div class="row">
+			<div class="col s12 m8 l6 offset-m2 offset-l3">
+				<ul class="collapsible popout" data-collapsible="accordion">
+					 <li>
+						<div class="collapsible-header"><i class="material-icons indigo-text text-lighten-2">lock_outline</i><h6>CREDENTIALS</h6></div>
+						<div class="collapsible-body">
+							<span><h5 class=" indigo-text text-lighten-2">CREDENTIALS</h5></span>
+							<div class='divider'></div><br>
+							<div class="center">
+								 <i class="material-icons medium indigo-text text-lighten-2">lock_outline</i>
+							</div>
+							<div class="row center">
+								 <form class="col s12">
+										<div class="row">
+											<div class="input-field col s12">
+												 <input id="email" type="email" class="validate">
+												 <label for="email">Email</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												 <input id="password" type="password" class="validate">
+												 <label for="password">Password</label>
+											</div>
+										</div>
+										<button class="btn waves-effect waves-light z-depth-3" type="submit" name="action">SAVE
+											<i class="material-icons right">save</i>
+										</button>
+								 </form>
+							</div>
+						</div>
+					 </li>
+					 <li>
+						<div class="collapsible-header"><i class="material-icons indigo-text text-lighten-2">person_outline</i><h6>MEMBERSHIP</h6></div>
+						<div class="collapsible-body">
+							<span><h5>MEMBERSHIP</h5></span>
+							<div class="divider"></div><br>
+							<div class="center">
+								 <i class="material-icons medium  indigo-text text-lighten-2">person_outline</i>
+							</div><br>
+							<div class="row">
+								 <form action="#">
+										<div class="col s3 offset-s1 pull-s1">
+											<i class="material-icons large grey-text text-darken-1">donut_large</i>
+										</div>
+										<h6>BASIC</h6>
+										<p>FREE</p>
+										<p>
+										 <input type="checkbox" id="membership-basic" />
+										 <label for="membership-basic">BASIC</label>
+										</p><br>
+										<div class="divider"></div><br>
+										<div class="col s3 offset-s1 pull-s1">
+											<i class="material-icons large yellow-text text-darken-2">donut_small</i>
+										</div>
+										<h6>ELITE</h6>
+										<p>$12/annual</p>
+										<p>
+										 <input type="checkbox" id="membership-elite" />
+										 <label for="membership-elite">ELITE</label>
+										</p>
+								 </form>
+							</div>
+						</div>
+					 </li>
+					 <li>
+						<div class="collapsible-header"><i class="material-icons indigo-text text-lighten-2">security</i><h6>SECURITY</h6></div>
+						<div class="collapsible-body">
+							<span><h5>SECURITY</h5></span>
+							<div class='divider'></div><br>
+							<div class="center">
+								 <i class="material-icons medium indigo-text text-lighten-2">security</i>
+							</div><br>
+							<span>Security Question, 2-Step Authentication (sms, authenticator, email)</span>
+						</div>
+					 </li>
+					 <li>
+						<div class="collapsible-header"><i class="material-icons indigo-text text-lighten-2">notifications</i><h6>NOTIFICATIONS</h6></div>
+						<div class="collapsible-body">
+							<span><h5>NOTIFICATIONS</h5></span>
+							<div class='divider'></div><br>
+							<div class="center">
+								 <i class="material-icons medium indigo-text text-lighten-2">notifications</i>
+							</div><br>
+							<h6>ACTIVITY</h6><br>
+							 <div class="row">
+								 <form action="#">
+										<br>
+										<div class="col s3 offset-s1 pull-s1">
+											<i class="material-icons medium indigo-text text-lighten-2">mail_outline</i>
+										</div>
+										<h6>REQUESTS</h6>
+										<p>
+										 <input type="checkbox" id="settings-activity-requests" />
+										 <label for="settings-activity-requests"></label>
+										</p><br>
+										<div class="divider"></div><br>
+										<br>
+										<div class="col s3 offset-s1 pull-s1">
+											<i class="material-icons medium indigo-text text-lighten-2">people_outline</i>
+										</div>
+										<h6>CONNECTIONS</h6>
+										<p>
+										 <input type="checkbox" id="settings-activity-connections" />
+										 <label for="settings-activity-connections"></label>
+										</p><br>
+										<div class="divider"></div><br>
+										<br>
+										<div class="col s3 offset-s1 pull-s1">
+											<i class="material-icons medium grey-text text-darken-1">sentiment_neutral</i>
+										</div>
+										<h6>RATINGS</h6>
+										<p>
+										 <input type="checkbox" id="settings-activity-ratings" />
+										 <label for="settings-activity-ratings"></label>
+										</p><br>
+										<div class="divider"></div><br>
+										<br>
+										<div class="col s3 offset-s1 pull-s1">
+											<i class="material-icons medium grey-text text-darken-1">comment</i>
+										</div>
+										<h6>COMMENTS</h6>
+										<p>
+										 <input type="checkbox" id="settings-activity-comments" />
+										 <label for="settings-activity-comments"></label>
+										</p><br>
+										<div class="divider"></div><br>
+								 </form>
+							</div><br>
+							<h6>DELIVERY METHOD</h6><br>
+							<div class="switch">
+								 <label>
+										<i class="material-icons grey-text text-darken-2 small">mail_outline</i> EMAIL
+									<input type="checkbox">
+									<span class="lever right"></span>
+								 </label>
+							</div><br>
+							<div class='divider'></div><br>
+							<div class="switch">
+								 <label>
+									<i class="material-icons grey-text text-darken-2 small">smartphone</i> PUSH
+									<input type="checkbox">
+									<span class="lever right"></span>
+								 </label>
+							</div><br>
+							<div class='divider'></div><br>
+							<div class="switch">
+								 <label>
+									 <i class="material-icons grey-text text-darken-2 small">sms</i> SMS/TEXT
+									<input type="checkbox">
+									<span class="lever right"></span>
+								 </label>
+							</div><br>
+						</div>
+					 </li>
+					 <li>
+						<div class="collapsible-header"><i class="material-icons indigo-text text-lighten-2">credit_card</i><h6>BILLING</h6></div>
+						<div class="collapsible-body">
+							<span><h5>BILLING</h5></span>
+							<div class='divider'></div><br>
+							<div class="center">
+								 <i class="material-icons medium indigo-text text-lighten-2">credit_card</i>
+							</div><br>
+							<div class="row">
+								 <form class="col s12">
+										<div class="row">
+										 <div class="input-field col s12 m8 l6 offset-m2 offset-l3">
+											<input id="cardnumber" type="text" class="validate">
+											<label for="cardnumber">Card Number</label>
+										 </div>
+										 <div class="input-field col s12 m8 l6 offset-m2 offset-l3">
+											<input id="cardexp" type="text" class="validate">
+											<label for="cardexp">Card Expiration</label>
+										 </div>
+											<div class="input-field col s8 m6 l4 offset-m2 offset-l3">
+												<input id="zipcdoe" type="text" class="validate">
+												<label for="zipcode">Zip Code</label>
+											</div>
+										</div>
+										<div class="row center">
+											<button class="btn waves-effect waves-light z-depth-3" type="submit" name="action">SAVE
+												<i class="material-icons right">save</i>
+											</button>
+										</div>
+								 </form>
+							</div>
+						</div>
+					 </li>
+					 <li>
+							<div class="collapsible-header"><i class="material-icons indigo-text text-lighten-2">visibility_off</i><h6>PRIVACY</h6></div>
+							<div class="collapsible-body">
+								<span><h5>PRIVACY</h5></span>
+								<div class='divider'></div><br>
+								<div class="center">
+									 <i class="material-icons medium indigo-text text-lighten-2">visibility_off</i>
+								</div><br>
+								<div class="row">
+
+								</div>
+							</div>
+					 </li>
+				</ul>
+			</div>
+	 </div>
+{{end}}

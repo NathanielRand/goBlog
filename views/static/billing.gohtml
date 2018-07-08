@@ -1,38 +1,38 @@
 {{define "yield"}}
     
-        {{template "accountDashboardNavigation"}}
-        {{template "accountDashboardImages"}}
+        {{template "accountNetworkNavigation"}}
+        {{template "accountNetworkImages"}}
     
 {{end}}
 
-{{define "accountDashboardNavigation"}}
+{{define "accountNetworkNavigation"}}
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-title center"><br>
-                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMzLjA1NCAzMy4wNTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMzLjA1NCAzMy4wNTQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8cGF0aCBkPSJNMjkuMTI1LDMuMjkySDMuOTI4Yy0wLjI3NiwwLTAuNS0wLjIyNC0wLjUtMC41czAuMjI0LTAuNSwwLjUtMC41aDI1LjE5N2MwLjI3NiwwLDAuNSwwLjIyNCwwLjUsMC41ICAgUzI5LjQwMSwzLjI5MiwyOS4xMjUsMy4yOTJ6IiBmaWxsPSIjNWM2YmMwIi8+Cgk8Zz4KCQk8Zz4KCQkJPHBhdGggZD0iTTMwLjU1NCwzMC43NjFIMi41Yy0xLjM3OSwwLTIuNS0xLjEyMi0yLjUtMi41VjguMDA1YzAtMS4zNzgsMS4xMjEtMi41LDIuNS0yLjVoMjguMDU0YzEuMzc5LDAsMi41LDEuMTIyLDIuNSwyLjUgICAgIHYyMC4yNTdDMzMuMDU0LDI5LjY0LDMxLjkzMywzMC43NjEsMzAuNTU0LDMwLjc2MXogTTIuNSw2LjUwNWMtMC44MjcsMC0xLjUsMC42NzMtMS41LDEuNXYyMC4yNTdjMCwwLjgyNywwLjY3MywxLjUsMS41LDEuNSAgICAgaDI4LjA1NGMwLjgyNywwLDEuNS0wLjY3MywxLjUtMS41VjguMDA1YzAtMC44MjctMC42NzMtMS41LTEuNS0xLjVIMi41eiIgZmlsbD0iIzVjNmJjMCIvPgoJCQk8cGF0aCBkPSJNMjUuMTE3LDYuNTA1SDcuOTM3Yy0wLjI3NiwwLTAuNS0wLjIyNC0wLjUtMC41czAuMjI0LTAuNSwwLjUtMC41aDE3LjE4MWMwLjI3NiwwLDAuNSwwLjIyNCwwLjUsMC41ICAgICBTMjUuMzk0LDYuNTA1LDI1LjExNyw2LjUwNXoiIGZpbGw9IiM1YzZiYzAiLz4KCQk8L2c+CgkJPHBhdGggZD0iTTE3LjA5MSwyNS44MzdINS4zMjdjLTAuMjc2LDAtMC41LTAuMjI0LTAuNS0wLjV2LTEuMzM4YzAtMC44MzQsMC40ODctMS42MDUsMS4yNDItMS45NjJsMi42NDgtMS42MjggICAgYy0wLjg1NS0wLjY5My0xLjM4Ni0xLjcyMi0xLjQyOS0yLjgzNmwtMC4xMDEtMi42MzZjMC0yLjAxNSwxLjY0Ni0zLjYzOCwzLjY3MS0zLjYzOGgwLjY5OGMyLjAyNCwwLDMuNjcyLDEuNjI0LDMuNjcyLDMuNjE5ICAgIGwtMC4xMDIsMi42NTVjLTAuMDQzLDEuMTE2LTAuNTc0LDIuMTQ2LTEuNDMyLDIuODM4bDIuNjc2LDEuNjM4YzAuNzQxLDAuMzYyLDEuMjE5LDEuMTI1LDEuMjE5LDEuOTUxdjEuMzM3ICAgIEMxNy41OTEsMjUuNjEzLDE3LjM2NywyNS44MzcsMTcuMDkxLDI1LjgzN3ogTTUuODI3LDI0LjgzN2gxMC43NjR2LTAuODM3YzAtMC40NTEtMC4yNjQtMC44NjYtMC42NzItMS4wNTkgICAgYy0wLjAxNi0wLjAwOC0wLjAzMi0wLjAxNi0wLjA0Ny0wLjAyNmwtMy4zNzUtMi4wNjZjLTAuMTU1LTAuMDk1LTAuMjQ3LTAuMjY2LTAuMjM5LTAuNDQ4YzAuMDA5LTAuMTgyLDAuMTE0LTAuMzQ1LDAuMjc2LTAuNDI2ICAgIGMwLjk0NC0wLjQ3MSwxLjU1NS0xLjQwNiwxLjU5NC0yLjQ0MWwwLjEwMi0yLjYzNmMwLTEuNDI1LTEuMTk4LTIuNi0yLjY3Mi0yLjZoLTAuNjk4Yy0xLjQ3MywwLTIuNjcxLDEuMTc1LTIuNjcxLDIuNjE5ICAgIGwwLjEwMSwyLjYxN2MwLjAzOSwxLjAzMiwwLjY0NywxLjk2NywxLjU4OSwyLjQzOWMwLjE2MiwwLjA4MSwwLjI2OCwwLjI0NCwwLjI3NSwwLjQyNWMwLjAwNywwLjE4Mi0wLjA4NCwwLjM1My0wLjIzOCwwLjQ0OCAgICBsLTMuMzcsMi4wNjhjLTAuNDU1LDAuMjE5LTAuNzE4LDAuNjM0LTAuNzE4LDEuMDg0VjI0LjgzN3oiIGZpbGw9IiM1YzZiYzAiLz4KCQk8Zz4KCQkJPHBhdGggZD0iTTI3Ljc5OCwxNC42MjdoLTYuMTc3Yy0wLjI3NiwwLTAuNS0wLjIyNC0wLjUtMC41czAuMjI0LTAuNSwwLjUtMC41aDYuMTc3YzAuMjc2LDAsMC41LDAuMjI0LDAuNSwwLjUgICAgIFMyOC4wNzQsMTQuNjI3LDI3Ljc5OCwxNC42Mjd6IiBmaWxsPSIjNWM2YmMwIi8+CgkJCTxwYXRoIGQ9Ik0yNy43OTgsMTkuMDY2aC02LjE3N2MtMC4yNzYsMC0wLjUtMC4yMjQtMC41LTAuNXMwLjIyNC0wLjUsMC41LTAuNWg2LjE3N2MwLjI3NiwwLDAuNSwwLjIyNCwwLjUsMC41ICAgICBTMjguMDc0LDE5LjA2NiwyNy43OTgsMTkuMDY2eiIgZmlsbD0iIzVjNmJjMCIvPgoJCQk8cGF0aCBkPSJNMjcuNzk4LDIzLjUwOGgtNi4xNzdjLTAuMjc2LDAtMC41LTAuMjI0LTAuNS0wLjVzMC4yMjQtMC41LDAuNS0wLjVoNi4xNzdjMC4yNzYsMCwwLjUsMC4yMjQsMC41LDAuNSAgICAgUzI4LjA3NCwyMy41MDgsMjcuNzk4LDIzLjUwOHoiIGZpbGw9IiM1YzZiYzAiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
-                <h3 class="indigo-text text-lighten-2">HEALTH</h3>
+                <i class="material-icons large indigo-text text-lighten-2">blur_circular</i>
+                <h3 class="indigo-text text-lighten-2">POOL</h3>
             </div>
         </div>
     </div>
 {{end}}
 
-{{define "accountDashboardImages"}}
+{{define "accountNetworkImages"}}
     <div class="row">
-        <div class="col s12">
+        <div class="col s12 m8 offset-m2">
             <ul class="tabs tabs-fixed-width">
-                <li class="tab col s3"><a href="#customer-dashboard-health" class="active">Status</a></li>
-                <li class="tab col s3"><a href="#customer-dashboard-network">Visits</a></li>
+                <li class="tab col s3"><a href="#customer-dashboard-health" class="active">Active</a></li>
+                <li class="tab col s3"><a href="#customer-dashboard-network">Previous</a></li>
             </ul>
         </div>
         <div id="customer-dashboard-health" class="col s12 m12">
             <div class="row">
                 <div class="center"><br>
-                    <h4 class="indigo-text text-lighten-2">STATUS</h4>
+                    <h4 class="indigo-text text-lighten-2">ACTIVE</h4>
                     <p>CUSTOMER: #00130</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 m8 l6 offset-m2">
+                <div class="col s12 m8 l5 offset-m2 offset-l1">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                             <span class="card-title">Overall Health</span>
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m8 l6 offset-m2">
+                <div class="col s12 m8 l5 offset-m2">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                             <span class="card-title">Existing Conditions</span>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m8 l6 offset-m2">
+                <div class="col s12 m8 l5 offset-m2">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                             <span class="card-title">Medications</span>
@@ -87,12 +87,12 @@
         <div id="customer-dashboard-network" class="col s12">
             <div class="row">
                 <div class="center"><br>
-                    <h4 class="indigo-text text-lighten-2">VISITS</h4>
+                    <h4 class="indigo-text text-lighten-2">PREVIOUS</h4>
                     <p>CUSTOMER: #00130</p>
                 </div>
             </div>
             <div class="row center">
-                <a href="/galleries/new" class="waves-effect waves-light btn amber darken-2"><i class="material-icons left">file_upload</i>NEW VISIT</a>
+                <a class="waves-effect waves-light btn amber darken-2"><i class="material-icons left">file_upload</i>NEW VISIT</a>
             </div>
             
             <div class="row">
@@ -137,8 +137,8 @@
                     <div class="col s12 m8 l6 offset-m2 offset-l3">
                         <div class="center">   
                             <div class="divider"></div><br>
-                            <h4 class="indigo-text text-lighten-3">No Visits<h4><br>
-                            <h5 class="indigo-text text-lighten-3">You must be immortal</h5><br>
+                            <h4 class="indigo-text text-lighten-3">No Bills<h4><br>
+                            <h5 class="indigo-text text-lighten-3">Must be nice</h5><br>
                         </div>
                     </div>
                 {{end}}

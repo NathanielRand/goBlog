@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"GoBlog/context"
-	"GoBlog/models"
+	"coverd/context"
+	"coverd/models"
 )
 
 // User middleware will lookup the current user via their

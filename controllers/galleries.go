@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"GoBlog/context"
-	"GoBlog/models"
-	"GoBlog/views"
+	"coverd/context"
+	"coverd/models"
+	"coverd/views"
 
 	"github.com/gorilla/mux"
 )
@@ -45,7 +45,15 @@ type Galleries struct {
 }
 
 type GalleryForm struct {
-	Title string `schema:"title"`
+	Title       string `schema:"title"`
+	Reason      string `schema:"reason"`
+	Doctor      string `schema:"doctor"`
+	Cost        int    `schema:"cost"`
+	Address     string `schema:"address"`
+	City        string `schema:"city"`
+	State       string `schema:"state"`
+	ZipCode     int    `schema:"zipcode"`
+	PhoneNumber string `schema:"phonenumber"`
 }
 
 // POST /galleries
@@ -201,8 +209,15 @@ func (g *Galleries) Create(w http.ResponseWriter, r *http.Request) {
 	}
 	account := context.Account(r.Context())
 	gallery := models.Gallery{
-		Title:     form.Title,
-		AccountID: account.ID,
+		Reason:      form.Reason,
+		Doctor:      form.Doctor,
+		Cost:        form.Cost,
+		Address:     form.Address,
+		City:        form.City,
+		State:       form.State,
+		ZipCode:     form.ZipCode,
+		PhoneNumber: form.PhoneNumber,
+		AccountID:   account.ID,
 	}
 	if err := g.gs.Create(&gallery); err != nil {
 		vd.SetAlert(err)
@@ -247,7 +262,14 @@ func (g *Galleries) Update(w http.ResponseWriter, r *http.Request) {
 		g.EditView.Render(w, r, vd)
 		return
 	}
-	gallery.Title = form.Title
+	gallery.Reason = form.Reason
+	gallery.Doctor = form.Doctor
+	gallery.Cost = form.Cost
+	gallery.Address = form.Address
+	gallery.City = form.City
+	gallery.State = form.State
+	gallery.ZipCode = form.ZipCode
+	gallery.PhoneNumber = form.PhoneNumber
 	err = g.gs.Update(gallery)
 	// If there is an error our alert will be an error. Otherwise
 	// we will still render an alert, but instead it will be

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"GoBlog/hash"
+	"coverd/hash"
 )
 
 func main() {

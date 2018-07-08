@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"GoBlog/rand"
+	"coverd/rand"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package views
 import (
 	"log"
 
-	"GoBlog/models"
+	"coverd/models"
 )
 
 const (

@@ -1,11 +1,11 @@
-/*GoBlog HTML Elements*/
+/*Coverd HTML Elements*/
 body {
-    background-color: #eceff1;
+    background-color: #e8eaf6 ;
 }
 
-h1, h2, h3, h4, h5, h6, a, p {
+h1, h2, h3, h4, h5, h6{
     font-family: 'Comfortaa', cursive;
-    color: grey;
+    color: #7986cb;
     letter-spacing: 0.06em;
 }
 
@@ -15,6 +15,9 @@ h6 {
 
 a, p {
     font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+    color: #212121;
+    letter-spacing: 0.06em;
 }
 
 
@@ -31,7 +34,7 @@ input[type=range]+.thumb .value {
     background-color: rgb(96, 125, 139);
 }
 
-/*GoBlog Custom ID Elements*/
+/*Coverd Custom ID Elements*/
 
 #search {
     text-align: center;

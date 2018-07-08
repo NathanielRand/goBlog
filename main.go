@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"GoBlog/controllers"
-	"GoBlog/middleware"
-	"GoBlog/models"
-	"GoBlog/rand"
+	"coverd/controllers"
+	"coverd/middleware"
+	"coverd/models"
+	"coverd/rand"
 
 	"github.com/gorilla/csrf"
 	"github.com/gorilla/mux"
@@ -76,6 +76,9 @@ func main() {
 	r.Handle("/faq", staticC.FaqView).Methods("GET")
 	r.Handle("/faq-question", staticC.FaqQuestionView).Methods("GET")
 	r.Handle("/dashboard", staticC.DashboardView).Methods("GET")
+	r.Handle("/network", staticC.NetworkView).Methods("GET")
+	r.Handle("/billing", staticC.BillingView).Methods("GET")
+	r.Handle("/settings", staticC.SettingsView).Methods("GET")
 
 	// Account Routes
 	r.HandleFunc("/register", accountsC.New).Methods("GET")
