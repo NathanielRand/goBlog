@@ -1,0 +1,162 @@
+// package models
+
+// import (
+// 	"github.com/jinzhu/gorm"
+// )
+
+// // Network - Error Constants
+// const (
+// 	ErrAccountIDNetworkRequired modelError = "models: account ID is required"
+
+// // 	ErrPrimaryCareRequired      modelError = "models: primary is required"
+// )
+
+// var _ NetworkDB = &networkGorm{}
+
+// type Network struct {
+// 	gorm.Model
+// 	AccountID   uint   `gorm:"not_null;index"`
+// 	PrimaryCare string `gorm:"not_null"`
+// }
+
+// type NetworkService interface {
+// 	NetworkDB
+// }
+
+// type NetworkDB interface {
+// 	ByID(id uint) (*Network, error)
+// 	ByAccountID(accountID uint) ([]Network, error)
+// 	Create(network *Network) error
+// 	Update(network *Network) error
+// 	Delete(id uint) error
+// }
+
+// // Network - Service
+// type networkService struct {
+// 	NetworkDB
+// }
+
+// // Network - Validation
+// type networkValidator struct {
+// 	NetworkDB
+// }
+
+// // Network - GORM
+// type networkGorm struct {
+// 	db *gorm.DB
+// }
+
+// type networkValFn func(*Network) error
+
+// // Network - Validation
+// func runNetworkValFns(network *Network, fns ...networkValFn) error {
+// 	for _, fn := range fns {
+// 		if err := fn(network); err != nil {
+// 			return err
+// 		}
+// 	}
+// 	return nil
+// }
+
+// // Network - Validation
+// func (nv *networkValidator) accountIDRequired(n *Network) error {
+// 	if n.AccountID <= 0 {
+// 		return ErrAccountIDNetworkRequired
+// 	}
+// 	return nil
+// }
+
+// // // Network - Validation
+// // func (nv *networkValidator) primarycareRequired(n *Network) error {
+// // 	if n.Content == "" {
+// // 		return ErrPrimaryCareRequired
+// // 	}
+// // 	return nil
+// // }
+
+// // Network - Validation - nonZeroID
+// func (nv *networkValidator) nonZeroID(network *Network) error {
+// 	if network.ID <= 0 {
+// 		return ErrIDInvalid
+// 	}
+// 	return nil
+// }
+
+// // Network - Validation - Create
+// func (nv *networkValidator) Create(micropost *Network) error {
+// 	err := runNetworkValFns(network,
+// 		mv.accountIDRequired)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	return mv.MicropostDB.Create(micropost)
+// }
+
+// // Network - Validation - Update
+// func (nv *networkValidator) Update(network *Network) error {
+// 	err := runNetworkValFns(network,
+// 		nv.accountIDRequired,
+// 		nv.contentRequire)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	return nv.NetworkDB.Update(Network)
+// }
+
+// // Micropost - Validation - Delete
+// func (nv *networkValidator) Delete(id uint) error {
+// 	var network Network
+// 	network.ID = id
+// 	if err := runNetworkValFns(&network, nv.nonZeroID); err != nil {
+// 		return err
+// 	}
+// 	return nv.NetworkDB.Delete(network.ID)
+// }
+
+// // Network - GORM - ByID
+// func (ng *networkGorm) ByID(id uint) (*Network, error) {
+// 	var network Network
+// 	db := ng.db.Where("id = ?", id)
+// 	err := first(db, &network)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	return &network, nil
+// }
+
+// // Network - GORM - ByAccountID
+// func (ng *networkGorm) ByAccountID(accountID uint) ([]Micropost, error) {
+// 	var network []Network
+// 	db := ng.db.Where("account_id = ?", accountID)
+// 	if err := db.Find(&network).Error; err != nil {
+// 		return nil, err
+// 	}
+// 	return network, nil
+// }
+
+// // Network - GORM - Create
+// func (ng *networkGorm) Create(network *Network) error {
+// 	return ng.db.Create(network).Error
+// }
+
+// // Network - GORM - Update
+// func (ng *networkGorm) Update(network *Network) error {
+// 	return ng.db.Save(network).Error
+// }
+
+// // Network - GORM - Delete
+// func (ng *networkGorm) Delete(id uint) error {
+// 	network := Network{Model: gorm.Model{ID: id}}
+// 	return ng.db.Delete(&network).Error
+// }
+
+// // Network - GORM - Service
+// func NewNetworkService(db *gorm.DB) NetworkService {
+// 	return &networkService{
+// 		NetworkDB: &networkValidator{
+// 			NetworkDB: &networkGorm{
+// 				db: db,
+// 			},
+// 		},
+// 	}
+// }

@@ -72,12 +72,19 @@ func main() {
 
 	// Static Routes
 	r.Handle("/", staticC.LandingView).Methods("GET")
+	r.Handle("/about", staticC.AboutView).Methods("GET")
+	r.Handle("/advertise", staticC.AdvertiseView).Methods("GET")
+	r.Handle("/affiliate", staticC.AffiliateView).Methods("GET")
+	r.Handle("/billing", staticC.BillingView).Methods("GET")
 	r.Handle("/contact", staticC.ContactView).Methods("GET")
+	r.Handle("/dashboard", staticC.DashboardView).Methods("GET")
 	r.Handle("/faq", staticC.FaqView).Methods("GET")
 	r.Handle("/faq-question", staticC.FaqQuestionView).Methods("GET")
-	r.Handle("/dashboard", staticC.DashboardView).Methods("GET")
+	r.Handle("/help", staticC.HelpView).Methods("GET")
+	r.Handle("/investors", staticC.InvestorsView).Methods("GET")
 	r.Handle("/network", staticC.NetworkView).Methods("GET")
-	r.Handle("/billing", staticC.BillingView).Methods("GET")
+	r.Handle("/pool", staticC.PoolView).Methods("GET")
+	r.Handle("/privacy-policy", staticC.PrivacyPolicyView).Methods("GET")
 	r.Handle("/settings", staticC.SettingsView).Methods("GET")
 
 	// Account Routes

@@ -61,7 +61,7 @@ func (a *Accounts) Login(w http.ResponseWriter, r *http.Request) {
 		a.LoginView.Render(w, r, vd)
 		return
 	}
-	http.Redirect(w, r, "/dashboard", http.StatusFound)
+	http.Redirect(w, r, "/galleries", http.StatusFound)
 }
 
 // New is used to render the form.
@@ -98,7 +98,7 @@ func (a *Accounts) Create(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, "/dashboard", http.StatusFound)
+	http.Redirect(w, r, "/galleries", http.StatusFound)
 }
 
 // func (a *Accounts) Index(w http.ResponseWriter, r *http.Request) {

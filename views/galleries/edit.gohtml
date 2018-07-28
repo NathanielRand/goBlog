@@ -81,6 +81,25 @@
     <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
         <div class="card-content">
             <div class="card-title">
+                <h4>Cost</h4>
+            </div>
+            <div class="row">
+                <div class="input-field col s11">
+                    <i class="material-icons prefix indigo-text text-lighten-1">attach_money</i>
+                    <input id="gallery-cost" type="text" class="validate" name="cost" data-length="48" value="{{.Cost}}" pattern=".{1,48}" title="Cost missing">
+                    <label for="gallery-cost" data-error="Too long" data-success="Accepted"></label>
+                </div>
+            </div>
+            <div class="card-content right">
+                <button type="submit" class="btn waves-effect waves-light indigo lighten-3">
+                    <i class="material-icons">save</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
+        <div class="card-content">
+            <div class="card-title">
                 <h4>Doctor</h4>
             </div>
             <div class="row">
@@ -99,46 +118,27 @@
             </div>
             <div class="row">
                 <div class="input-field col s10 offset-s1">
-                    <input id="gallery-title" type="text" class="validate" name="city" pattern="[A-Za-z]{,66}" data-length="66" value="{{.City}}">
+                    <input id="gallery-title" type="text" name="city" pattern="[A-Za-z]{0,58}" data-length="58" value="{{.City}}">
                     <label for="gallery-title" data-error="Invalid" data-success="Accepted">City</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s10 offset-s1">
-                    <input id="gallery-title" type="text" class="validate" name="state" pattern="[A-Za-z]{,52}" data-length="52" value="{{.State}}">
+                    <input id="gallery-title" type="text" name="state" pattern="[A-Za-z ]{0,58}" data-length="58" value="{{.State}}">
                     <label for="gallery-title" data-error="Invalid" data-success="Accepted">State</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s10 offset-s1">
-                    <input id="gallery-title" type="text" class="validate" name="zipcode" pattern="[0-9]{5}" data-length="5" value="{{.ZipCode}}">
+                <div class="input-field col s6 offset-s1">
+                    <input id="gallery-title" type="text" name="zipcode" pattern="[0-9]{5}" data-length="5" value="{{.ZipCode}}">
                     <label for="gallery-title" data-error="Invalid. 5 Digit Zip Codes Please" data-success="Accepted">Zip Code (5 Digit)</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s11">
                     <i class="material-icons prefix indigo-text text-lighten-1">phone</i>
-                    <input id="gallery-title" type="tel" class="validate" name="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-length="12" value="{{.PhoneNumber}}">
-                    <label for="gallery-title" data-error="Invalid. (i.e 888-888-8888)" data-success="Accepted">Phone Number</label>
-                </div>
-            </div>
-            <div class="card-content right">
-                <button type="submit" class="btn waves-effect waves-light indigo lighten-3">
-                    <i class="material-icons">save</i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m8 offset-m2 card hoverable z-depth-1">
-        <div class="card-content">
-            <div class="card-title">
-                <h4>Cost</h4>
-            </div>
-            <div class="row">
-                <div class="input-field col s11">
-                    <i class="material-icons prefix indigo-text text-lighten-1">attach_money</i>
-                    <input id="gallery-cost" type="text" class="validate" name="cost" data-length="48" value="{{.Cost}}" pattern=".{1,48}" title="Doctor missing">
-                    <label for="gallery-cost" data-error="Too long" data-success="Accepted"></label>
+                    <input id="gallery-title" type="tel" class="validate" name="phonenumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" data-length="12" value="{{.PhoneNumber}}">
+                    <label for="gallery-title" data-error="Invalid. (i.e 8885550000)" data-success="Accepted">Phone Number</label>
                 </div>
             </div>
             <div class="card-content right">
@@ -210,12 +210,29 @@
                 <h5 class="white-text">DELETE</h5>
                 <p>THIS ACTION CANNOT BE UNDONE</p>
             </div><br>
-            <form action="/galleries/{{.ID}}/delete" method="POST">
-                {{csrfField}}
-                <button type="submit" class="btn btn-large waves-effect waves-light white red-text text-lighten-3">
-                    <i class="material-icons left">delete_forever</i> DELETE
-                </button>
-            </form>
+            <!-- Delete Visit Modal Trigger -->
+            <button data-target="modal-delete-visit" class="modal-trigger btn btn-large waves-effect waves-light white red-text text-lighten-3">
+                <i class="material-icons left">delete_forever</i> DELETE
+            </button>
+        </div>
+        
+        <!-- Delete Visit Modal Structure -->
+        <div id="modal-delete-visit" class="modal">
+            <div class="modal-content right">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons right">close</i>Nevermind</a>
+            </div><br>
+            <div class="modal-content">
+                <h4>CONFIRMATION</h4>
+                <p>Are you sure you wish to destroy this visit?</p><br>
+                <div class="center">
+                    <form action="/galleries/{{.ID}}/delete" method="POST">
+                        {{csrfField}}
+                        <button type="submit" class="modal-close btn btn-large waves-effect waves-light red lighten-3 white-text align-center">
+                            <i class="material-icons left">delete_forever</i> DELETE
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="card-action">
             <a class="waves-effect waves-light grey-text text-darken-2 right">
@@ -226,10 +243,27 @@
 {{end}}
 
 {{define "galleryDeleteImageForm"}}
-    <form action="/galleries/{{.GalleryID}}/images/{{pathEscape .Filename}}/delete" method="POST" class="center">
-        {{csrfField}}
-        <button type="submit" class="btn red lighten-3">
+    <div class="center">
+        <button data-target="modal-delete-upload" class="modal-trigger btn red lighten-3">
             <i class="material-icons white-text text-lighten-2">close</i>
         </button>
-    </form>
+    </div>
+    <!-- Delete Visit Modal Structure -->
+    <div id="modal-delete-upload" class="modal">
+        <div class="modal-content right">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons right">close</i>Nevermind</a>
+        </div><br>
+        <div class="modal-content">
+            <h4>CONFIRMATION</h4>
+            <p>Are you sure you wish to destroy this upload?</p><br>
+            <div class="center">
+                <form action="/galleries/{{.GalleryID}}/images/{{pathEscape .Filename}}/delete" method="POST" class="center">
+                    {{csrfField}}
+                    <button type="submit" class="modal-close btn btn-large waves-effect waves-light red lighten-3 white-text align-center">
+                        <i class="material-icons left">delete_forever</i> DELETE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 {{end}}

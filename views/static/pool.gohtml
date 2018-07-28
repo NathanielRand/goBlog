@@ -1,0 +1,127 @@
+{{define "yield"}}
+    {{template "accountPoolContribution"}}
+    {{template "accountPoolSize"}}
+{{end}}
+
+{{define "accountPoolContribution"}}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-title center"><br>
+                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMDIgNTEyLjAwMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwMiA1MTIuMDAyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTE3Mi45OTUsMjIwLjYyM2MtMS44Ni0xLjg3LTQuNDQtMi45My03LjA3LTIuOTNjLTIuNjMsMC01LjIxLDEuMDYtNy4wNywyLjkzYy0xLjg2LDEuODYtMi45Myw0LjQzLTIuOTMsNy4wNyAgICBjMCwyLjYzLDEuMDcsNS4yLDIuOTMsNy4wN2MxLjg2LDEuODYsNC40NCwyLjkzLDcuMDcsMi45M2MyLjYzLDAsNS4yMS0xLjA3LDcuMDctMi45M2MxLjg2LTEuODcsMi45My00LjQ0LDIuOTMtNy4wNyAgICBDMTc1LjkyNSwyMjUuMDUzLDE3NC44NTUsMjIyLjQ4MywxNzIuOTk1LDIyMC42MjN6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzc5LjE3MywyNTMuNzc0Yy0wLjAzNi0wLjA0OS0wLjA3Mi0wLjA5Ni0wLjEwOC0wLjE0M0wyNjQuNDIzLDEwNi4wMTRjLTEuODg5LTIuNDMzLTQuNzk0LTMuODU5LTcuODc1LTMuODY2ICAgIGMtMC4wMDgsMC0wLjAxNiwwLTAuMDIzLDBjLTMuMDcxLDAtNS45NzMsMS40MTItNy44NjksMy44M2wtNjUuNTAxLDgzLjUzM2MtMy40MDgsNC4zNDYtMi42NDcsMTAuNjMyLDEuNjk5LDE0LjA0ICAgIGM0LjM0NiwzLjQwOCwxMC42MzEsMi42NDcsMTQuMDQtMS42OTlsNTcuNTk0LTczLjQ0OWwxMDYuNTMsMTM3LjE3MmMwLjEyMywwLjE3MywwLjI1MiwwLjM0MiwwLjM4OCwwLjUwOCAgICBjMjAuMDQ3LDI0LjU5NiwzMS4wODcsNTUuNjQ0LDMxLjA4Nyw4Ny40MjVjMCw3Ni4zNjUtNjIuMTI3LDEzOC40OTMtMTM4LjQ5MywxMzguNDkzcy0xMzguNDkzLTYyLjEyNy0xMzguNDkzLTEzOC40OTMgICAgYzAtMzIuMTI0LDExLjI0Ny02My40MjgsMzEuNjctODguMTQ3YzIuNDY2LTIuOTg1LDIuOTg3LTcuMTI2LDEuMzM3LTEwLjYzYy0xLjY1LTMuNTA0LTUuMTc0LTUuNzM5LTkuMDQ3LTUuNzM5aC0wLjA4NiAgICBjLTMuNDU0LDAtNi40ODIsMS43NTEtOC4yNjcsNC40MTVjLTIyLjk2OSwyOC4xNzItMzUuNjA4LDYzLjY3OS0zNS42MDgsMTAwLjEwMmMwLDg3LjM5Myw3MS4xLDE1OC40OTMsMTU4LjQ5MywxNTguNDkzICAgIHMxNTguNDkzLTcxLjEsMTU4LjQ5My0xNTguNDkzQzQxNC40OTEsMzE3LjI3Nyw0MDEuOTUxLDI4MS44NzYsMzc5LjE3MywyNTMuNzc0eiIgZmlsbD0iIzc5ODZjYiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM2MC4wMTcsMzY1LjIxOGMtNS4zNzYtMS4yNjgtMTAuNzYxLDIuMDYzLTEyLjAyOCw3LjQzOGMtNi43MjksMjguNTM5LTI2Ljk3Nyw1Mi4yNTMtNTQuMTYxLDYzLjQzNyAgICBjLTUuMTA4LDIuMTAxLTcuNTQ1LDcuOTQ1LTUuNDQ0LDEzLjA1MmMxLjU4OSwzLjg2Myw1LjMxOCw2LjE5OCw5LjI1Miw2LjE5OGMxLjI2NywwLDIuNTU2LTAuMjQzLDMuODAxLTAuNzU0ICAgIGMzMy4xMzQtMTMuNjMsNTcuODEzLTQyLjU0NCw2Ni4wMTgtNzcuMzQzQzM2OC43MjMsMzcxLjg3MSwzNjUuMzkyLDM2Ni40ODUsMzYwLjAxNywzNjUuMjE4eiIgZmlsbD0iIzc5ODZjYiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM2MC40MjMsMzE4LjE5MWMtNS41MjMsMC0xMCw0LjQ3Ny0xMCwxMHYwLjIzNWMwLDUuNTIzLDQuNDc3LDEwLDEwLDEwYzUuNTIzLDAsMTAtNC40NzcsMTAtMTB2LTAuMjM1ICAgIEMzNzAuNDIzLDMyMi42NjgsMzY1Ljk0NiwzMTguMTkxLDM2MC40MjMsMzE4LjE5MXoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00OTUuMTczLDcxLjAwNWMtMC4wMS0wLjAxMy0wLjAxOS0wLjAyNS0wLjAyOS0wLjAzOEw0NDQuMTkxLDMuOTQ4Yy0xLjg4Ni0yLjQ4MS00LjgyMS0zLjk0LTcuOTM3LTMuOTQ4ICAgIGMtMC4wMDgsMC0wLjAxNiwwLTAuMDIzLDBjLTMuMTA3LDAtNi4wNCwxLjQ0NS03LjkzMiwzLjkxMWwtNTEuMTc4LDY2LjY2OGMtMC4xMTgsMC4xNTQtMC4yMzEsMC4zMTEtMC4zMzksMC40NyAgICBjLTEwLjgzLDEzLjcwMS0xNi43ODUsMzAuOS0xNi43ODUsNDguNTNjMCw0Mi42ODksMzQuMDk0LDc3LjQxOCw3NS45OTksNzcuNDE4czc1Ljk5OS0zNC43Myw3NS45OTktNzcuNDE3ICAgIEM1MTEuOTk1LDEwMS45NDcsNTA2LjAyMyw4NC43MDksNDk1LjE3Myw3MS4wMDV6IE00MzUuOTk2LDE3Ni45OThjLTMwLjg3OCwwLTU1Ljk5OS0yNS43NTgtNTUuOTk5LTU3LjQxNyAgICBjMC0xMy4zNTYsNC41Ny0yNi4zNjIsMTIuODY5LTM2LjYyM2MwLjIxOC0wLjI3LDAuNDItMC41NDgsMC42MDYtMC44MzVsNDIuNzE5LTU1LjY0OWw0Mi44NjgsNTYuMzg1ICAgIGMwLjA5NywwLjEzNSwwLjE5OCwwLjI2OCwwLjMwMiwwLjM5OWM4LjE0NywxMC4yMSwxMi42MzMsMjMuMTEsMTIuNjMzLDM2LjMyNEM0OTEuOTk1LDE1MS4yNCw0NjYuODc0LDE3Ni45OTgsNDM1Ljk5NiwxNzYuOTk4eiIgZmlsbD0iIzc5ODZjYiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ2OC45OTUsMTA5LjU4Yy01LjUyMywwLTEwLDQuNDc3LTEwLDEwYzAsMTMuMDczLTEwLjMxOCwyMy43MDktMjMsMjMuNzA5Yy01LjUyMywwLTEwLDQuNDc3LTEwLDEwczQuNDc3LDEwLDEwLDEwICAgIGMyMy43MSwwLDQyLjk5OS0xOS42MDgsNDIuOTk5LTQzLjcwOEM0NzguOTk1LDExNC4wNTcsNDc0LjUxOCwxMDkuNTgsNDY4Ljk5NSwxMDkuNTh6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMTM1LjE5Miw3MS4wMTdjLTAuMDEzLTAuMDE3LTAuMDI1LTAuMDMzLTAuMDM4LTAuMDVMODQuMjAxLDMuOTQ4QzgyLjMxNSwxLjQ2Nyw3OS4zOCwwLjAwNyw3Ni4yNjQsMCAgICBjLTAuMDA4LDAtMC4wMTYsMC0wLjAyMywwYy0zLjEwNywwLTYuMDQsMS40NDUtNy45MzIsMy45MTFMMTcuMTMsNzAuNTc5Yy0wLjExOSwwLjE1NS0wLjIzMywwLjMxMy0wLjM0MiwwLjQ3NCAgICBDNS45Niw4NC43NTMsMC4wMDcsMTAxLjk1MSwwLjAwNywxMTkuNThjMCw0Mi42ODgsMzQuMDkzLDc3LjQxNyw3NS45OTksNzcuNDE3YzQxLjkwNiwwLDc1Ljk5OS0zNC43MjksNzUuOTk5LTc3LjQxNyAgICBDMTUyLjAwNSwxMDEuOTUyLDE0Ni4wMzYsODQuNzE5LDEzNS4xOTIsNzEuMDE3eiBNNzYuMDA2LDE3Ni45OThjLTMwLjg3OCwwLTU1Ljk5OS0yNS43NTgtNTUuOTk5LTU3LjQxNyAgICBjMC0xMy4zNTYsNC41Ny0yNi4zNjMsMTIuODY5LTM2LjYyM2MwLjIxOS0wLjI3MSwwLjQyMi0wLjU1MSwwLjYwOS0wLjgzOWw0Mi43MTctNTUuNjQ2bDQyLjg2LDU2LjM3NCAgICBjMC4xLDAuMTM5LDAuMjAzLDAuMjc2LDAuMzEsMC40MWM4LjE0NywxMC4yMSwxMi42MzMsMjMuMTEsMTIuNjMzLDM2LjMyNEMxMzIuMDA1LDE1MS4yNCwxMDYuODg0LDE3Ni45OTgsNzYuMDA2LDE3Ni45OTh6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMTA5LjAwNiwxMDkuNThjLTUuNTIzLDAtMTAsNC40NzctMTAsMTBjMCwxMy4wNzMtMTAuMzE4LDIzLjcwOS0yMywyMy43MDljLTUuNTIzLDAtMTAsNC40NzctMTAsMTBzNC40NzcsMTAsMTAsMTAgICAgYzIzLjcxLDAsNDIuOTk5LTE5LjYwOCw0Mi45OTktNDMuNzA4QzExOS4wMDYsMTE0LjA1NywxMTQuNTI5LDEwOS41OCwxMDkuMDA2LDEwOS41OHoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                <h3 class="indigo-text text-lighten-2">POOL</h3>
+            </div>
+        </div>
+    </div>
+{{end}}
+
+{{define "accountPoolSize"}}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab col s3"><a href="#customer-dashboard-health" class="active">CONTRIBUTION</a></li>
+                <li class="tab col s3"><a href="#customer-dashboard-network">SIZE</a></li>
+            </ul>
+        </div>
+        <div id="customer-dashboard-health" class="col s12 m12">
+            <div class="row">
+                <div class="center"><br>
+                    <h4 class="indigo-text text-lighten-2">ACTIVE</h4>
+                    <p>CUSTOMER: #00130</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <div class="card">
+                        <div class="card-content indigo lighten-2 white-text">
+                            <span class="card-title">Present Contribution
+                                <h3 class="right white-text">$125</h3>
+                            </span>
+                            <p><b>January</b></p>
+                        </div>
+                        <div class="card-content">
+                            <section>
+                                <p>Lead Balance Due: <b class="right">$500.00</b></p>
+                            </section><br>
+                            <div class="divider"></div><br>
+                            <section>
+                                <p>Previous Balance Due: <b class="right">$70.00</b></p>
+                            </section><br>
+                            <div class="divider"></div><br>
+                            <section>  
+                                <p>Total Balance Due: <b class="right indigo-text text-lighten-2">$695.00</b></p>
+                            </section><br>
+                            <div class="divider"></div><br>
+                            <section>
+                                <p>Due Date: <b class="right orange-text text-darken-2">02/05/2019</b></p><br>
+                            </section>
+                            <div class="divider"></div><br>
+                            <section>
+                                <p>Billing Period: <b class="right">01/01/2019 - 01/31/2019</b></p>
+                            </section>
+                        </div>
+                        <div class="card-action right-align">
+                            <a href="#" class="waves-effect btn orange darken-2">Pay Bill</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <div class="card">
+                        <div class="card-content indigo lighten-2 white-text">
+                            <span class="card-title">Past Contributions</span>
+                            <p><b>Member Since: 2017 - 2019</b></p>
+                        </div>
+                        <div class="card-content">
+                            <section>
+                                <p>December: <b class="right">$97.00</b></p>
+                            </section><br>
+                            <div class="divider"></div><br>
+                            <section>
+                                <p>November: <b class="right">$121.00</b></p>
+                            </section><br>
+                            <div class="divider"></div><br>
+                            <section>
+                                <p>October: <b class="right">$125.00</b></p>
+                            </section>
+                        </div>
+                        <div class="card-action right-align">
+                            <a href="#" class="waves-effect btn orange darken-2">All Past Bills</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="customer-dashboard-network" class="col s12 m10 offset-m1">
+            <div class="row">
+                <div class="center"><br>
+                    <h4 class="indigo-text text-lighten-2">ACTIVE</h4>
+                    <p>CUSTOMER: #00130</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <div class="card">
+                        <div class="card-content indigo lighten-2 white-text">
+                            <span class="card-title">Total Pool Size</span>
+                            <p><b>January</b></p>
+                        </div>
+                        <div class="card-content">
+                            <section>
+                                <p>Total Members: <b class="right orange-text text-darken-2">100,000,000</b></p>
+                            </section><br>
+                            <div class="divider"></div><br>
+                            <section>
+                                <p>Total Contributions: <b class="right indigo-text text-lighten-2">$193,000,000</b></p>
+                            </section><br>
+                            <div class="divider"></div><br>
+                            <section>
+                                <p>Average Member Contribution: <b class="right indigo-text text-lighten-2">$1.93</b></p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{end}}

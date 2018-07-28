@@ -51,7 +51,7 @@
                             {{if .Reason}}
                                 <h6><b>{{.Reason}}</b></h6><br>
                             {{else}}
-                                NO REASON PROVIDED
+                                <p>NO REASON PROVIDED</p>
                             {{end}}
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                 <p><b>{{.City}}, {{.State}}</b></p>
                                 <p>{{.ZipCode}}</p>
                             {{else}}
-                                <h6>NO INFORMATION PROVIDED</h6>
+                                <p>NO INFORMATION PROVIDED</p>
                             {{end}}
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                             {{if .Cost}}
                             <h5><b>Total Costs: ${{.Cost}}</b></h5>
                             {{else}}
-                            <h6>NO COST PROVIDED</h6>
+                            <p>NO COST PROVIDED</p>
                             {{end}}
                         </div>
                     </div>

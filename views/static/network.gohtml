@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 m8 l5 offset-m2 offset-l1">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                             <span class="card-title">Healthcare Providers</span>
@@ -40,11 +40,13 @@
                         </div>
                         <div class="card-content">
                             <section>
-                                <p>Primary Care: <b class="right">Dr. John C. Rand</b></p>
+                                <p>Primary Care:</p><br>
+                                <h6 class="center"><b>Dr. John Rand</b></h6>
                             </section><br>
                             <div class="divider"></div><br>
                             <section>
-                                <p>Dermatologist: <b class="right">Dr. John C. Rand</b></p>
+                                <p>Dermatologist:</p><br>
+                                <h6 class="center"><b>Dr. John Rand</b></h6>
                             </section><br>
                             <div class="divider"></div><br>
                             <section>
@@ -70,77 +72,9 @@
                 </div>
             </div>
             <div class="row center">
-                <a class="waves-effect waves-light btn amber darken-2"><i class="material-icons left">file_upload</i>NEW VISIT</a>
+                <h5>COMING SOON!</h5>
             </div>
-            
-            <div class="row">
-                {{if .}}
-                    <ul class="collection">
-                        {{range .}}
-                            <li class="collection-item avatar">
-                                <img src="images/yuna.jpg" alt="" class="circle">
-                                <span class="title">Title</span>
-                                <p>{{.ID}}<br>
-                                Second Line
-                                </p>
-                                <a href="/microposts/{{.ID}}" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a>
-                            </li>
-                            <li class="collection-item avatar">
-                                <i class="material-icons circle">folder</i>
-                                <span class="title">Title</span>
-                                <p>First Line <br>
-                                Second Line
-                                </p>
-                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                            </li>
-                            <li class="collection-item avatar">
-                                <i class="material-icons circle green">insert_chart</i>
-                                <span class="title">Title</span>
-                                <p>First Line <br>
-                                Second Line
-                                </p>
-                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                            </li>
-                            <li class="collection-item avatar">
-                                <i class="material-icons circle red">play_arrow</i>
-                                <span class="title">Title</span>
-                                <p>First Line <br>
-                                Second Line
-                                </p>
-                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                            </li>
-                        {{end}}
-                    </ul>
-                {{else}}
-                    <div class="col s12 m8 l6 offset-m2 offset-l3">
-                        <div class="center">   
-                            <div class="divider"></div><br>
-                            <h4 class="indigo-text text-lighten-3">No Visits<h4><br>
-                            <h5 class="indigo-text text-lighten-3">You must be immortal</h5><br>
-                        </div>
-                    </div>
-                {{end}}
-            </div>
-            <div class="row">
-                <ul>
-                    <li>Subit new visit / process new bill</li>
-                    <li>General Care</li>
-                    <li>Dentist</li>
-                    <li>Dermatologist</li>
-                    <li>Search</li>
-                </ul>    
-            </div>
-            <div class="row">
-                <div class="col s12 m6">
-                    <ul>
-                        <li>*Consider moving to seperate site menu item</li>
-                        <li>Estimated contributions this month</li>
-                        <li>Pool size</li>
-                        <li>Number of contributors</li>
-                        <li>Average medical expenses per customers</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="divider"></div>
         </div>
     </div>
 {{end}}

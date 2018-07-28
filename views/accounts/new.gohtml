@@ -1,52 +1,52 @@
 {{define "yield"}}
-    <div class="container"><br>
-        <div class="row">
-            {{template "registerForm"}}
-        </div>
-    </div>
+	 <div class="container"><br>
+		  <div class="row">
+				{{template "registerForm"}}
+		  </div>
+	 </div>
 {{end}}
 
 {{define "registerForm"}}
-    <form action="/register" method="POST" class="col s12 m8 l6 offset-m2 offset-l3">
-        {{csrfField}}
-        <div class="card hoverable z-depth-4">
-            <div class="card-content">
-                <div class="row center">
-                    <a href="/"><img class="responsive-img col s4 m4 offset-s4 offset-m4" src="assets/media/nathaniel.png"></a>
-                </div><br>
-                <span class="card-title">
-                    <h4 class="condensed light">REGISTER</h4>
-                </span><br>
-                <div class="row">
-                    <div class="input-field col s11 m11">
-                        <i class="material-icons prefix grey-text text-darken-2">account_circle</i>
-                        <input id="email" type="email" class="validate" name="email">
-                        <label for="email" data-error="Wrong format" data-success="Right format">EMAIL</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s11 l11">
-                        <i class="material-icons prefix grey-text text-darken-2">lock_open</i>
-                        <input id="password" type="password" class="validate" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                        <label for="password">PASSWORD</label>
-                    </div>
-                </div>
-                <div class="center-align"><br>
-                    <button type="submit" class="btn waves-effect waves-light indigo lighten-3">
-                        <i class="material-icons">keyboard_arrow_right</i>
-                    </button>
-                </div><br><br>
-                <div class="card-divider">
-                    <div class="card-action"><br>
-                        <a class="waves-effect waves-light amber-text text-darken-2 left-align" href="/enter">
-                           <i class="material-icons">lock_outline</i>
-                        </a>
-                        <a class="waves-effect waves-light amber-text text-darken-2 right">
-                           <i class="material-icons">help_outline</i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
+	<form action="/register" method="POST" class="col s12 m8 l6 offset-m2 offset-l3">
+		{{csrfField}}
+		<div class="card hoverable z-depth-4">
+			<div class="card-content">
+				 <div class="row center"><br>
+					  <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3MCA0NzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3MCA0NzA7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8cGF0aCBkPSJNMTIzLjQzMSwyMjUuOTkyYy05LjQ4Ni05LjQ4Ni0yMy45MDQtMTEuMDk2LTM1LjA3NC00Ljg0NHYtOTcuNjc3YzAtNC45NjEtMS4yNDItOS42MzYtMy40MjYtMTMuNzM3ICAgYzEuMzE1LTAuMzkxLDIuNjktMC41OTYsNC4wOTMtMC41OTZjNy45MDMsMCwxNC4zMzMsNi40MjksMTQuMzMzLDE0LjMzM3Y3Mi4xMDljMCw0LjE0MiwzLjM1OCw3LjUsNy41LDcuNXM3LjUtMy4zNTgsNy41LTcuNSAgIHYtNzIuMTA5YzAtMTYuMTc0LTEzLjE1OS0yOS4zMzMtMjkuMzMzLTI5LjMzM2MtNS4zNSwwLTEwLjUwOCwxLjQ0NS0xNS4wMSw0LjEzM2MtNC4zOS0yLjYyMS05LjUxNi00LjEzMy0xNC45OS00LjEzMyAgIGMtMTYuMTc0LDAtMjkuMzMzLDEzLjE1OC0yOS4zMzMsMjkuMzM5bDAuMTIyLDEzNy42NDRjMC4wMDUsNi4yODEsMi4zMzEsMTUuMTQ4LDUuNDA5LDIwLjYyNWMwLjA1LDAuMDksMC4xMDMsMC4xNzgsMC4xNTcsMC4yNjYgICBsODYuMzk0LDEzOS45MDFjMS43OTQsMy4yNzEsMy40MTEsOS40OTQsMy40MTEsMTMuMTYyVjQ2Mi41YzAsNC4xNDIsMy4zNTgsNy41LDcuNSw3LjVzNy41LTMuMzU4LDcuNS03LjV2LTI3LjQyNSAgIGMwLTYuMjgzLTIuMzIyLTE1LjE1My01LjQwMS0yMC42MzFjLTAuMDUxLTAuMDktMC4xMDMtMC4xNzgtMC4xNTctMC4yNjZMNDguMjMzLDI3NC4yNzhjLTEuNzk1LTMuMjczLTMuNDE2LTkuNDk5LTMuNDE5LTEzLjE2OSAgIGwtMC4xMjItMTM3LjYzN2MwLTcuOTAzLDYuNDMtMTQuMzMzLDE0LjMzMy0xNC4zMzNzMTQuMzMzLDYuNDI5LDE0LjMzMywxNC4zMzN2MTIzLjI2MmMwLDAuMTc2LDAuMDE0LDAuMzQ5LDAuMDI2LDAuNTIyICAgYzAuMTI5LDcuMzM2LDIuOTc5LDE0LjYzMyw4LjU2NSwyMC4yMTlsNjcuMTc3LDY3LjE3NmMyLjkyOSwyLjkyOSw3LjY3OCwyLjkyOSwxMC42MDYsMGMyLjkyOS0yLjkyOSwyLjkyOS03LjY3NywwLTEwLjYwNiAgIGwtNjcuMTc3LTY3LjE3NmMtNS41ODgtNS41ODgtNS41ODgtMTQuNjgxLDAtMjAuMjY5YzUuNTg4LTUuNTg4LDE0LjY4MS01LjU4OCwyMC4yNywwbDgyLjY1Niw4Mi42NTYgICBjOS4yMjYsOS4yMjYsMTcuMDIxLDI4LjA0NCwxNy4wMjEsNDEuMDkyVjQ2Mi41YzAsNC4xNDIsMy4zNTgsNy41LDcuNSw3LjVzNy41LTMuMzU4LDcuNS03LjVWMzYwLjM0NyAgIGMwLTE2Ljk4Mi05LjQwNi0zOS42OTEtMjEuNDE1LTUxLjY5OUwxMjMuNDMxLDIyNS45OTJ6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8cGF0aCBkPSJNNDEwLjk3Niw5NC4xMzljLTUuNDc0LDAtMTAuNiwxLjUxMS0xNC45OSw0LjEzM2MtNC41MDEtMi42ODgtOS42Ni00LjEzMy0xNS4wMS00LjEzMyAgIGMtMTYuMTc0LDAtMjkuMzMzLDEzLjE1OC0yOS4zMzMsMjkuMzMzdjcyLjEwOWMwLDQuMTQyLDMuMzU4LDcuNSw3LjUsNy41czcuNS0zLjM1OCw3LjUtNy41di03Mi4xMDkgICBjMC03LjkwMyw2LjQzLTE0LjMzMywxNC4zMzMtMTQuMzMzYzEuNDAzLDAsMi43NzksMC4yMDUsNC4wOTMsMC41OTZjLTIuMTgzLDQuMTAxLTMuNDI2LDguNzc2LTMuNDI2LDEzLjczN3Y5Ny42NzcgICBjLTExLjE2OS02LjI1MS0yNS41ODctNC42NDItMzUuMDc0LDQuODQ1bC04Mi42NTYsODIuNjU2Yy0xMi4wMDgsMTIuMDA4LTIxLjQxNSwzNC43MTctMjEuNDE1LDUxLjY5OVY0NjIuNSAgIGMwLDQuMTQyLDMuMzU4LDcuNSw3LjUsNy41czcuNS0zLjM1OCw3LjUtNy41VjM2MC4zNDdjMC0xMy4wNDgsNy43OTUtMzEuODY2LDE3LjAyMS00MS4wOTJsODIuNjU2LTgyLjY1NiAgIGM1LjU4OC01LjU4OCwxNC42ODEtNS41ODgsMjAuMjcsMGM1LjU4OCw1LjU4OCw1LjU4OCwxNC42ODEsMCwyMC4yN2wtNjcuMTc3LDY3LjE3NmMtMi45MjksMi45MjktMi45MjksNy42NzcsMCwxMC42MDYgICBjMi45MjksMi45MjksNy42NzgsMi45MjksMTAuNjA2LDBsNjcuMTc3LTY3LjE3NmM1LjU4Ni01LjU4Niw4LjQzNS0xMi44ODMsOC41NjUtMjAuMjE5YzAuMDEyLTAuMTczLDAuMDI2LTAuMzQ2LDAuMDI2LTAuNTIyICAgVjEyMy40NzFjMC03LjkwMyw2LjQzLTE0LjMzMywxNC4zMzMtMTQuMzMzczE0LjMzMyw2LjQyOSwxNC4zMzMsMTQuMzI2bC0wLjEyMiwxMzcuNjQ0Yy0wLjAwMywzLjY3LTEuNjI1LDkuODk2LTMuNDE5LDEzLjE2OSAgIGwtODYuMzkzLDEzOS45MDFjLTAuMDU0LDAuMDg3LTAuMTA2LDAuMTc2LTAuMTU3LDAuMjY2Yy0zLjA3OSw1LjQ3OC01LjQwMSwxNC4zNDgtNS40MDEsMjAuNjMxVjQ2Mi41YzAsNC4xNDIsMy4zNTgsNy41LDcuNSw3LjUgICBzNy41LTMuMzU4LDcuNS03LjV2LTI3LjQyNWMwLTMuNjY4LDEuNjE3LTkuODksMy40MTEtMTMuMTYybDg2LjM5NC0xMzkuOTAxYzAuMDU0LTAuMDg3LDAuMTA2LTAuMTc2LDAuMTU3LTAuMjY2ICAgYzMuMDc4LTUuNDc3LDUuNDA0LTE0LjM0Myw1LjQwOS0yMC42MjVsMC4xMjItMTM3LjY1QzQ0MC4zMDgsMTA3LjI5Nyw0MjcuMTQ5LDk0LjEzOSw0MTAuOTc2LDk0LjEzOXoiIGZpbGw9IiM3OTg2Y2IiLz4KCTxwYXRoIGQ9Ik0yNjUuNzM4LDIwMS4zMTVjMjUuOTEyLTguMTE5LDQ3LjQ0OC0yNi4yMjIsNjAuMDg4LTQ5Ljc4YzAuMjczLTAuNDE0LDAuNTA1LTAuODUxLDAuNjkxLTEuMzA3ICAgQzMzMy44NSwxMzYuMDczLDMzOCwxMjAuMDEzLDMzOCwxMDNjMC0xNi4zMi0zLjgyMi0zMS43NjItMTAuNjA3LTQ1LjQ4OWMtMC4xNTItMC4zODQtMC4zMzctMC43NS0wLjU0Ny0xLjA5OSAgIGMtMTIuNTI0LTI0LjU5LTM0LjYzNC00My41MTMtNjEuMzc2LTUxLjgxMWMtMC4yNzQtMC4xMDEtMC41NTgtMC4xODQtMC44NDgtMC4yNTNDMjU1LjIzNiwxLjUyNSwyNDUuMjkzLDAsMjM1LDAgICBjLTEwLjI5LDAtMjAuMjMsMS41MjQtMjkuNjEzLDQuMzQ2Yy0wLjI5NiwwLjA3LTAuNTg1LDAuMTU1LTAuODY0LDAuMjU4QzE2Mi41NjEsMTcuNjI4LDEzMiw1Ni44MTEsMTMyLDEwMyAgIGMwLDU2Ljc5NCw0Ni4yMDYsMTAzLDEwMywxMDNjMTAuNDE1LDAsMjAuNDcxLTEuNTU5LDI5Ljk1NC00LjQ0N0MyNjUuMjIxLDIwMS40ODgsMjY1LjQ4MiwyMDEuNDA4LDI2NS43MzgsMjAxLjMxNXogICAgTTI3MC42NzcsMTgzLjQzNnYtMzYuMDRjMC00LjE0Mi0zLjM1OC03LjUtNy41LTcuNWgtMTcuNjg5Yy0wLjI5NC0wLjI5Ni0wLjgxMS0xLjE1My0wLjgxMS0yLjVWMTE5LjVoNTEuMzU0bDE0Ljk3NCwyNy44MDcgICBDMzAxLjcxNSwxNjMuMTgzLDI4Ny41OTYsMTc1LjkwMiwyNzAuNjc3LDE4My40MzZ6IE0yNTMuMzcyLDE2LjkzNWMtMy40NzQsNi43MDEtMTAuNSwxMS4yNDItMTguMzcyLDExLjI0MiAgIGMtNy44NzIsMC0xNC44OTgtNC41NDEtMTguMzcyLTExLjI0MkMyMjIuNTU2LDE1LjY3MSwyMjguNzAxLDE1LDIzNSwxNUMyNDEuMjk5LDE1LDI0Ny40NDQsMTUuNjcxLDI1My4zNzIsMTYuOTM1eiBNMTQ3LDEwMyAgIGMwLTI2Ljk3NCwxMi4yMDQtNTEuMTQ5LDMxLjM3NS02Ny4zMDR2MzYuOTcxaC05Ljg2NWMtNC4xNDIsMC03LjUsMy4zNTgtNy41LDcuNXY0OC41YzAsNC4xNDIsMy4zNTgsNy41LDcuNSw3LjVoMTIuNjY3ICAgYzEuMzU1LDAsMi41LDEuMTQ1LDIuNSwyLjV2MTkuMjAzYzAsNC4xNDIsMy4zNTgsNy41LDcuNSw3LjVzNy41LTMuMzU4LDcuNS03LjV2LTE5LjIwM2MwLTkuNjUtNy44NTEtMTcuNS0xNy41LTE3LjVoLTUuMTY3di0zMy41ICAgaDMuMjM0YzEuMjU4LDIuMzc4LDMuNzU0LDQsNi42MzEsNGM0LjE0MiwwLDcuNS0zLjM1OCw3LjUtNy41VjI1LjQ4NWMyLjgzNC0xLjUyOCw1Ljc2MS0yLjkwMyw4Ljc3LTQuMTE4ICAgYzUuNDg1LDEyLjg4MiwxOC4zNTEsMjEuODEsMzIuODU1LDIxLjgxYzE0LjUwNSwwLDI3LjM3LTguOTI4LDMyLjg1NS0yMS44MWMxNS45NzIsNi40NTIsMjkuNjMxLDE3LjQ1OSwzOS4zNiwzMS40MDVIMjc1LjUxICAgYy00LjE0MiwwLTcuNSwzLjM1OC03LjUsNy41djcuNTYxaC0yMy44MzNjLTQuMTQyLDAtNy41LDMuMzU4LTcuNSw3LjVjMCwyLjQ1MSwxLjE4MSw0LjYyMSwzLDUuOTl2Ny4wMWMwLDQuMTQyLDMuMzU4LDcuNSw3LjUsNy41ICAgczcuNS0zLjM1OCw3LjUtNy41di01LjVoMjAuODMzYzQuMTQyLDAsNy41LTMuMzU4LDcuNS03LjV2LTcuNTYxaDMyLjYyMkMzMjAuMzY2LDc4LjU2NSwzMjMsOTAuNDgsMzIzLDEwMyAgIGMwLDkuNDMxLTEuNDk3LDE4LjUxNy00LjI1NiwyNy4wNDFsLTExLjYzLTIxLjU5N2MtMS4zMDgtMi40MjktMy44NDQtMy45NDQtNi42MDQtMy45NDRoLTYzLjMzM2MtNC4xNDIsMC03LjUsMy4zNTgtNy41LDcuNSAgIHYyNS4zOTZjMCw5LjY0OSw2Ljk1MywxNy41LDE1LjUsMTcuNWgxMC41djMzLjY0NUMyNDkuMDQzLDE5MC4xNDQsMjQyLjEyLDE5MSwyMzUsMTkxQzE4Ni40NzcsMTkxLDE0NywxNTEuNTIzLDE0NywxMDN6IiBmaWxsPSIjNzk4NmNiIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+				 </div><br>
+				 <span class="card-title">
+					  <h4 class="condensed light">REGISTER</h4>
+				 </span><br>
+				 <div class="row">
+					  <div class="input-field col s11 m11">
+							<i class="material-icons prefix grey-text text-darken-2">account_circle</i>
+							<input id="email" type="email" class="validate" name="email">
+							<label for="email" data-error="Wrong format" data-success="Right format">EMAIL</label>
+					  </div>
+				 </div>
+				 <div class="row">
+					  <div class="input-field col s11 l11">
+							<i class="material-icons prefix grey-text text-darken-2">lock_open</i>
+							<input id="password" type="password" class="validate" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+							<label for="password">PASSWORD</label>
+					  </div>
+				 </div>
+				 <div class="center-align"><br>
+					  <button type="submit" class="btn waves-effect waves-light indigo lighten-3">
+							<i class="material-icons">keyboard_arrow_right</i>
+					  </button>
+				 </div><br><br>
+				 <div class="card-divider">
+					  <div class="card-action"><br>
+							<a class="waves-effect waves-light indigo-text text-lighten-2 left-align" href="/enter">
+								<i class="material-icons">lock_outline</i>
+							</a>
+							<a class="waves-effect waves-light indigo-text text-ligh-2 right">
+								<i class="material-icons">help_outline</i>
+							</a>
+					  </div>
+				 </div>
+			</div>
+		</div>
+	 </form>
 {{end}}

@@ -96,7 +96,7 @@ func (g *Galleries) Edit(w http.ResponseWriter, r *http.Request) {
 	// and set the account for us in the request context.
 	account := context.Account(r.Context())
 	if gallery.AccountID != account.ID {
-		http.Error(w, "You do not have permission to edit this gallery",
+		http.Error(w, "You do not have permission to edit this visit",
 			http.StatusForbidden)
 		return
 	}
@@ -113,7 +113,7 @@ func (g *Galleries) ImageUpload(w http.ResponseWriter, r *http.Request) {
 	}
 	account := context.Account(r.Context())
 	if gallery.AccountID != account.ID {
-		http.Error(w, "Gallery not found", http.StatusNotFound)
+		http.Error(w, "Visit not found", http.StatusNotFound)
 		return
 	}
 
@@ -168,7 +168,7 @@ func (g *Galleries) ImageDelete(w http.ResponseWriter, r *http.Request) {
 	account := context.Account(r.Context())
 	if gallery.AccountID != account.ID {
 		http.Error(w, "You do not have permission to edit "+
-			"this gallery or image", http.StatusForbidden)
+			"this visit or bill", http.StatusForbidden)
 		return
 	}
 	// Get the filename from the path.
@@ -248,7 +248,7 @@ func (g *Galleries) Update(w http.ResponseWriter, r *http.Request) {
 	}
 	account := context.Account(r.Context())
 	if gallery.AccountID != account.ID {
-		http.Error(w, "Gallery not found", http.StatusNotFound)
+		http.Error(w, "Visit not found", http.StatusNotFound)
 		return
 	}
 	var vd views.Data
@@ -279,7 +279,7 @@ func (g *Galleries) Update(w http.ResponseWriter, r *http.Request) {
 	} else {
 		vd.Alert = &views.Alert{
 			Level:   views.AlertLvlSuccess,
-			Message: "Gallery updated successfully",
+			Message: "Visit updated successfully",
 		}
 	}
 	// Error or not, we are going to render the EditView with
@@ -299,7 +299,7 @@ func (g *Galleries) Delete(w http.ResponseWriter, r *http.Request) {
 	// on any routes mapped to this method.
 	account := context.Account(r.Context())
 	if gallery.AccountID != account.ID {
-		http.Error(w, "Permisson Denied! You do not have access to this gallery.", http.StatusForbidden)
+		http.Error(w, "Permisson Denied! You do not have access to this visit.", http.StatusForbidden)
 		return
 	}
 	var vd views.Data
@@ -347,14 +347,14 @@ func (g *Galleries) galleryByID(w http.ResponseWriter,
 		// status code, as the page requested is for an invalid
 		// gallery ID, which means the page doesn't exist.
 		log.Println(err)
-		http.Error(w, "Invalid gallery ID", http.StatusNotFound)
+		http.Error(w, "Invalid visit ID", http.StatusNotFound)
 		return nil, err
 	}
 	gallery, err := g.gs.ByID(uint(id))
 	if err != nil {
 		switch err {
 		case models.ErrNotFound:
-			http.Error(w, "Gallery not found", http.StatusNotFound)
+			http.Error(w, "Visit not found", http.StatusNotFound)
 		default:
 			log.Println(err)
 			http.Error(w, "Hmmm..Something went wrong.",

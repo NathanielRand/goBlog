@@ -1,39 +1,39 @@
 {{define "materialize"}}
-    <!DOCTYPE html>
-    <html lang="en">
-        <!--template "head"-->
-        <head>
-            <meta charset="utf-8">
-        	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        
-        	<title>Coverd</title>
-        	<meta name="Coverd Assurance, Inc." content="">
-        	<meta name="Nathaniel Rand" content="">
-        
-        	<!--Import Google Material Icons-->
-        	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
-        	<!--Google Fonts-->
-        	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa:300">
-        
-        	<!--Materialize CSS-->
-        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection">
-        
-        	<!--MUTO CSS-->
-        	<link href="/assets/coverd.css" rel="stylesheet" type="text/css">
-        
-        	<!--Device View Optimization-->
-        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
-        <body>
-            {{template "navbar" .}}
-            {{if .Alert}}
-                {{template "alert" .Alert}}
-            {{end}}
-            {{template "yield" .Yield}}
-            {{template "footer"}}
-            
-            <!--Import jQuery before materialize.min.js-->
+	<!DOCTYPE html>
+	<html lang="en">
+		<!--template "head"-->
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+			<title>Coverd</title>
+			<meta name="Coverd Assurance, Inc." content="">
+			<meta name="Nathaniel Rand" content="">
+		
+			<!--Import Google Material Icons-->
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+			<!--Google Fonts-->
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa:300">
+		
+			<!--Materialize CSS-->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection">
+		
+			<!--MUTO CSS-->
+			<link href="/assets/coverd.css" rel="stylesheet" type="text/css">
+		
+			<!--Device View Optimization-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</head>
+		<body>
+			{{template "navbar" .}}
+			{{if .Alert}}
+				{{template "alert" .Alert}}
+			{{end}}
+			{{template "yield" .Yield}}
+			{{template "footer"}}
+			
+			<!--Import jQuery before materialize.min.js-->
 			<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 			<!--Materialize JavaScript -->
@@ -47,30 +47,33 @@
 			
 			<!--MUTO JavaScript-->
 			<script>
-			    M.AutoInit();
-			    
-			    var elem = document.querySelector('.fixed-action-btn');
-                var instance = M.FloatingActionButton.init(elem, options);
-                
-                $(document).ready(function(){
-                $('.fixed-action-btn').floatingActionButton();
-                });
+				
+				// Modal
+				$(document).ready(function(){
+					$('.modal').modal();
+				});
+				
+				var elem = document.querySelector('.fixed-action-btn');
+				var instance = M.FloatingActionButton.init(elem, options);
+				
+				// Floating Button
+				$(document).ready(function(){
+					$('.fixed-action-btn').floatingActionButton();
+				});
 			
-			 //   //  Select Button
-    //             $(document).ready(function() {
-    //                 $('select').material_select();
-    //             });
-			
-			    // Initialize collapse button
-			    $(".button-collapse").sideNav();
-			    
-              
-                
-                $('.chips-placeholder').material_chip({
-                    placeholder: 'Styles, Types, etc..',
-                    secondaryPlaceholder: '+Tag',
-                });
+				// Collapsing button
+				$(".button-collapse").sideNav();
+				
+				// Chips 
+				$('.chips-placeholder').material_chip({
+					placeholder: 'Styles, Types, etc..',
+					secondaryPlaceholder: '+Tag',
+				});
+				
+				// Auto-Initilization
+				M.AutoInit();
+				
 			</script>
-        </body>
-    </html>
+		</body>
+	</html>
 {{end}}
