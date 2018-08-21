@@ -1,22 +1,71 @@
 {{define "yield"}}
-    <div class="container">
-        {{template "aboutHeader"}}
-        {{template "aboutContent"}}
-    </div>
+		{{template "aboutHeader"}}
+		{{template "aboutMission"}}
+		{{template "aboutTeam"}}
 {{end}}
 
 {{define "aboutHeader"}}
-    <div class="row center">
-        <h2>About</h2>
-    </div>
+	<div class="row center">
+			<h2>ABOUT</h2>
+	</div>
+	<div class="row">
+		<div class="col s12">
+			<div class="card-content">
+				<div class="card-title center">
+					<img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTEwLjk4NSwzNDEuNzg4Yy0zLjEtMTIuNTExLTEyLjgyMi0yMi4xMDQtMjUuMzcyLTI1LjAzNGMtNy4xMS0xLjY2Mi0xNC41NjgtMC45NDEtMjEuMTkxLDEuODc3ICAgIGMtMC42MzQtMC40ODYtMS4zMjktMC45MTItMi4wOTUtMS4yNDRsLTYuNDU5LTIuODA2Yy0yMS40MzctOS4zMTMtNDYuMjc1LTYuMjYxLTY0LjgxOCw3Ljk2OGwtNzUuNzMyLDU4LjEwNCAgICBjLTMuMzg2LTQuMTU1LTcuNzEtNy41MzEtMTIuNy05Ljc4OWwtNzAuNzU0LTMyLjAxN2MtMjUuNzk1LTExLjY3Mi01NS4wNjEtMTQuMDY2LTgyLjQwNS02LjczOUw4Ny44MSwzNDguNjIyVjM0MiAgICBjMC01LjUyMi00LjQ3OC0xMC0xMC0xMEgxMGMtNS41MjIsMC0xMCw0LjQ3OC0xMCwxMHYxNjBjMCw1LjUyMiw0LjQ3OCwxMCwxMCwxMGgyODIuODQ3YzMyLjU5NSwwLDY0LjA5OC0xMS43NzEsODguNzA2LTMzLjE0NiAgICBsMzcuNzk2LTMyLjgyOGM0LjE3LTMuNjIyLDQuNjEzLTkuOTM4LDAuOTkyLTE0LjEwN2MtMy42MjItNC4xNy05LjkzOC00LjYxNC0xNC4xMDctMC45OTJsLTM3Ljc5NiwzMi44MjggICAgQzM0Ny40NjgsNDgxLjk2OSwzMjAuNjIzLDQ5MiwyOTIuODQ3LDQ5Mkg4Ny44MVYzNjkuMzI3bDY2LjgyMy0xNy45YzIyLjg5My02LjEzMiw0Ny4zOTQtNC4xMjksNjguOTg0LDUuNjQybDcwLjc1NSwzMi4wMTcgICAgYzMuOTgsMS44MDIsNi44NzksNS4wOTQsOC4xNjEsOS4yNzFjMS4yODIsNC4xNzcsMC43MjksOC41MjktMS41NTYsMTIuMjU1Yy0zLjQ2Miw1LjY0MS0xMC4zNDEsOC4zNzQtMTYuNzI2LDYuNjM2ICAgIGwtODguODg1LTI0LjEyMmMtNS4zMjgtMS40NDEtMTAuODIzLDEuNzAyLTEyLjI3MSw3LjAzMmMtMS40NDYsNS4zMywxLjcwMiwxMC44MjMsNy4wMzIsMTIuMjcxbDg4Ljg4NCwyNC4xMjEgICAgYzIuOTk5LDAuODE0LDYuMDQ0LDEuMjA3LDkuMDYxLDEuMjA2YzAuMjk1LDAsMC41ODktMC4wMjEsMC44ODQtMC4wMjhjMC4zMTMsMC4wMjksMC42MjksMC4wNDgsMC45NDksMC4wNDhoMjUuMTggICAgYzIxLjYxNiwwLDQyLjcyMy03LjU1Miw1OS40MzEtMjEuMjY1bDk0LjM1OS03Ny40NDFjMy4zNzYtMi43NzIsNy45MzItMy44MzcsMTIuMTg3LTIuODM5YzUuMjc3LDEuMjMyLDkuMjA1LDUuMTA4LDEwLjUwOSwxMC4zNjggICAgYzEuMzAzLDUuMjYtMC4zNjEsMTAuNTIxLTQuNDUyLDE0LjA3NWwtMjYuNDgyLDIzLjAwMWMtNC4xNywzLjYyMS00LjYxNCw5LjkzOC0wLjk5MiwxNC4xMDdzOS45MzgsNC42MTQsMTQuMTA3LDAuOTkyICAgIGwyNi40ODItMjMuMDAxQzUwOS45NjUsMzY3LjMyLDUxNC4wODQsMzU0LjI5OCw1MTAuOTg1LDM0MS43ODh6IE02Ny44MSw0OTJIMjBWMzUyaDQ3LjgxVjQ5MnogTTM2MS44Myw0MDEuMDUgICAgYy0xMS45LDkuNzY2LTI2LjYzOCwxNS41NDItNDEuOTQsMTYuNTQ5YzIuNTktNS41MzUsMy42OC0xMS42MzgsMy4xODYtMTcuNjlsODAuMTQ4LTYxLjQ5MyAgICBjMTIuMTkxLTkuMzUzLDI4LjMyMS0xMS42NzksNDIuNjA3LTYuMzA3TDM2MS44Myw0MDEuMDV6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDQ2LjA5LDQwOC42MmMtMS44Ni0xLjg2LTQuNDI5LTIuOTMxLTcuMDctMi45MzFjLTIuNjMsMC01LjIxLDEuMDctNy4wNjksMi45MzFjLTEuODYsMS44NTktMi45MzEsNC40MzktMi45MzEsNy4wNjkgICAgczEuMDcsNS4yMSwyLjkzMSw3LjA3YzEuODU5LDEuODYsNC40MzksMi45Myw3LjA2OSwyLjkzYzIuNjQxLDAsNS4yMjEtMS4wNjksNy4wNy0yLjkzYzEuODYtMS44NiwyLjkzLTQuNDQsMi45My03LjA3ICAgIFM0NDcuOTUxLDQxMC40NzksNDQ2LjA5LDQwOC42MnoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik01MC45OCwzNzUuNzgxYy0xLjg3LTEuODYxLTQuNDM5LTIuOTMxLTcuMDgtMi45MzFjLTIuNjMsMC01LjE5OSwxLjA3LTcuMDY5LDIuOTMxYy0xLjg2LDEuODU5LTIuOTMxLDQuNDM5LTIuOTMxLDcuMDY5ICAgIHMxLjA3LDUuMjEsMi45MzEsNy4wN2MxLjg3LDEuODYsNC40MzksMi45Myw3LjA2OSwyLjkzYzIuNjQxLDAsNS4yMS0xLjA2OSw3LjA4LTIuOTNjMS44Ni0xLjg2LDIuOTMxLTQuNDQsMi45MzEtNy4wNyAgICBTNTIuODQxLDM3Ny42NCw1MC45OCwzNzUuNzgxeiIgZmlsbD0iIzc5ODZjYiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM0OS4yNjgsMTEyLjk5Yy0wLjAyNS0wLjAzNC0wLjA1Mi0wLjA2Ny0wLjA3OC0wLjEwMkwyNjMuODc2LDMuODM4QzI2MS45ODIsMS40MTYsMjU5LjA3OCwwLDI1Ni4wMDEsMEgyNTYgICAgYy0zLjA3NSwwLTUuOTc5LDEuNDE1LTcuODc1LDMuODM2bC04NC45MDcsMTA4LjQ3OWMtMC4xNTksMC4yMDQtMC4zMSwwLjQxMy0wLjQ1MSwwLjYyNkMxNDUuNDk4LDEzNC4xNzksMTM2LDE2MC44OTYsMTM2LDE4OC4zMDIgICAgQzEzNiwyNTQuMzA0LDE4OS44MzIsMzA4LDI1NiwzMDhzMTIwLTUzLjY5NiwxMjAtMTE5LjY5OEMzNzYsMTYwLjk0NCwzNjYuNTA4LDEzNC4yMTEsMzQ5LjI2OCwxMTIuOTl6IE0yNTYsMjg4ICAgIGMtNTUuMTQxLDAtMTAwLTQ0LjcyNS0xMDAtOTkuNjk4YzAtMjMuMTE5LDguMTE5LTQ1LjY1MSwyMi44NTgtNjMuNDQzYzAuMjc2LTAuMzMzLDAuNTI3LTAuNjgxLDAuNzU0LTEuMDM5bDc2LjM4Ny05Ny41OTQgICAgbDc3LjIzMiw5OC43MjJjMC4xMDcsMC4xNDYsMC4yMTgsMC4yOSwwLjMzMywwLjQzMUMzNDguMDMzLDE0My4wODEsMzU2LDE2NS40MjgsMzU2LDE4OC4zMDJDMzU2LDI0My4yNzUsMzExLjE0MSwyODgsMjU2LDI4OHoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zMjMuODg0LDE3OC4zMDFjLTUuNTIyLDAtMTAsNC40NzgtMTAsMTBjMCwxOS4zMjMtOS42NDEsMzcuMjc3LTI1Ljc4OCw0OC4wMjVjLTQuNTk4LDMuMDYtNS44NDQsOS4yNjgtMi43ODMsMTMuODY1ICAgIGMxLjkyNiwyLjg5Niw1LjEsNC40NjEsOC4zMzMsNC40NjFjMS45MDQsMCwzLjgyOS0wLjU0Myw1LjUzMi0xLjY3N2MyMS43MzEtMTQuNDY1LDM0LjcwNi0zOC42NDIsMzQuNzA2LTY0LjY3NCAgICBDMzMzLjg4NCwxODIuNzc5LDMyOS40MDYsMTc4LjMwMSwzMjMuODg0LDE3OC4zMDF6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjU2Ljg1NCwyNDUuOTkzQzI1Ni41NzEsMjQ1Ljk5OCwyNTYuMjg2LDI0NiwyNTYsMjQ2Yy01LjUyMiwwLTEwLDQuNDc4LTEwLDEwYzAsNS41MjIsNC40NzgsMTAsMTAsMTAgICAgYzAuMzgzLDAsMC43NjYtMC4wMDIsMS4xNDctMC4wMDhjNS41MjItMC4wODEsOS45MzQtNC42MjMsOS44NTMtMTAuMTQ2QzI2Ni45MiwyNTAuMzI0LDI2Mi40MTUsMjQ1LjkwMiwyNTYuODU0LDI0NS45OTN6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+					<h4>Coverd Assurance, Inc.</h4>
+					<h5>Medical Pooling</h5><br>
+					<p>
+						Established 2018<br>
+						Born in Charleston, South Carolina
+					</p>
+				</div>    
+			</div>
+		</div>
+	</div><br>
 {{end}}
 
-{{define "aboutContent"}}
-    <div class="card">
-        <div class="card-content">
-            <div class="card-title">
-                <h4>Information</h4>
-            </div>    
-        </div>
-    </div>
+{{define "aboutMission"}}
+	<div class="row">
+		<div class="divider"></div>
+		<h3 class="center">MISSION</h3>
+		<div class="card col s12 m6 l6 offset-m3 offset-l3 z-depth-2">
+			<div class="card-content">
+				<p><b>Our Mission</b> at Coverd is make health-care affordable for all. Healthcare should be welcomed and not feared. It is our human right to live in peace and in health, free from an all consuming debt.</p>
+			</div>
+		</div>
+	</div>
+{{end}}
+
+{{define "aboutTeam"}}
+	<div class="row">
+		<div class="divider"></div>
+		<h3 class="center">TEAM</h3>
+	</div>
+	<div class="row">
+		<div class="col s12 m6 l4">
+			<div class="card">
+				<div class="card-content center">
+					<span>
+						<img src="assets/media/nathanielrand.JPG" alt="Nathaniel Rand Image" id="about-image" class="circle responsive-img">
+						<h4 class="indigo-text text-lighten-1"><b>Nathaniel</b> Rand</h4>
+						<h5 class="orange-text text-lighten-1">Co-Founder</h5><br>
+						<h6>TECHNOLOGY</h6>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="col s12 m6 l4">
+			<div class="card">
+				<div class="card-content center">
+					<span>
+						<img src="assets/media/nathaniel.png" alt="Jordan Mason Image" id="about-image" class="circle responsive-img">
+						<h4 class="indigo-text text-lighten-1"><b>Jordan</b> Mason</h4>
+						<h5 class="orange-text text-lighten-1">Co-Founder</h5><br>
+						<h6>OPERATIONS</h6>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
 {{end}}

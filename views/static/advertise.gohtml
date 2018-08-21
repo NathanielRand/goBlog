@@ -1,24 +1,43 @@
 {{define "yield"}}
-    <div class="container">
-        {{template "advertiseHeader"}}
-        {{template "advertiseContent"}}
-    </div>
+	<div class="container">
+		{{template "advertiseHeader"}}
+		{{template "advertiseContent"}}
+	</div>
 {{end}}
 
 {{define "advertiseHeader"}}
-    <div class="row center">
-        <h2>Advertise</h2>
-    </div>
+	<div class="row center">
+		<h2>Advertise</h2>
+	</div>
 {{end}}
 
 {{define "advertiseContent"}}
-    <div class="row">
-        <div class="card">
-            <div class="card-content">
-                <div class="card-title">
-                    <h4>Information</h4>
-                </div>    
-            </div>
-        </div>
-    </div>
+	<div class="row">
+		<div class="card col s12 m8 offset-m2">
+			<div class="card-content">
+				<div class="card-title">
+					<h4>Coming Soon!</h4>
+				</div>    
+			</div>
+			<div class="card-content">
+				<p>Please provide your contact information below to recieve a notifiction when this feature launches.</p>
+				<br>
+				<p><b>Thank you</b></p><br>
+				<div class="row">
+					<div class="input-field col s11 m11">
+						<i class="material-icons prefix indigo-text text-lighten-1">mail_outline</i>
+						<input id="email" type="email" class="validate" name="email">
+						<label for="email" data-error="Incorrect Format. Try Again." data-success="Correct Format">EMAIL</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="center-align"><br>
+              <button type="submit" class="btn waves-effect waves-light indigo lighten-2">
+                  <i class="material-icons right">keyboard_arrow_right</i> SUBMIT
+              </button>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
 {{end}}

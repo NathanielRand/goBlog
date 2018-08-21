@@ -30,11 +30,11 @@
                 </div>
             </div>
             <div class="row center">
-                <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn amber darken-2"><i class="material-icons left">settings</i>EDIT</a>
+                <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn orange lighten-1"><i class="material-icons left">settings</i>EDIT</a>
             </div>
             <div class="divider"></div><br>
             <div class="row">
-                <div class="col s12 m6">
+                <div class="col s12 m6 l5 offset-l1">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                             <span class="card-title">Reason
@@ -47,16 +47,18 @@
                                 {{end}}
                             </p>
                         </div>
-                        <div class="card-content center"><br>
+                        <div class="card-content center"><br><br>
                             {{if .Reason}}
-                                <h6><b>{{.Reason}}</b></h6><br>
+                                <h6><b>{{.Reason}}</b></h6><br><br><br>
                             {{else}}
+                                <br><br><br>
                                 <p>NO REASON PROVIDED</p>
+                                <br><br><br>
                             {{end}}
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6">
+                <div class="col s12 m6 l5">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                             <span class="card-title">Service Provider
@@ -82,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m10 l8 offset-m1 offset-l2">
+                <div class="col s12 m6 l5 offset-l1">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                             <span class="card-title">Cost
@@ -97,7 +99,9 @@
                         </div>
                         <div class="card-content center">
                             {{if .Cost}}
+                            <br><br>
                             <h5><b>Total Costs: ${{.Cost}}</b></h5>
+                            <br><br>
                             {{else}}
                             <p>NO COST PROVIDED</p>
                             {{end}}
@@ -114,48 +118,90 @@
                 </div>
             </div>
             <div class="row center">
-                <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn amber darken-2"><i class="material-icons left">settings</i>EDIT</a>
+                <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn orange lighten-1"><i class="material-icons left">settings</i>EDIT</a>
             </div>
             <div class="row">
-                <div class="col s12 m10 l8 offset-m1 offset-l2">
+                <div class="col s12 m6 l5 offset-l1">
                     <div class="card">
                         <div class="card-content indigo lighten-2 white-text">
                         {{if .Images}}
                             <span class="card-title">Bill Uploaded: <b>YES</b>
-                                <i class="material-icons right medium">attach_money</i>
+                                <h4 class="right white-text"><b>${{.Cost}}</b></h4>
                             </span>
-                            <p>Upload this visit's bill only</p>
+                            <p>Visit on: 01/27/2019</p>
                         {{else}}
                             <span class="card-title">Bill Uploaded: <b>NO</b>
                                 <i class="material-icons right medium">attach_money</i>
                             </span>
-                            <p>Upload this visit's bill only</p>
+                            <p>Visit on: 01/27/2019</p>
                         {{end}}
                         </div>
-                        <div class="card-content col s11 m11 l5 offset-s1 offset-m2 offset-l1">
-                            <br>
-                            <h5><b>Your Cost: ${{.Cost}} <small>(6%)</small></b></h5><br>
-                            <h6>Pool Cost: $0.04 <small>(per person)</small></h6><br>
-                            <h6>Total Cost: ${{.Cost}}</h6><br>
-                            <div class="divider"></div>
+                        <div class="card-content">
+                            <h5>Financial</h5>
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Percentage</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>Total:</p></td>
+                                        <td><p>100%</p></td>
+                                        <td><p>${{.Cost}}</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Lead:</p></td>
+                                        <td><p>6%</p></td>
+                                        <td><p>$42.00</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Contribution:</p></td>
+                                        <td><p>0.0001%</p></td>
+                                        <td><p>$0.07</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p><b>You Pay:</b></p></td>
+                                        <td><p><b>6.0001%</b></p></td>
+                                        <td><p><b>$42.07</b></p></td>
+                                    </tr>
+                                </tbody>
+                            </table><br>
+                            <div class="card-action center">
+                                <a class="waves-effect btn orange lighten-1"><i class="material-icons left">attach_money</i>PAY BILL</a>
+                            </div>
                         </div>
-                        {{if .Images}}
-                            {{range .ImagesSplitN 6}}
-                            <div class="card-content">
-                                <div id="gallery-show-images">
-                                    {{range .}}
-                                        <a href="{{.Path}}">
-                                            <img src="{{.Path}}" class="responsive-img col s12 m10 l6 offset-m1">
-                                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m6 l5">
+                    <div class="card">
+                        <div class="card-content indigo lighten-2">
+                            <span class="card-title white-text">Bills Uploaded: {{len .Images}} ( pages )
+                                <h5 class="white-text"></h5>
+                            </span>
+                        </div>
+                            {{if .Images}}
+                                <div class="card-content">
+                                    {{range .ImagesSplitN 12}}
+                                        <div id="gallery-show-images">
+                                            {{range .}}
+                                                <a href="{{.Path}}">
+                                                    <img src="{{.Path}}" class="responsive-img col s12 m12 l12">
+                                                </a>
+                                            {{end}}
+                                        </div><br><br>
                                     {{end}}
+                                    <div class="center">
+                                        <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn btn-large indigo lighten-3"><i class="material-icons">file_upload</i></a>
+                                    </div>
                                 </div>
-                            </div><br><br><br><br>
+                            {{else}}
+                                <div class="card-content center"><br>
+                                    <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn btn-large indigo lighten-3"><i class="material-icons">file_upload</i></a>
+                                </div><br>
                             {{end}}
-                        {{else}}
-                            <div class="card-content center"><br>
-                                <a href="/galleries/{{.ID}}/edit" class="waves-effect waves-light btn btn-large indigo lighten-3"><i class="material-icons">file_upload</i></a>
-                            </div><br>
-                        {{end}}
                         </div>
                     </div>
                 </div>

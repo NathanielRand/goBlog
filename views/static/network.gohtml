@@ -1,15 +1,13 @@
 {{define "yield"}}
-    
-        {{template "accountNetworkNavigation"}}
-        {{template "accountNetworkImages"}}
-    
+    {{template "accountNetworkNavigation"}}
+    {{template "accountNetworkImages"}}
 {{end}}
 
 {{define "accountNetworkNavigation"}}
     <div class="row">
         <div class="col s12 m8 offset-m2">
-            <div class="card-title center"><br>
-                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MC42NjcgNDkwLjY2NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkwLjY2NyA0OTAuNjY3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTI0NS4zMzMsODUuMzMzYy00MS4xNzMsMC03NC42NjcsMzMuNDkzLTc0LjY2Nyw3NC42NjdzMzMuNDkzLDc0LjY2Nyw3NC42NjcsNzQuNjY3UzMyMCwyMDEuMTczLDMyMCwxNjAgICAgQzMyMCwxMTguODI3LDI4Ni41MDcsODUuMzMzLDI0NS4zMzMsODUuMzMzeiBNMjQ1LjMzMywyMTMuMzMzQzIxNS45MzYsMjEzLjMzMywxOTIsMTg5LjM5NywxOTIsMTYwICAgIGMwLTI5LjM5NywyMy45MzYtNTMuMzMzLDUzLjMzMy01My4zMzNzNTMuMzMzLDIzLjkzNiw1My4zMzMsNTMuMzMzUzI3NC43MzEsMjEzLjMzMywyNDUuMzMzLDIxMy4zMzN6IiBmaWxsPSIjNWM2YmMwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzk0LjY2NywxNzAuNjY3Yy0yOS4zOTcsMC01My4zMzMsMjMuOTM2LTUzLjMzMyw1My4zMzNzMjMuOTM2LDUzLjMzMyw1My4zMzMsNTMuMzMzUzQ0OCwyNTMuMzk3LDQ0OCwyMjQgICAgUzQyNC4wNjQsMTcwLjY2NywzOTQuNjY3LDE3MC42Njd6IE0zOTQuNjY3LDI1NmMtMTcuNjQzLDAtMzItMTQuMzU3LTMyLTMyYzAtMTcuNjQzLDE0LjM1Ny0zMiwzMi0zMnMzMiwxNC4zNTcsMzIsMzIgICAgQzQyNi42NjcsMjQxLjY0Myw0MTIuMzA5LDI1NiwzOTQuNjY3LDI1NnoiIGZpbGw9IiM1YzZiYzAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik05Ny41MTUsMTcwLjY2N2MtMjkuNDE5LDAtNTMuMzMzLDIzLjkzNi01My4zMzMsNTMuMzMzczIzLjkzNiw1My4zMzMsNTMuMzMzLDUzLjMzM3M1My4zMzMtMjMuOTM2LDUzLjMzMy01My4zMzMgICAgUzEyNi45MzMsMTcwLjY2Nyw5Ny41MTUsMTcwLjY2N3ogTTk3LjUxNSwyNTZjLTE3LjY0MywwLTMyLTE0LjM1Ny0zMi0zMmMwLTE3LjY0MywxNC4zNTctMzIsMzItMzJjMTcuNjQzLDAsMzIsMTQuMzU3LDMyLDMyICAgIEMxMjkuNTE1LDI0MS42NDMsMTE1LjE1NywyNTYsOTcuNTE1LDI1NnoiIGZpbGw9IiM1YzZiYzAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNDUuMzMzLDI1NmMtNzYuNDU5LDAtMTM4LjY2Nyw2Mi4yMDgtMTM4LjY2NywxMzguNjY3YzAsNS44ODgsNC43NzksMTAuNjY3LDEwLjY2NywxMC42NjdTMTI4LDQwMC41NTUsMTI4LDM5NC42NjcgICAgYzAtNjQuNzA0LDUyLjYyOS0xMTcuMzMzLDExNy4zMzMtMTE3LjMzM3MxMTcuMzMzLDUyLjYyOSwxMTcuMzMzLDExNy4zMzNjMCw1Ljg4OCw0Ljc3OSwxMC42NjcsMTAuNjY3LDEwLjY2NyAgICBjNS44ODgsMCwxMC42NjctNC43NzksMTAuNjY3LTEwLjY2N0MzODQsMzE4LjIwOCwzMjEuNzkyLDI1NiwyNDUuMzMzLDI1NnoiIGZpbGw9IiM1YzZiYzAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zOTQuNjY3LDI5OC42NjdjLTE3LjU1NywwLTM0Ljc1Miw0LjgtNDkuNzI4LDEzLjg2N2MtNS4wMTMsMy4wNzItNi42MzUsOS42MjEtMy41ODQsMTQuNjU2ICAgIGMzLjA5Myw1LjAzNSw5LjYyMSw2LjYzNSwxNC42NTYsMy41ODRDMzY3LjYzNywzMjMuNzEyLDM4MC45OTIsMzIwLDM5NC42NjcsMzIwYzQxLjE3MywwLDc0LjY2NywzMy40OTMsNzQuNjY3LDc0LjY2NyAgICBjMCw1Ljg4OCw0Ljc3OSwxMC42NjcsMTAuNjY3LDEwLjY2N2M1Ljg4OCwwLDEwLjY2Ny00Ljc3OSwxMC42NjctMTAuNjY3QzQ5MC42NjcsMzQxLjczOSw0NDcuNTk1LDI5OC42NjcsMzk0LjY2NywyOTguNjY3eiIgZmlsbD0iIzVjNmJjMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTE0NS43MDcsMzEyLjUxMmMtMTQuOTU1LTkuMDQ1LTMyLjE0OS0xMy44NDUtNDkuNzA3LTEzLjg0NWMtNTIuOTI4LDAtOTYsNDMuMDcyLTk2LDk2ICAgIGMwLDUuODg4LDQuNzc5LDEwLjY2NywxMC42NjcsMTAuNjY3czEwLjY2Ny00Ljc3OSwxMC42NjctMTAuNjY3QzIxLjMzMywzNTMuNDkzLDU0LjgyNywzMjAsOTYsMzIwICAgIGMxMy42NzUsMCwyNy4wMjksMy43MTIsMzguNjM1LDEwLjc1MmM1LjAxMywzLjA1MSwxMS41ODQsMS40NTEsMTQuNjU2LTMuNTg0QzE1Mi4zNjMsMzIyLjEzMywxNTAuNzQxLDMxNS41ODQsMTQ1LjcwNywzMTIuNTEyeiIgZmlsbD0iIzVjNmJjMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+            <div class="card-title center"><br><br>
+                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MC42NjcgNDkwLjY2NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkwLjY2NyA0OTAuNjY3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTI0NS4zMzMsODUuMzMzYy00MS4xNzMsMC03NC42NjcsMzMuNDkzLTc0LjY2Nyw3NC42NjdzMzMuNDkzLDc0LjY2Nyw3NC42NjcsNzQuNjY3UzMyMCwyMDEuMTczLDMyMCwxNjAgICAgQzMyMCwxMTguODI3LDI4Ni41MDcsODUuMzMzLDI0NS4zMzMsODUuMzMzeiBNMjQ1LjMzMywyMTMuMzMzQzIxNS45MzYsMjEzLjMzMywxOTIsMTg5LjM5NywxOTIsMTYwICAgIGMwLTI5LjM5NywyMy45MzYtNTMuMzMzLDUzLjMzMy01My4zMzNzNTMuMzMzLDIzLjkzNiw1My4zMzMsNTMuMzMzUzI3NC43MzEsMjEzLjMzMywyNDUuMzMzLDIxMy4zMzN6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzk0LjY2NywxNzAuNjY3Yy0yOS4zOTcsMC01My4zMzMsMjMuOTM2LTUzLjMzMyw1My4zMzNzMjMuOTM2LDUzLjMzMyw1My4zMzMsNTMuMzMzUzQ0OCwyNTMuMzk3LDQ0OCwyMjQgICAgUzQyNC4wNjQsMTcwLjY2NywzOTQuNjY3LDE3MC42Njd6IE0zOTQuNjY3LDI1NmMtMTcuNjQzLDAtMzItMTQuMzU3LTMyLTMyYzAtMTcuNjQzLDE0LjM1Ny0zMiwzMi0zMnMzMiwxNC4zNTcsMzIsMzIgICAgQzQyNi42NjcsMjQxLjY0Myw0MTIuMzA5LDI1NiwzOTQuNjY3LDI1NnoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik05Ny41MTUsMTcwLjY2N2MtMjkuNDE5LDAtNTMuMzMzLDIzLjkzNi01My4zMzMsNTMuMzMzczIzLjkzNiw1My4zMzMsNTMuMzMzLDUzLjMzM3M1My4zMzMtMjMuOTM2LDUzLjMzMy01My4zMzMgICAgUzEyNi45MzMsMTcwLjY2Nyw5Ny41MTUsMTcwLjY2N3ogTTk3LjUxNSwyNTZjLTE3LjY0MywwLTMyLTE0LjM1Ny0zMi0zMmMwLTE3LjY0MywxNC4zNTctMzIsMzItMzJjMTcuNjQzLDAsMzIsMTQuMzU3LDMyLDMyICAgIEMxMjkuNTE1LDI0MS42NDMsMTE1LjE1NywyNTYsOTcuNTE1LDI1NnoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yNDUuMzMzLDI1NmMtNzYuNDU5LDAtMTM4LjY2Nyw2Mi4yMDgtMTM4LjY2NywxMzguNjY3YzAsNS44ODgsNC43NzksMTAuNjY3LDEwLjY2NywxMC42NjdTMTI4LDQwMC41NTUsMTI4LDM5NC42NjcgICAgYzAtNjQuNzA0LDUyLjYyOS0xMTcuMzMzLDExNy4zMzMtMTE3LjMzM3MxMTcuMzMzLDUyLjYyOSwxMTcuMzMzLDExNy4zMzNjMCw1Ljg4OCw0Ljc3OSwxMC42NjcsMTAuNjY3LDEwLjY2NyAgICBjNS44ODgsMCwxMC42NjctNC43NzksMTAuNjY3LTEwLjY2N0MzODQsMzE4LjIwOCwzMjEuNzkyLDI1NiwyNDUuMzMzLDI1NnoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zOTQuNjY3LDI5OC42NjdjLTE3LjU1NywwLTM0Ljc1Miw0LjgtNDkuNzI4LDEzLjg2N2MtNS4wMTMsMy4wNzItNi42MzUsOS42MjEtMy41ODQsMTQuNjU2ICAgIGMzLjA5Myw1LjAzNSw5LjYyMSw2LjYzNSwxNC42NTYsMy41ODRDMzY3LjYzNywzMjMuNzEyLDM4MC45OTIsMzIwLDM5NC42NjcsMzIwYzQxLjE3MywwLDc0LjY2NywzMy40OTMsNzQuNjY3LDc0LjY2NyAgICBjMCw1Ljg4OCw0Ljc3OSwxMC42NjcsMTAuNjY3LDEwLjY2N2M1Ljg4OCwwLDEwLjY2Ny00Ljc3OSwxMC42NjctMTAuNjY3QzQ5MC42NjcsMzQxLjczOSw0NDcuNTk1LDI5OC42NjcsMzk0LjY2NywyOTguNjY3eiIgZmlsbD0iIzc5ODZjYiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTE0NS43MDcsMzEyLjUxMmMtMTQuOTU1LTkuMDQ1LTMyLjE0OS0xMy44NDUtNDkuNzA3LTEzLjg0NWMtNTIuOTI4LDAtOTYsNDMuMDcyLTk2LDk2ICAgIGMwLDUuODg4LDQuNzc5LDEwLjY2NywxMC42NjcsMTAuNjY3czEwLjY2Ny00Ljc3OSwxMC42NjctMTAuNjY3QzIxLjMzMywzNTMuNDkzLDU0LjgyNywzMjAsOTYsMzIwICAgIGMxMy42NzUsMCwyNy4wMjksMy43MTIsMzguNjM1LDEwLjc1MmM1LjAxMywzLjA1MSwxMS41ODQsMS40NTEsMTQuNjU2LTMuNTg0QzE1Mi4zNjMsMzIyLjEzMywxNTAuNzQxLDMxNS41ODQsMTQ1LjcwNywzMTIuNTEyeiIgZmlsbD0iIzc5ODZjYiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
                 <h3 class="indigo-text text-lighten-2">NETWORK</h3>
             </div>
         </div>
@@ -39,23 +37,48 @@
                             <p>Your Network of Medical Professionals</p>
                         </div>
                         <div class="card-content">
-                            <section>
-                                <p>Primary Care:</p><br>
-                                <h6 class="center"><b>Dr. John Rand</b></h6>
-                            </section><br>
-                            <div class="divider"></div><br>
-                            <section>
-                                <p>Dermatologist:</p><br>
-                                <h6 class="center"><b>Dr. John Rand</b></h6>
-                            </section><br>
-                            <div class="divider"></div><br>
-                            <section>
-                                <p>Cardiologist: <b class="right">n/a</b></p>
-                            </section><br>
-                            <div class="divider"></div><br>
-                            <section>
-                                <p>Endocrinologist: <b class="right">Dr. John C. Rand</b></p>
-                            </section>
+                            <table class="striped">
+                                <thead>
+                                  <tr>
+                                      <th>Type</th>
+                                      <th>Doctor</th>
+                                      <th>Phone</th>
+                                  </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td>Primary Care</td>
+                                        <td>Dr. John Rand</td>
+                                        <td>843-469-6850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pediatrician</td>
+                                        <td>Dr. John Rand</td>
+                                        <td>843-469-6850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dermatologist</td>
+                                        <td>Dr. John Rand</td>
+                                        <td>843-469-6850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cardiologist</td>
+                                        <td>Dr. John Rand</td>
+                                        <td>843-469-6850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Psychiatrist</td>
+                                        <td>Dr. John Rand</td>
+                                        <td>843-469-6850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Neurologist</td>
+                                        <td>Dr. John Rand</td>
+                                        <td>843-469-6850</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="card-action right-align">
                             <a href="#" class="waves-effect btn orange darken-2">EDIT</a>

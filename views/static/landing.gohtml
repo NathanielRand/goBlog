@@ -1,12 +1,28 @@
+{{define "disclaimer"}}
+    <div class="row">
+        <div class="col s10 offset-s1 m8 offset-m2 l6 offset-l3">
+            <div class="card red lighten-4">
+                <div class="card-content">
+                    <i class="material-icons red-text text-lighten-2 left">warning</i>
+                    <h6 class="red-text text-lighten-2"><b> MVP Disclaimer</b></h6>
+                    <p class="red-text text-darken-1"><b>Hello, I am a demo. Any data will be stored in my test database. Some of my features will not work.</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{{end}}
+
 {{define "yield"}}
+    {{template "disclaimer"}}
     <div class="container"><br>
         <div class="row"><br>
             <div class="center">
                 <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTEwLjk4NSwzNDEuNzg4Yy0zLjEtMTIuNTExLTEyLjgyMi0yMi4xMDQtMjUuMzcyLTI1LjAzNGMtNy4xMS0xLjY2Mi0xNC41NjgtMC45NDEtMjEuMTkxLDEuODc3ICAgIGMtMC42MzQtMC40ODYtMS4zMjktMC45MTItMi4wOTUtMS4yNDRsLTYuNDU5LTIuODA2Yy0yMS40MzctOS4zMTMtNDYuMjc1LTYuMjYxLTY0LjgxOCw3Ljk2OGwtNzUuNzMyLDU4LjEwNCAgICBjLTMuMzg2LTQuMTU1LTcuNzEtNy41MzEtMTIuNy05Ljc4OWwtNzAuNzU0LTMyLjAxN2MtMjUuNzk1LTExLjY3Mi01NS4wNjEtMTQuMDY2LTgyLjQwNS02LjczOUw4Ny44MSwzNDguNjIyVjM0MiAgICBjMC01LjUyMi00LjQ3OC0xMC0xMC0xMEgxMGMtNS41MjIsMC0xMCw0LjQ3OC0xMCwxMHYxNjBjMCw1LjUyMiw0LjQ3OCwxMCwxMCwxMGgyODIuODQ3YzMyLjU5NSwwLDY0LjA5OC0xMS43NzEsODguNzA2LTMzLjE0NiAgICBsMzcuNzk2LTMyLjgyOGM0LjE3LTMuNjIyLDQuNjEzLTkuOTM4LDAuOTkyLTE0LjEwN2MtMy42MjItNC4xNy05LjkzOC00LjYxNC0xNC4xMDctMC45OTJsLTM3Ljc5NiwzMi44MjggICAgQzM0Ny40NjgsNDgxLjk2OSwzMjAuNjIzLDQ5MiwyOTIuODQ3LDQ5Mkg4Ny44MVYzNjkuMzI3bDY2LjgyMy0xNy45YzIyLjg5My02LjEzMiw0Ny4zOTQtNC4xMjksNjguOTg0LDUuNjQybDcwLjc1NSwzMi4wMTcgICAgYzMuOTgsMS44MDIsNi44NzksNS4wOTQsOC4xNjEsOS4yNzFjMS4yODIsNC4xNzcsMC43MjksOC41MjktMS41NTYsMTIuMjU1Yy0zLjQ2Miw1LjY0MS0xMC4zNDEsOC4zNzQtMTYuNzI2LDYuNjM2ICAgIGwtODguODg1LTI0LjEyMmMtNS4zMjgtMS40NDEtMTAuODIzLDEuNzAyLTEyLjI3MSw3LjAzMmMtMS40NDYsNS4zMywxLjcwMiwxMC44MjMsNy4wMzIsMTIuMjcxbDg4Ljg4NCwyNC4xMjEgICAgYzIuOTk5LDAuODE0LDYuMDQ0LDEuMjA3LDkuMDYxLDEuMjA2YzAuMjk1LDAsMC41ODktMC4wMjEsMC44ODQtMC4wMjhjMC4zMTMsMC4wMjksMC42MjksMC4wNDgsMC45NDksMC4wNDhoMjUuMTggICAgYzIxLjYxNiwwLDQyLjcyMy03LjU1Miw1OS40MzEtMjEuMjY1bDk0LjM1OS03Ny40NDFjMy4zNzYtMi43NzIsNy45MzItMy44MzcsMTIuMTg3LTIuODM5YzUuMjc3LDEuMjMyLDkuMjA1LDUuMTA4LDEwLjUwOSwxMC4zNjggICAgYzEuMzAzLDUuMjYtMC4zNjEsMTAuNTIxLTQuNDUyLDE0LjA3NWwtMjYuNDgyLDIzLjAwMWMtNC4xNywzLjYyMS00LjYxNCw5LjkzOC0wLjk5MiwxNC4xMDdzOS45MzgsNC42MTQsMTQuMTA3LDAuOTkyICAgIGwyNi40ODItMjMuMDAxQzUwOS45NjUsMzY3LjMyLDUxNC4wODQsMzU0LjI5OCw1MTAuOTg1LDM0MS43ODh6IE02Ny44MSw0OTJIMjBWMzUyaDQ3LjgxVjQ5MnogTTM2MS44Myw0MDEuMDUgICAgYy0xMS45LDkuNzY2LTI2LjYzOCwxNS41NDItNDEuOTQsMTYuNTQ5YzIuNTktNS41MzUsMy42OC0xMS42MzgsMy4xODYtMTcuNjlsODAuMTQ4LTYxLjQ5MyAgICBjMTIuMTkxLTkuMzUzLDI4LjMyMS0xMS42NzksNDIuNjA3LTYuMzA3TDM2MS44Myw0MDEuMDV6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDQ2LjA5LDQwOC42MmMtMS44Ni0xLjg2LTQuNDI5LTIuOTMxLTcuMDctMi45MzFjLTIuNjMsMC01LjIxLDEuMDctNy4wNjksMi45MzFjLTEuODYsMS44NTktMi45MzEsNC40MzktMi45MzEsNy4wNjkgICAgczEuMDcsNS4yMSwyLjkzMSw3LjA3YzEuODU5LDEuODYsNC40MzksMi45Myw3LjA2OSwyLjkzYzIuNjQxLDAsNS4yMjEtMS4wNjksNy4wNy0yLjkzYzEuODYtMS44NiwyLjkzLTQuNDQsMi45My03LjA3ICAgIFM0NDcuOTUxLDQxMC40NzksNDQ2LjA5LDQwOC42MnoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik01MC45OCwzNzUuNzgxYy0xLjg3LTEuODYxLTQuNDM5LTIuOTMxLTcuMDgtMi45MzFjLTIuNjMsMC01LjE5OSwxLjA3LTcuMDY5LDIuOTMxYy0xLjg2LDEuODU5LTIuOTMxLDQuNDM5LTIuOTMxLDcuMDY5ICAgIHMxLjA3LDUuMjEsMi45MzEsNy4wN2MxLjg3LDEuODYsNC40MzksMi45Myw3LjA2OSwyLjkzYzIuNjQxLDAsNS4yMS0xLjA2OSw3LjA4LTIuOTNjMS44Ni0xLjg2LDIuOTMxLTQuNDQsMi45MzEtNy4wNyAgICBTNTIuODQxLDM3Ny42NCw1MC45OCwzNzUuNzgxeiIgZmlsbD0iIzc5ODZjYiIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTM0OS4yNjgsMTEyLjk5Yy0wLjAyNS0wLjAzNC0wLjA1Mi0wLjA2Ny0wLjA3OC0wLjEwMkwyNjMuODc2LDMuODM4QzI2MS45ODIsMS40MTYsMjU5LjA3OCwwLDI1Ni4wMDEsMEgyNTYgICAgYy0zLjA3NSwwLTUuOTc5LDEuNDE1LTcuODc1LDMuODM2bC04NC45MDcsMTA4LjQ3OWMtMC4xNTksMC4yMDQtMC4zMSwwLjQxMy0wLjQ1MSwwLjYyNkMxNDUuNDk4LDEzNC4xNzksMTM2LDE2MC44OTYsMTM2LDE4OC4zMDIgICAgQzEzNiwyNTQuMzA0LDE4OS44MzIsMzA4LDI1NiwzMDhzMTIwLTUzLjY5NiwxMjAtMTE5LjY5OEMzNzYsMTYwLjk0NCwzNjYuNTA4LDEzNC4yMTEsMzQ5LjI2OCwxMTIuOTl6IE0yNTYsMjg4ICAgIGMtNTUuMTQxLDAtMTAwLTQ0LjcyNS0xMDAtOTkuNjk4YzAtMjMuMTE5LDguMTE5LTQ1LjY1MSwyMi44NTgtNjMuNDQzYzAuMjc2LTAuMzMzLDAuNTI3LTAuNjgxLDAuNzU0LTEuMDM5bDc2LjM4Ny05Ny41OTQgICAgbDc3LjIzMiw5OC43MjJjMC4xMDcsMC4xNDYsMC4yMTgsMC4yOSwwLjMzMywwLjQzMUMzNDguMDMzLDE0My4wODEsMzU2LDE2NS40MjgsMzU2LDE4OC4zMDJDMzU2LDI0My4yNzUsMzExLjE0MSwyODgsMjU2LDI4OHoiIGZpbGw9IiM3OTg2Y2IiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zMjMuODg0LDE3OC4zMDFjLTUuNTIyLDAtMTAsNC40NzgtMTAsMTBjMCwxOS4zMjMtOS42NDEsMzcuMjc3LTI1Ljc4OCw0OC4wMjVjLTQuNTk4LDMuMDYtNS44NDQsOS4yNjgtMi43ODMsMTMuODY1ICAgIGMxLjkyNiwyLjg5Niw1LjEsNC40NjEsOC4zMzMsNC40NjFjMS45MDQsMCwzLjgyOS0wLjU0Myw1LjUzMi0xLjY3N2MyMS43MzEtMTQuNDY1LDM0LjcwNi0zOC42NDIsMzQuNzA2LTY0LjY3NCAgICBDMzMzLjg4NCwxODIuNzc5LDMyOS40MDYsMTc4LjMwMSwzMjMuODg0LDE3OC4zMDF6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjU2Ljg1NCwyNDUuOTkzQzI1Ni41NzEsMjQ1Ljk5OCwyNTYuMjg2LDI0NiwyNTYsMjQ2Yy01LjUyMiwwLTEwLDQuNDc4LTEwLDEwYzAsNS41MjIsNC40NzgsMTAsMTAsMTAgICAgYzAuMzgzLDAsMC43NjYtMC4wMDIsMS4xNDctMC4wMDhjNS41MjItMC4wODEsOS45MzQtNC42MjMsOS44NTMtMTAuMTQ2QzI2Ni45MiwyNTAuMzI0LDI2Mi40MTUsMjQ1LjkwMiwyNTYuODU0LDI0NS45OTN6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
-                <br><br>
-                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3MCA0NzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3MCA0NzA7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8cGF0aCBkPSJNMzQxLDIwNC4yOTJoLTU3LjI2M2MtMS4zNTUsMC0yLjUtMS4xNDUtMi41LTIuNXYtNTcuMjYzYzAtOS42NDktNy44NTEtMTcuNS0xNy41LTE3LjVoLTU3LjQ3NCAgIGMtOS42NDksMC0xNy41LDcuODUxLTE3LjUsMTcuNXY1Ny4yNjNjMCwxLjM1NS0xLjE0NSwyLjUtMi41LDIuNUgxMjljLTkuNjQ5LDAtMTcuNSw3Ljg1MS0xNy41LDE3LjV2NTcuNDc0ICAgYzAsOS42NDksNy44NTEsMTcuNSwxNy41LDE3LjVoNTcuMjYzYzEuMzU1LDAsMi41LDEuMTQ1LDIuNSwyLjV2NTcuMjYzYzAsOS42NDksNy44NTEsMTcuNSwxNy41LDE3LjVoNTcuNDc0ICAgYzkuNjQ5LDAsMTcuNS03Ljg1MSwxNy41LTE3LjV2LTE5LjI2M2MwLTQuMTQyLTMuMzU4LTcuNS03LjUtNy41cy03LjUsMy4zNTgtNy41LDcuNXYxOS4yNjNjMCwxLjM1NS0xLjE0NSwyLjUtMi41LDIuNWgtNTcuNDc0ICAgYy0xLjM1NSwwLTIuNS0xLjE0NS0yLjUtMi41di01Ny4yNjNjMC05LjY0OS03Ljg1MS0xNy41LTE3LjUtMTcuNUgxMjljLTEuMzU1LDAtMi41LTEuMTQ1LTIuNS0yLjV2LTU3LjQ3NCAgIGMwLTEuMzU1LDEuMTQ1LTIuNSwyLjUtMi41aDU3LjI2M2M5LjY0OSwwLDE3LjUtNy44NTEsMTcuNS0xNy41di01Ny4yNjNjMC0xLjM1NSwxLjE0NS0yLjUsMi41LTIuNWg1Ny40NzQgICBjMS4zNTUsMCwyLjUsMS4xNDUsMi41LDIuNXY1Ny4yNjNjMCw5LjY0OSw3Ljg1MSwxNy41LDE3LjUsMTcuNUgzNDFjMS4zNTUsMCwyLjUsMS4xNDUsMi41LDIuNXY1Ny40NzRjMCwxLjM1NS0xLjE0NSwyLjUtMi41LDIuNSAgIGgtNTcuMjYzYy05LjY0OSwwLTE3LjUsNy44NTEtMTcuNSwxNy41djhjMCw0LjE0MiwzLjM1OCw3LjUsNy41LDcuNXM3LjUtMy4zNTgsNy41LTcuNXYtOGMwLTEuMzU1LDEuMTQ1LTIuNSwyLjUtMi41SDM0MSAgIGM5LjY0OSwwLDE3LjUtNy44NTEsMTcuNS0xNy41di01Ny40NzRDMzU4LjUsMjEyLjE0MiwzNTAuNjQ5LDIwNC4yOTIsMzQxLDIwNC4yOTJ6IiBmaWxsPSIjNzk4NmNiIi8+Cgk8cGF0aCBkPSJNNDMzLjUsNjguNzY0SDI5OS40MjdWNTEuMDM2YzAtMTUuODgtMTIuOTItMjguOC0yOC44LTI4LjhoLTcxLjI1NGMtMTUuODgsMC0yOC44LDEyLjkxOS0yOC44LDI4LjhsMCwxNy43MjlIMzYuNSAgIGMtMjAuMTI2LDAtMzYuNSwxNi4zNzQtMzYuNSwzNi41djI5MC41MjljMCwyMC4xMjYsMTYuMzc0LDM2LjUsMzYuNSwzNi41aDM2djcuOTcxYzAsNC4xNDIsMy4zNTgsNy41LDcuNSw3LjVzNy41LTMuMzU4LDcuNS03LjUgICB2LTcuOTcxaDI5NXY3Ljk3MWMwLDQuMTQyLDMuMzU4LDcuNSw3LjUsNy41czcuNS0zLjM1OCw3LjUtNy41di03Ljk3MWgzNmMyMC4xMjYsMCwzNi41LTE2LjM3NCwzNi41LTM2LjVWMTA1LjI2NCAgIEM0NzAsODUuMTM4LDQ1My42MjYsNjguNzY0LDQzMy41LDY4Ljc2NHogTTE4NS41NzMsNTEuMDM2YzAtNy42MDksNi4xOS0xMy44LDEzLjgtMTMuOGg3MS4yNTRjNy42MDksMCwxMy44LDYuMTksMTMuOCwxMy44djE3LjcyOSAgIGgtOTguODU0TDE4NS41NzMsNTEuMDM2eiBNNDU1LDM5NS43OTNjMCwxMS44NTUtOS42NDUsMjEuNS0yMS41LDIxLjVoLTM5N2MtMTEuODU1LDAtMjEuNS05LjY0NS0yMS41LTIxLjVWMTA1LjI2NCAgIGMwLTExLjg1NSw5LjY0NS0yMS41LDIxLjUtMjEuNWgzOTdjMTEuODU1LDAsMjEuNSw5LjY0NSwyMS41LDIxLjVWMzk1Ljc5M3oiIGZpbGw9IiM3OTg2Y2IiLz4KCTxwYXRoIGQ9Ik04MCw2My43NjRoMzAuNjE4YzQuMTQyLDAsNy41LTMuMzU4LDcuNS03LjVzLTMuMzU4LTcuNS03LjUtNy41SDgwYy00LjE0MiwwLTcuNSwzLjM1OC03LjUsNy41Uzc1Ljg1OCw2My43NjQsODAsNjMuNzY0eiIgZmlsbD0iIzc5ODZjYiIvPgoJPHBhdGggZD0iTTM1OS4zODIsNjMuNzY0SDM5MGM0LjE0MiwwLDcuNS0zLjM1OCw3LjUtNy41cy0zLjM1OC03LjUtNy41LTcuNWgtMzAuNjE4Yy00LjE0MiwwLTcuNSwzLjM1OC03LjUsNy41ICAgUzM1NS4yNCw2My43NjQsMzU5LjM4Miw2My43NjR6IiBmaWxsPSIjNzk4NmNiIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
-                <h4 class="indigo-text text-lighten-2">Medical Pooling</h4>
-                <h6 class="indigo-text text-lighten-2">Low-Cost Health Assurance</h6><br>
+                <h3>COVERD</h3>
+                <h5>ASSURANCE</h5><br>
+                <div class="divider"></div><br>
+                <h5 class="indigo-text text-lighten-2">Medical Pooling</h5><br>
+                <h6 class="orange-text text-ligten-2"><i>"Low-Cost Health Assurance"</i></h6>
             </div>
         </div><br>
         <br>
@@ -15,7 +31,7 @@
                 <div class="card-action">
                     <a role="link" href="/galleries" id="landing-btn-default" class="col s5 l4 waves-effect waves-light btn btn-large indigo lighten-2 thin z-depth-3">
                         <i class="material-icons left">lock_outline</i>LOGIN</a>
-                    <a role="link" href="/register" id="landing-btn-default" class=" col s5 l4 offset-s1 waves-effect waves-light btn btn-large right thin z-depth-3 amber darken-2">
+                    <a role="link" href="/register" id="landing-btn-default" class=" col s5 l4 offset-s1 waves-effect waves-light btn btn-large right thin z-depth-3 orange lighten-2">
                         <i class="material-icons right">person_add</i>JOIN</a>
                 </div>
             </div>
@@ -57,8 +73,6 @@
                     <div class="card-action">
                         <a href="/galleries/new" class="btn waves-effect waves-light orange lighten-2" type="submit" name="action">Learn More
                         </a>
-                        <a href="/galleries" class="btn waves-effect waves-light btn-flat right" type="submit" name="action">Signup
-                        </a>
                     </div>
                 </div>
             </div>
@@ -77,8 +91,6 @@
                     </div>
                     <div class="card-action">
                         <a href="/galleries/new" class="btn waves-effect waves-light orange lighten-2" type="submit" name="action">Learn More
-                        </a>
-                        <a href="/galleries" class="btn waves-effect waves-light btn-flat right" type="submit" name="action">Signup
                         </a>
                     </div>
                 </div>
@@ -99,8 +111,6 @@
                     <div class="card-action">
                         <a href="/galleries/new" class="btn waves-effect waves-light orange lighten-2" type="submit" name="action">Learn More
                         </a>
-                        <a href="/galleries" class="btn waves-effect waves-light btn-flat right" type="submit" name="action">Signup
-                        </a>
                     </div>
                 </div>
             </div>
@@ -119,8 +129,6 @@
                     </div>
                     <div class="card-action">
                         <a href="/galleries/new" class="btn waves-effect waves-light orange lighten-2" type="submit" name="action">Learn More
-                        </a>
-                        <a href="/galleries" class="btn waves-effect waves-light btn-flat right" type="submit" name="action">Signup
                         </a>
                     </div>
                 </div>

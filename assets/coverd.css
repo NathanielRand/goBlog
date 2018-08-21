@@ -36,6 +36,12 @@ input[type=range]+.thumb .value {
 
 /*Coverd Custom ID Elements*/
 
+#about-image {
+    border: outset 3px indigo;
+    height: 300px;
+    width: 300px;
+}
+
 #search {
     text-align: center;
 }
@@ -151,4 +157,9 @@ input[type=range]+.thumb .value {
         #landing-social-icons {
             margin: 0% 2% 0% 2%;
     }   
+}
+
+#navbar-logout-button {
+    margin-top: 18%;
+    margin-left: 5%;
 }

@@ -88,11 +88,24 @@ func main() {
 	r.Handle("/settings", staticC.SettingsView).Methods("GET")
 
 	// Account Routes
-	r.HandleFunc("/register", accountsC.New).Methods("GET")
-	r.HandleFunc("/register", accountsC.Create).Methods("POST")
-	r.Handle("/enter", accountsC.LoginView).Methods("GET")
-	r.HandleFunc("/enter", accountsC.Login).Methods("POST")
-	r.HandleFunc("/cookietest", accountsC.CookieTest).Methods("GET")
+	r.HandleFunc("/register",
+		accountsC.New).
+		Methods("GET")
+	r.HandleFunc("/register",
+		accountsC.Create).
+		Methods("POST")
+	r.Handle("/enter",
+		accountsC.LoginView).
+		Methods("GET")
+	r.HandleFunc("/enter",
+		accountsC.Login).
+		Methods("POST")
+	r.HandleFunc("/exit",
+		requireAccountMw.ApplyFn(accountsC.Logout)).
+		Methods("POST")
+	r.HandleFunc("/cookietest",
+		accountsC.CookieTest).
+		Methods("GET")
 
 	// Gallery Routes
 	r.Handle("/galleries/new",
